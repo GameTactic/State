@@ -4,12 +4,18 @@
   "description": "State Object",
   "author": "Niko Granö <niko@gametactic.eu>",
   "license": "GPL-3.0-only",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "prepack": "yarn run build",
-    "build": "tsc"
+    "prepack": "yarn cti -w -b ./src && yarn run build",
+    "build": "tsc",
+    "postpack": "yarn cti clean ./src"
   },
   "devDependencies": {
+    "create-ts-index": "^1.13.3",
     "typescript": "^3.9.6"
   },
-  "files": [ "dist" ]
+  "files": [
+    "dist"
+  ]
 }
