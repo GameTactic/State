@@ -13,13 +13,14 @@ import {
     RedoCommit,
     UndoCommit,
     MoveCommit,
-    RemovalCommit
+    RemovalCommit,
+    TransformCommit,
     } from './commit';
 
 export interface CanvasElementHistory {
     id: string;
     jti: string;
     commitType: string;
-    commitData: AdditionCommit | RedoCommit | UndoCommit | MoveCommit | RemovalCommit;
+    commitData: AdditionCommit | RedoCommit | UndoCommit | MoveCommit | RemovalCommit | TransformCommit;
     timestampModified: number;
 }
