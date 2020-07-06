@@ -7,12 +7,11 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-export default interface Collection {
+export interface Collection {
     id: string;
     parentCollectionId: string | undefined;
     name: string;
     lockedBy: string | undefined;
     isPinned: boolean;
     createdBy: string;
-    // eslint-disable-next-line semi
-};
+}

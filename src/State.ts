@@ -7,17 +7,15 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import Room from './room/Room';
-import User from './user/User';
-import Collection from './Collection';
-import Tactic from './tactic/Tactic';
-import CustomStageConfig from './CustomStageConfig';
+import { Room } from './room';
+import { User } from './user';
+import { Tactic } from './tactic';
+import { CustomStageConfig, Collection } from './';
 
-export default interface State {
+export interface State {
     room: Room;
     stageConfig: CustomStageConfig;
     collections: { [key: string]: Collection };
     tactics: { [key: string]: Tactic };
     users: { [key: string]: User };
-    // eslint-disable-next-line semi
-};
+}

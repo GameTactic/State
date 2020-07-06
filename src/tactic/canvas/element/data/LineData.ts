@@ -7,10 +7,9 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasPoint from '../../CanvasPoint';
+import { CanvasPoint } from '../../';
 
-export default interface LineData {
+export interface LineData {
     from: CanvasPoint;
     to: CanvasPoint;
-    // eslint-disable-next-line semi
-};
+}

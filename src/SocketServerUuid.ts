@@ -8,5 +8,4 @@
  *
  */
 
-const SOCKET_SERVER_UUID = '2a2e5b87-d740-469b-ae27-79b0f0ec4b2e';
-export default SOCKET_SERVER_UUID;
+export const SOCKET_SERVER_UUID = '2a2e5b87-d740-469b-ae27-79b0f0ec4b2e';

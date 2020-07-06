@@ -7,13 +7,11 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasPoint from '../../CanvasPoint';
-import Dimension from './entity/Dimension';
-import Entity from './entity/Entity';
+import { CanvasPoint } from '../../';
+import { Dimension, Entity } from './entity';
 
-export default interface EntityData {
+export interface EntityData {
     point: CanvasPoint;
     dimensions: Dimension;
     entity: Entity;
-    // eslint-disable-next-line semi
-};
+}

@@ -8,7 +8,6 @@
  *
  */
 
-export default interface FreeDrawData {
+export interface FreeDrawData {
     points: number[];
-    // eslint-disable-next-line semi
-};
+}

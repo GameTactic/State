@@ -7,17 +7,19 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import AdditionCommit from './commit/AdditionCommit';
-import RedoCommit from './commit/RedoCommit';
-import UndoCommit from './commit/UndoCommit';
-import MoveCommit from './commit/MoveCommit';
-import RemovalCommit from './commit/RemovalCommit';
 
-export default interface CanvasElementHistory {
+import {
+    AdditionCommit,
+    RedoCommit,
+    UndoCommit,
+    MoveCommit,
+    RemovalCommit
+    } from './commit';
+
+export interface CanvasElementHistory {
     id: string;
     jti: string;
     commitType: string;
     commitData: AdditionCommit | RedoCommit | UndoCommit | MoveCommit | RemovalCommit;
     timestampModified: number;
-    // eslint-disable-next-line semi
-};
+}

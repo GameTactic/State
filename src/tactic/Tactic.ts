@@ -7,11 +7,10 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import TacticMap from './TacticMap';
-import CanvasElementHistory from './canvas/element/CanvasElementHistory';
-import CanvasElement from './canvas/element/CanvasElement';
+import { TacticMap } from './';
+import { CanvasElementHistory, CanvasElement } from './canvas/element';
 
-export default interface Tactic {
+export interface Tactic {
     id: string;
     name: string;
     collectionId: string;
@@ -21,7 +20,6 @@ export default interface Tactic {
     createdBy: string;
     canvasElements: CanvasElement[];
     canvasElementsHistory: CanvasElementHistory[];
-    // eslint-disable-next-line semi
 }
 
 

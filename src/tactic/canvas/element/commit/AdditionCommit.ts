@@ -8,8 +8,7 @@
  *
  */
 
-export default interface Commit {
+export interface AdditionCommit {
     additions: string[];
     tool: string;
-    // eslint-disable-next-line semi
-};
+}

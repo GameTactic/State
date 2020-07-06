@@ -7,8 +7,7 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-export default interface Presentation {
+export interface Presentation {
     enabledBy: string | undefined;
     tacticId: string | undefined;
-    // eslint-disable-next-line semi
-};
+}

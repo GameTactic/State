@@ -8,11 +8,10 @@
  *
  */
 
-export default interface UserRole {
+export interface UserRole {
     id: number;
     date: Date;
     assignedBy: string;
-    // eslint-disable-next-line semi
 }
 
 export enum UserRoles {

@@ -8,7 +8,6 @@
  *
  */
 
-export default interface Commit {
+export interface UndoCommit {
     historyId: string;
-    // eslint-disable-next-line semi
-};
+}

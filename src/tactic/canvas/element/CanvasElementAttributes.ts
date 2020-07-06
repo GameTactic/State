@@ -7,14 +7,13 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasPoint from '../CanvasPoint';
+import { CanvasPoint } from '../';
 
-export default interface CanvasElementAttributes {
+export interface CanvasElementAttributes {
     position: CanvasPoint;
     rotation: number;
     scaleX: number;
     scaleY: number;
     skewX: number;
     skewY: number;
-    // eslint-disable-next-line semi
-};
+}

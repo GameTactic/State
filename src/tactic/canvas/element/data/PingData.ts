@@ -7,9 +7,8 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasPoint from '../../CanvasPoint';
+import { CanvasPoint } from '../../';
 
-export default interface PingData {
+export interface PingData {
     point: CanvasPoint;
-    // eslint-disable-next-line semi
-};
+}

@@ -1,15 +1,15 @@
 {
   "name": "@gametactic/state",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "State Object",
   "author": "Niko Granö <niko@gametactic.eu>",
   "license": "GPL-3.0-only",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepack": "yarn cti -w -b ./src && yarn run build",
-    "build": "tsc",
-    "postpack": "yarn cti clean ./src"
+    "prepack": "yarn run build",
+    "index": "yarn cti -w -b ./src",
+    "build": "tsc"
   },
   "devDependencies": {
     "create-ts-index": "^1.13.3",

@@ -8,8 +8,7 @@
  *
  */
 
-export default interface CanvasPoint {
+export interface CanvasPoint {
     x: number;
     y: number;
-    // eslint-disable-next-line semi
-};
+}

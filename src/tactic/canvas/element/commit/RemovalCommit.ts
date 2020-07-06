@@ -8,7 +8,6 @@
  *
  */
 
-export default interface Commit {
+export interface RemovalCommit {
     removals: string[];
-    // eslint-disable-next-line semi
-};
+}

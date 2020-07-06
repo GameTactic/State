@@ -7,8 +7,7 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-export default interface Dimension {
+export interface Dimension {
     width: number;
     height: number;
-    // eslint-disable-next-line semi
-};
+}

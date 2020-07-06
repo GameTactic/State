@@ -7,12 +7,11 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-export default interface Entity {
+export interface Entity {
     text: string;
     shortText: string;
     type: string;
     value: number;
     tier: number;
     image: string | undefined;
-    // eslint-disable-next-line semi
-};
+}

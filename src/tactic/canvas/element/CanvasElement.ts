@@ -7,17 +7,19 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasTool from '../CanvasTool';
-import CanvasElementAttributes from './CanvasElementAttributes';
-import TextData from './data/TextData';
-import RulerData from './data/RulerData';
-import CircleData from './data/CircleData';
-import LineData from './data/LineData';
-import PingData from './data/PingData';
-import FreeDrawData from './data/FreeDrawData';
-import EntityData from './data/EntityData';
+import { CanvasTool } from '../';
+import { CanvasElementAttributes } from './';
+import {
+    TextData,
+    RulerData,
+    CircleData,
+    LineData,
+    PingData,
+    FreeDrawData,
+    EntityData
+    } from './data';
 
-export default interface CanvasElement {
+export interface CanvasElement {
     id: string;
     tool: CanvasTool;
     type: string;
@@ -26,5 +28,4 @@ export default interface CanvasElement {
     jti: string;
     isVisible: boolean;
     attrs: CanvasElementAttributes;
-// eslint-disable-next-line semi
-};
+}

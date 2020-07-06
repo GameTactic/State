@@ -8,12 +8,11 @@
  *
  */
 
-export default interface TacticMap {
+export interface TacticMap {
     desc: string;
     name: string;
     icon: string;
     ratio: number;
     height: number;
     width: number;
-    // eslint-disable-next-line semi
-};
+}

@@ -8,8 +8,7 @@
  *
  */
 
-export default interface CanvasTool {
+export interface CanvasTool {
     name: string;
     temporary: boolean;
-    // eslint-disable-next-line semi
-};
+}

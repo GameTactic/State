@@ -7,13 +7,12 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import UserRole from './UserRole';
+import { UserRole } from './';
 
-export default interface User {
+export interface User {
     jti: string;
     onTacticId: string | undefined;
     isOnline: boolean;
     lastOnline: Date | undefined;
     roles: UserRole[];
-    // eslint-disable-next-line semi
 }

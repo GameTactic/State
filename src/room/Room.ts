@@ -7,12 +7,11 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import Presentation from './Presentation';
+import { Presentation } from './';
 
-export default interface Room {
+export interface Room {
     game: string;
     presentation: Presentation | undefined;
     isPrivate: boolean;
     roomId: string;
-    // eslint-disable-next-line semi
-};
+}

@@ -7,9 +7,9 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasPoint from './tactic/canvas/CanvasPoint';
+import { CanvasPoint } from './tactic/canvas';
 
-export default interface CustomStageConfig {
+export interface CustomStageConfig {
     scale: CanvasPoint;
     width: number;
     height: number;
@@ -17,5 +17,4 @@ export default interface CustomStageConfig {
     initialHeight: number;
     mapSrc: string;
     mapRatio: number;
-    // eslint-disable-next-line semi
-};
+}

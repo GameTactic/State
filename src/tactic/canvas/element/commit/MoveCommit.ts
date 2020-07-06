@@ -7,11 +7,10 @@
  * @author Niko Granö <niko@granö.fi>
  *
  */
-import CanvasPoint from '../../CanvasPoint';
+import { CanvasPoint } from '../../';
 
-export default interface MoveCommit {
+export interface MoveCommit {
     from: CanvasPoint;
     to: CanvasPoint;
     groups: string[];
-    // eslint-disable-next-line semi
-};
+}
