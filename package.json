@@ -2,8 +2,6 @@
   "name": "@gametactic/state",
   "version": "0.0.1",
   "description": "State Object",
-  "main": "dist/State.js",
-  "types": "dist/State.d.ts",
   "author": "Niko Granö <niko@gametactic.eu>",
   "license": "GPL-3.0-only",
   "scripts": {
