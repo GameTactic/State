@@ -1,12 +1,7 @@
-import { Locale } from './locale/Locale';
-import { Api } from './api/Api';
 import { Game } from '../game';
-import { Presentation } from './presentation/Presentation';
+import { Presentation } from './presentation';
 
 export interface RoomState {
-    locale: Locale;
-    api: Api[];
-    isCanvasLoaded: boolean;
     game: Game;
     presentation: Presentation;
     isPrivate: boolean;
