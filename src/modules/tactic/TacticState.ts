@@ -4,5 +4,4 @@ import { Collection } from './collection';
 export interface TacticState {
     collections: Collection[];
     tactics: Tactic[];
-    currentTacticId: string | undefined;
 }
