@@ -30,7 +30,7 @@ export default class RoomHistoryPrivate extends History {
      * Returns if the room was set to private or not
      * @returns boolean
      */
-    get element (): boolean {
+    get isPrivate (): boolean {
         return this._isPrivate
     }
 }

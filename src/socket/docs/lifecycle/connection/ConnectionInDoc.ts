@@ -1,5 +1,4 @@
 import SocketDoc, { SocketEventType } from "../../types";
-import LifecycleHistoryConnection from "../../../../history/lifecycle/connection/LifecycleHistoryConnection";
 
 export default class ConnectionInDoc implements SocketDoc<ConnectionInDocPayload> {
     title = 'Connect';
@@ -8,4 +7,4 @@ export default class ConnectionInDoc implements SocketDoc<ConnectionInDocPayload
     event = 'connection';
 }
 
-export type ConnectionInDocPayload = LifecycleHistoryConnection;
+export type ConnectionInDocPayload = void;

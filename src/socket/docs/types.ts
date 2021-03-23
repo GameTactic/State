@@ -1,7 +1,7 @@
 import History from "../../history/History";
 import { SocketException } from "./core";
 
-export default interface SocketDoc<T extends History | SocketException> {
+export default interface SocketDoc<T extends History | SocketException | any> {
     title: string;
     description: string;
     event: string;

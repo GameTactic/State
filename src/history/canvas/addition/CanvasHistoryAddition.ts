@@ -31,7 +31,7 @@ export default class CanvasHistoryAddition extends History {
    * Return the element from the addition
    * @returns CanvasElement[]
    */
-  get element (): CanvasElement[] {
+  get elements (): CanvasElement[] {
     return this._elements
   }
 }

@@ -1,11 +1,11 @@
 import SocketDoc, {SocketEventType} from "../../types";
 import TacticHistoryAdd from "../../../../history/tactic/add/TacticHistoryAdd";
 
-export default class AddTacticInDoc implements SocketDoc<AddTacticInDocPayload> {
+export default class AddTacticDoc implements SocketDoc<AddTacticDocPayload> {
     title = 'Create new tactic';
     description = 'Creates a new tactic';
     event = 'tactic/add';
-    type = SocketEventType.IN;
+    type = SocketEventType.IN_AND_OUT;
 }
 
-export type AddTacticInDocPayload = TacticHistoryAdd;
+export type AddTacticDocPayload = TacticHistoryAdd;

@@ -1,1 +1,1 @@
-export * from './setCurrentTeamId'
+export * from './switch'

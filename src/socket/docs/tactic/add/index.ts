@@ -1,2 +1,1 @@
-export * from './AddTacticInDoc'
-export * from './AddTacticOutDoc'
+export * from './AddTacticDoc'

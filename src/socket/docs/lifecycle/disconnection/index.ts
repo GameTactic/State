@@ -1,1 +1,1 @@
-export * from './DisconnectDoc'
+export * from './DisconnectionInDoc'
