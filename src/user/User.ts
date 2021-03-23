@@ -1,9 +1,10 @@
-import Role from './Role'
-
 /**
  * The user class
  * @author Eirmas
  */
+import {UserOptions} from "./types";
+import Role from "./Role";
+
 export default class User {
   /**
    * The users unique ID from the JWT token
@@ -22,13 +23,13 @@ export default class User {
    * The tactic the user is currently viewing
    * @private
    */
-  private _onTacticId: string
+  private _onTacticId: string | undefined
 
   /**
    * The team the user currently has selected
    * @private
    */
-  private _onTeamId: string
+  private _onTeamId: string | undefined
 
   /**
    * A boolean telling if the user is online or not
@@ -50,29 +51,16 @@ export default class User {
 
   /**
    * Construct the object
-   * @param jti
-   * @param name
-   * @param onTacticId
-   * @param onTeamId
-   * @param isOnline
-   * @param lastOnline
-   * @param roles
+   * @param options: UserOptions
    */
-  constructor (
-    jti: string,
-    name: string,
-    onTacticId: string,
-    onTeamId: string,
-    isOnline: boolean,
-    lastOnline: number,
-    roles: Role[]) {
-    this._jti = jti
-    this._name = name
-    this._onTacticId = onTacticId
-    this._onTeamId = onTeamId
-    this._isOnline = isOnline
-    this._lastOnline = lastOnline
-    this._roles = roles
+  constructor (options: UserOptions) {
+    this._jti = options.jti
+    this._name = options.name
+    this._onTacticId = options.onTacticId
+    this._onTeamId = options.onTeamId
+    this._isOnline = options.isOnline
+    this._lastOnline = options.lastOnline
+    this._roles = options.roles
   }
 
   /**
@@ -128,7 +116,7 @@ export default class User {
    * The ID is in UUID format
    * @returns onTeamId: string
    */
-  get onTeamId (): string {
+  get onTeamId (): string | undefined {
     return this._onTeamId
   }
 
@@ -137,7 +125,7 @@ export default class User {
    * The ID must be in UUID format
    * @param value: string
    */
-  set onTeamId (value: string) {
+  set onTeamId (value: string | undefined) {
     this._onTeamId = value
   }
 
@@ -146,7 +134,7 @@ export default class User {
    * The ID is in UUID format
    * @returns onTacticId: string
    */
-  get onTacticId (): string {
+  get onTacticId (): string | undefined {
     return this._onTacticId
   }
 
@@ -155,7 +143,7 @@ export default class User {
    * The ID must be in UUID format
    * @param value: string
    */
-  set onTacticId (value: string) {
+  set onTacticId (value: string | undefined) {
     this._onTacticId = value
   }
 
