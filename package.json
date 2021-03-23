@@ -19,5 +19,9 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@types/uuid": "^8.3.0",
+    "pixi.js": "5.2.1",
+    "uuid": "^8.3.2"
+  }
 }
