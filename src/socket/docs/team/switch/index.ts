@@ -1,1 +1,1 @@
-export * from './SwitchTeamDoc'
+export * from './SwitchTeamDoc';

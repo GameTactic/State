@@ -10,7 +10,7 @@ export default class WowsShipDistanceApiResponse {
    * @param distance
    */
   constructor (distance: number) {
-    this._distance = distance
+    this._distance = distance;
   }
 
   /**
@@ -18,6 +18,6 @@ export default class WowsShipDistanceApiResponse {
    * @returns distance: number
    */
   get distance (): number {
-    return this._distance
+    return this._distance;
   }
 }

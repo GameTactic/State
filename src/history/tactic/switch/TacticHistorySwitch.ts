@@ -2,13 +2,13 @@
  * This class contains data of an tactic switch event
  * @author Eirmas
  */
-import History from "../../History";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import Tactic from "../../../tactic/Tactic";
-import {HistoryEventTactic} from "../types";
-import {TacticHistorySwitchOptions} from './types';
-import User from "../../../user/User";
+import History from '../../History';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import Tactic from '../../../tactic/Tactic';
+import { HistoryEventTactic } from '../types';
+import { TacticHistorySwitchOptions } from './types';
+import User from '../../../user/User';
 
 export default class TacticHistorySwitch extends History {
     /**
@@ -36,10 +36,10 @@ export default class TacticHistorySwitch extends History {
                 module: HistoryEventModules.TACTIC,
                 event: HistoryEventTactic.SWITCH
             })
-        })
-        this._user = options.user
-        this._newTactic = options.newTactic
-        this._oldTactic = options.oldTactic
+        });
+        this._user = options.user;
+        this._newTactic = options.newTactic;
+        this._oldTactic = options.oldTactic;
     }
 
     /**
@@ -47,7 +47,7 @@ export default class TacticHistorySwitch extends History {
      * @returns User
      */
     get user (): User {
-        return this._user
+        return this._user;
     }
 
     /**
@@ -55,7 +55,7 @@ export default class TacticHistorySwitch extends History {
      * @returns Tactic
      */
     get newTactic (): Tactic {
-        return this._newTactic
+        return this._newTactic;
     }
 
     /**
@@ -63,6 +63,6 @@ export default class TacticHistorySwitch extends History {
      * @returns Tactic
      */
     get oldTactic (): Tactic {
-        return this._oldTactic
+        return this._oldTactic;
     }
 }

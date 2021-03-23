@@ -1,5 +1,5 @@
-import Collection from "./collection/Collection";
-import User from "../user/User";
+import Collection from './collection/Collection';
+import User from '../user/User';
 
 export interface TacticOptions {
   name: string;

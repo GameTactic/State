@@ -1,2 +1,2 @@
-export * from './addition'
-export * from './types'
+export * from './addition';
+export * from './types';

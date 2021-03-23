@@ -1,8 +1,8 @@
-import { v4 } from 'uuid'
-import User from "../user/User";
-import HistoryEvent from "./HistoryEvent";
-import {HistoryOptions} from "./types";
-import {ISO} from "../util/ISO";
+import { v4 } from 'uuid';
+import User from '../user/User';
+import HistoryEvent from './HistoryEvent';
+import { HistoryOptions } from './types';
+import { ISO } from '../util/ISO';
 
 /**
  * Base class for a canvas history.
@@ -34,10 +34,10 @@ export default abstract class History {
   private readonly _event: HistoryEvent
 
   protected constructor (options: HistoryOptions) {
-    this._id = options.id || v4()
-    this._timestamp = options.timestamp || ISO.timestamp()
-    this._creator = options.creator
-    this._event = options.event
+    this._id = options.id || v4();
+    this._timestamp = options.timestamp || ISO.timestamp();
+    this._creator = options.creator;
+    this._event = options.event;
   }
 
   /**
@@ -45,7 +45,7 @@ export default abstract class History {
    * @returns id: string
    */
   get id (): string {
-    return this._id
+    return this._id;
   }
 
   /**
@@ -53,7 +53,7 @@ export default abstract class History {
    * @returns timestamp: number
    */
   get timestamp (): number {
-    return this._timestamp
+    return this._timestamp;
   }
 
   /**
@@ -61,7 +61,7 @@ export default abstract class History {
    * @returns creator: User
    */
   get editor (): User {
-    return this._creator
+    return this._creator;
   }
 
   /**
@@ -69,6 +69,6 @@ export default abstract class History {
    * @returns event: HistoryEvent
    */
   get event (): HistoryEvent {
-    return this._event
+    return this._event;
   }
 }

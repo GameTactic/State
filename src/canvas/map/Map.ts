@@ -60,15 +60,15 @@ export default class Map implements MapInterface {
    * @param options: MapOptions
    */
   constructor (options: MapOptions) {
-    const finalOptions: Required<MapOptions> = Object.assign({}, defaultMapOptions, options)
-    this._name = finalOptions.name
-    this._description = finalOptions.description
-    this._texture = finalOptions.texture
-    this._ratio = finalOptions.ratio
-    this._sizeConstant = finalOptions.sizeConstant
-    this._creator = finalOptions.creator
-    this._dimensions = finalOptions.dimension
-    this._tactic = finalOptions.tactic
+    const finalOptions: Required<MapOptions> = Object.assign({}, defaultMapOptions, options);
+    this._name = finalOptions.name;
+    this._description = finalOptions.description;
+    this._texture = finalOptions.texture;
+    this._ratio = finalOptions.ratio;
+    this._sizeConstant = finalOptions.sizeConstant;
+    this._creator = finalOptions.creator;
+    this._dimensions = finalOptions.dimension;
+    this._tactic = finalOptions.tactic;
   }
 
   /**
@@ -76,7 +76,7 @@ export default class Map implements MapInterface {
    * @returns MapVueComponent.DEFAULT
    */
   getVueComponent (): MapVueComponent {
-    return MapVueComponent.DEFAULT
+    return MapVueComponent.DEFAULT;
   }
 
   /**
@@ -84,7 +84,7 @@ export default class Map implements MapInterface {
    * @returns name: string
    */
   get name (): string {
-    return this._name
+    return this._name;
   }
 
   /**
@@ -92,7 +92,7 @@ export default class Map implements MapInterface {
    * @param value: string
    */
   set name (value: string) {
-    this._name = value
+    this._name = value;
   }
 
   /**
@@ -100,7 +100,7 @@ export default class Map implements MapInterface {
    * @returns description: string
    */
   get description (): string {
-    return this._description
+    return this._description;
   }
 
   /**
@@ -108,7 +108,7 @@ export default class Map implements MapInterface {
    * @param value: string
    */
   set description (value: string) {
-    this._description = value
+    this._description = value;
   }
 
   /**
@@ -116,7 +116,7 @@ export default class Map implements MapInterface {
    * @returns texture: PIXI.Texture
    */
   get texture (): PIXI.Texture {
-    return this._texture
+    return this._texture;
   }
 
   /**
@@ -124,7 +124,7 @@ export default class Map implements MapInterface {
    * @param value: PIXI.Texture
    */
   set texture (value: PIXI.Texture) {
-    this._texture = value
+    this._texture = value;
   }
 
   /**
@@ -132,7 +132,7 @@ export default class Map implements MapInterface {
    * @returns ratio: Point
    */
   get ratio (): Point {
-    return this._ratio
+    return this._ratio;
   }
 
   /**
@@ -141,12 +141,12 @@ export default class Map implements MapInterface {
    */
   set ratio (value: Point) {
     if (value.x <= 0 || value.x > 1) {
-      throw new Error(`[Map error]: Invalid X ratio '${value.x}'. (0 < x >= 1)`)
+      throw new Error(`[Map error]: Invalid X ratio '${value.x}'. (0 < x >= 1)`);
     }
     if (value.y <= 0 || value.y > 1) {
-      throw new Error(`[Map error]: Invalid X ratio '${value.y}'. (0 < x >= 1)`)
+      throw new Error(`[Map error]: Invalid X ratio '${value.y}'. (0 < x >= 1)`);
     }
-    this._ratio = value
+    this._ratio = value;
   }
 
   /**
@@ -154,7 +154,7 @@ export default class Map implements MapInterface {
    * @returns creator: User
    */
   get creator (): User {
-    return this._creator
+    return this._creator;
   }
 
   /**
@@ -162,7 +162,7 @@ export default class Map implements MapInterface {
    * @returns sizeConstant: number
    */
   get sizeConstant (): number {
-    return this._sizeConstant
+    return this._sizeConstant;
   }
 
   /**
@@ -170,7 +170,7 @@ export default class Map implements MapInterface {
    * @param value
    */
   set sizeConstant (value: number) {
-    this._sizeConstant = value
+    this._sizeConstant = value;
   }
 
   /**
@@ -178,7 +178,7 @@ export default class Map implements MapInterface {
    * @return dimensions: Dimensions
    */
   get dimensions (): Dimensions {
-    return this._dimensions
+    return this._dimensions;
   }
 
   /**
@@ -186,7 +186,7 @@ export default class Map implements MapInterface {
    * @param value
    */
   set dimensions (value: Dimensions) {
-    this._dimensions = value
+    this._dimensions = value;
   }
 
   /**
@@ -194,7 +194,7 @@ export default class Map implements MapInterface {
    * @returns tactic: Tactic
    */
   get tactic (): Tactic {
-    return this._tactic
+    return this._tactic;
   }
 
   /**
@@ -202,6 +202,6 @@ export default class Map implements MapInterface {
    * @param value: Tactic
    */
   set tactic (value: Tactic) {
-    this._tactic = value
+    this._tactic = value;
   }
 }

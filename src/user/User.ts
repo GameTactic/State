@@ -2,8 +2,8 @@
  * The user class
  * @author Eirmas
  */
-import {UserOptions} from "./types";
-import Role from "./Role";
+import { UserOptions } from './types';
+import Role from './Role';
 
 export default class User {
   /**
@@ -54,13 +54,13 @@ export default class User {
    * @param options: UserOptions
    */
   constructor (options: UserOptions) {
-    this._jti = options.jti
-    this._name = options.name
-    this._onTacticId = options.onTacticId
-    this._onTeamId = options.onTeamId
-    this._isOnline = options.isOnline
-    this._lastOnline = options.lastOnline
-    this._roles = options.roles
+    this._jti = options.jti;
+    this._name = options.name;
+    this._onTacticId = options.onTacticId;
+    this._onTeamId = options.onTeamId;
+    this._isOnline = options.isOnline;
+    this._lastOnline = options.lastOnline;
+    this._roles = options.roles;
   }
 
   /**
@@ -68,7 +68,7 @@ export default class User {
    * @returns roles: Role[]
    */
   get roles (): Role[] {
-    return this._roles
+    return this._roles;
   }
 
   /**
@@ -76,7 +76,7 @@ export default class User {
    * @param value: Role[]
    */
   set roles (value: Role[]) {
-    this._roles = value
+    this._roles = value;
   }
 
   /**
@@ -84,7 +84,7 @@ export default class User {
    * @returns lastOnline: number
    */
   get lastOnline (): number {
-    return this._lastOnline
+    return this._lastOnline;
   }
 
   /**
@@ -92,7 +92,7 @@ export default class User {
    * @param value: number
    */
   set lastOnline (value: number) {
-    this._lastOnline = value
+    this._lastOnline = value;
   }
 
   /**
@@ -100,7 +100,7 @@ export default class User {
    * @returns isOnline: boolean
    */
   get isOnline (): boolean {
-    return this._isOnline
+    return this._isOnline;
   }
 
   /**
@@ -108,7 +108,7 @@ export default class User {
    * @param value: boolean
    */
   set isOnline (value: boolean) {
-    this._isOnline = value
+    this._isOnline = value;
   }
 
   /**
@@ -117,7 +117,7 @@ export default class User {
    * @returns onTeamId: string
    */
   get onTeamId (): string | undefined {
-    return this._onTeamId
+    return this._onTeamId;
   }
 
   /**
@@ -126,7 +126,7 @@ export default class User {
    * @param value: string
    */
   set onTeamId (value: string | undefined) {
-    this._onTeamId = value
+    this._onTeamId = value;
   }
 
   /**
@@ -135,7 +135,7 @@ export default class User {
    * @returns onTacticId: string
    */
   get onTacticId (): string | undefined {
-    return this._onTacticId
+    return this._onTacticId;
   }
 
   /**
@@ -144,7 +144,7 @@ export default class User {
    * @param value: string
    */
   set onTacticId (value: string | undefined) {
-    this._onTacticId = value
+    this._onTacticId = value;
   }
 
   /**
@@ -152,7 +152,7 @@ export default class User {
    * @returns name: string
    */
   get name (): string {
-    return this._name
+    return this._name;
   }
 
   /**
@@ -160,7 +160,7 @@ export default class User {
    * @param value: string
    */
   set name (value: string) {
-    this._name = value
+    this._name = value;
   }
 
   /**
@@ -168,7 +168,7 @@ export default class User {
    * @returns jti: string
    */
   get jti (): string {
-    return this._jti
+    return this._jti;
   }
 
   /**
@@ -176,6 +176,6 @@ export default class User {
    * @param value: string
    */
   set jti (value: string) {
-    this._jti = value
+    this._jti = value;
   }
 }

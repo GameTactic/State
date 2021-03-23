@@ -1,5 +1,5 @@
-import WgDataApiResponse from "../WgDataApiResponse";
-import WotTankImageApiResponse from "./WotTankImageApiResponse";
+import WgDataApiResponse from '../WgDataApiResponse';
+import WotTankImageApiResponse from './WotTankImageApiResponse';
 
 export default class WotTankApiResponse extends WgDataApiResponse {
   /**
@@ -39,11 +39,11 @@ export default class WotTankApiResponse extends WgDataApiResponse {
     name: string,
     image: WotTankImageApiResponse
   ) {
-    super()
-    this._tankId = tankId
-    this._type = type
-    this._name = name
-    this._image = image
+    super();
+    this._tankId = tankId;
+    this._type = type;
+    this._name = name;
+    this._image = image;
   }
 
   /**
@@ -51,7 +51,7 @@ export default class WotTankApiResponse extends WgDataApiResponse {
    * @returns tankId: number
    */
   get tankId (): number {
-    return this._tankId
+    return this._tankId;
   }
 
   /**
@@ -59,7 +59,7 @@ export default class WotTankApiResponse extends WgDataApiResponse {
    * @returns type: string
    */
   get type (): string {
-    return this._type
+    return this._type;
   }
 
   /**
@@ -67,7 +67,7 @@ export default class WotTankApiResponse extends WgDataApiResponse {
    * @returns name: string
    */
   get name (): string {
-    return this._name
+    return this._name;
   }
 
   /**
@@ -75,6 +75,6 @@ export default class WotTankApiResponse extends WgDataApiResponse {
    * @returns image: WotTankImageApiResponse
    */
   get image (): WotTankImageApiResponse {
-    return this._image
+    return this._image;
   }
 }

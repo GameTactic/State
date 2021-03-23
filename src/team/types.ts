@@ -1,5 +1,5 @@
-import Tactic from "../tactic/Tactic";
-import Entity from "./abtract/Entity";
+import Tactic from '../tactic/Tactic';
+import Entity from './abtract/Entity';
 
 export interface TeamOptions {
   id?: string;

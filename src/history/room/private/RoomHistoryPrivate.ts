@@ -2,11 +2,11 @@
  * This class contains data of an setPrivate event on the room
  * @author Eirmas
  */
-import History from "../../History";
-import {RoomHistoryPrivateOptions} from "./types";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import {HistoryEventRoom} from "../types";
+import History from '../../History';
+import { RoomHistoryPrivateOptions } from './types';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import { HistoryEventRoom } from '../types';
 
 export default class RoomHistoryPrivate extends History {
     /**
@@ -22,8 +22,8 @@ export default class RoomHistoryPrivate extends History {
                 module: HistoryEventModules.ROOM,
                 event: HistoryEventRoom.SET_IS_PRIVATE
             })
-        })
-        this._isPrivate = options.isPrivate
+        });
+        this._isPrivate = options.isPrivate;
     }
 
     /**
@@ -31,6 +31,6 @@ export default class RoomHistoryPrivate extends History {
      * @returns boolean
      */
     get isPrivate (): boolean {
-        return this._isPrivate
+        return this._isPrivate;
     }
 }

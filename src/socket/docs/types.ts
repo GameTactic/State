@@ -1,11 +1,9 @@
-import History from "../../history/History";
-import { SocketException } from "./core";
-
-export default interface SocketDoc<T extends History | SocketException | any> {
+export default interface SocketDoc {
     title: string;
     description: string;
     event: string;
     type: SocketEventType;
+// eslint-disable-next-line
 }
 
 export enum SocketEventType {

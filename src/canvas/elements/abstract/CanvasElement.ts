@@ -1,7 +1,7 @@
-import { v4 } from 'uuid'
-import User from "../../../user/User";
-import Tactic from "../../../tactic/Tactic";
-import {CanvasElementInterface, CanvasElementName, CanvasElementOptions} from "./types";
+import { v4 } from 'uuid';
+import User from '../../../user/User';
+import Tactic from '../../../tactic/Tactic';
+import { CanvasElementInterface, CanvasElementName, CanvasElementOptions } from './types';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
   /**
@@ -29,10 +29,10 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   private readonly _tactic: Tactic
 
   protected constructor (options: CanvasElementOptions) {
-    this._id = v4()
-    this._temporary = options.temporary
-    this._creator = options.creator
-    this._tactic = options.tactic
+    this._id = v4();
+    this._temporary = options.temporary;
+    this._creator = options.creator;
+    this._tactic = options.tactic;
   }
 
   /**
@@ -40,7 +40,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @returns false
    */
   get isTransformable () {
-    return false
+    return false;
   }
 
   /**
@@ -48,7 +48,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @returns CanvasElementName
    */
   get name (): CanvasElementName {
-    return CanvasElementName.BASE
+    return CanvasElementName.BASE;
   }
 
   /**
@@ -56,7 +56,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @return string: UUIDv4
    */
   get id (): string {
-    return this._id
+    return this._id;
   }
 
   /**
@@ -64,7 +64,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @return boolean
    */
   get temporary (): boolean {
-    return this._temporary
+    return this._temporary;
   }
 
   /**
@@ -72,7 +72,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @returns User
    */
   get creator (): User {
-    return this._creator
+    return this._creator;
   }
 
   /**
@@ -81,7 +81,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @returns boolean
    */
   isHex (value: string): boolean {
-    return Boolean(value.match(/^0x[0-9a-f]+$/i))
+    return Boolean(value.match(/^0x[0-9a-f]+$/i));
   }
 
   /**
@@ -89,6 +89,6 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @returns tactic: Tactic
    */
   get tactic (): Tactic {
-    return this._tactic
+    return this._tactic;
   }
 }

@@ -43,11 +43,11 @@ export default class WgMetaApiResponse {
     total: number, limit:
       number, page: number
   ) {
-    this._count = count
-    this._pageTotal = pageTotal
-    this._total = total
-    this._limit = limit
-    this._page = page
+    this._count = count;
+    this._pageTotal = pageTotal;
+    this._total = total;
+    this._limit = limit;
+    this._page = page;
   }
 
   /**
@@ -55,7 +55,7 @@ export default class WgMetaApiResponse {
    * @returns count: number
    */
   get count (): number {
-    return this._count
+    return this._count;
   }
 
   /**
@@ -63,7 +63,7 @@ export default class WgMetaApiResponse {
    * @returns pageTotal: number
    */
   get pageTotal (): number {
-    return this._pageTotal
+    return this._pageTotal;
   }
 
   /**
@@ -71,7 +71,7 @@ export default class WgMetaApiResponse {
    * @returns total: number
    */
   get total (): number {
-    return this._total
+    return this._total;
   }
 
   /**
@@ -79,7 +79,7 @@ export default class WgMetaApiResponse {
    * @returns limit: number
    */
   get limit (): number {
-    return this._limit
+    return this._limit;
   }
 
   /**
@@ -87,6 +87,6 @@ export default class WgMetaApiResponse {
    * @returns page: number
    */
   get page (): number {
-    return this._page
+    return this._page;
   }
 }

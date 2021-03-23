@@ -1,6 +1,6 @@
-import SocketDoc, { SocketEventType } from "../../types";
+import SocketDoc, { SocketEventType } from '../../types';
 
-export default class ConnectionInDoc implements SocketDoc<ConnectionInDocPayload> {
+export default class ConnectionInDoc implements SocketDoc {
     title = 'Connect';
     description = 'Connects user to socket';
     type = SocketEventType.IN;

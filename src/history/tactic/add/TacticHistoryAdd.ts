@@ -2,13 +2,12 @@
  * This class contains data of an tactic add event
  * @author Eirmas
  */
-import History from "../../History";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import {TacticData} from "../../../socket/state";
-import Tactic from "../../../tactic/Tactic";
-import {HistoryEventTactic} from "../types";
-import {TacticHistoryAddOptions} from './types';
+import History from '../../History';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import { TacticData } from '../../../socket/state';
+import { HistoryEventTactic } from '../types';
+import { TacticHistoryAddOptions } from './types';
 
 export default class TacticHistoryAdd extends History {
     /**
@@ -24,8 +23,8 @@ export default class TacticHistoryAdd extends History {
                 module: HistoryEventModules.TACTIC,
                 event: HistoryEventTactic.ADD
             })
-        })
-        this._data = options.data
+        });
+        this._data = options.data;
     }
 
     /**
@@ -33,6 +32,6 @@ export default class TacticHistoryAdd extends History {
      * @returns data: TacticData
      */
     get tacticData (): TacticData {
-        return this._data
+        return this._data;
     }
 }

@@ -2,12 +2,12 @@
  * This class contains data of an user update event
  * @author Eirmas
  */
-import History from "../../History";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import {UserHistoryUpdateOptions} from './types';
-import User from "../../../user/User";
-import {HistoryEventUser} from "../types";
+import History from '../../History';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import { UserHistoryUpdateOptions } from './types';
+import User from '../../../user/User';
+import { HistoryEventUser } from '../types';
 
 export default class UserHistoryUpdate extends History {
     /**
@@ -29,9 +29,9 @@ export default class UserHistoryUpdate extends History {
                 module: HistoryEventModules.USER,
                 event: HistoryEventUser.UPDATE
             })
-        })
-        this._oldUser = options.oldUser
-        this._newUser = options.newUser
+        });
+        this._oldUser = options.oldUser;
+        this._newUser = options.newUser;
     }
 
     /**
@@ -39,7 +39,7 @@ export default class UserHistoryUpdate extends History {
      * @returns User
      */
     get oldUser (): User {
-        return this._oldUser
+        return this._oldUser;
     }
 
     /**
@@ -47,6 +47,6 @@ export default class UserHistoryUpdate extends History {
      * @returns User
      */
     get newUser (): User {
-        return this._newUser
+        return this._newUser;
     }
 }

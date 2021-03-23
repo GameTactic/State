@@ -1,4 +1,4 @@
-import WotTeamsPositions from '../positions/WotTeamsPositions'
+import WotTeamsPositions from '../positions/WotTeamsPositions';
 
 export default class WotStandardBattle {
   /**
@@ -12,7 +12,7 @@ export default class WotStandardBattle {
    * @param teamsBasePositions
    */
   constructor (teamsBasePositions: WotTeamsPositions) {
-    this._teamsBasePositions = teamsBasePositions
+    this._teamsBasePositions = teamsBasePositions;
   }
 
   /**
@@ -20,7 +20,7 @@ export default class WotStandardBattle {
    * @returns teamsBasePositions: WotTeamsBasePositions
    */
   get teamsBasePositions (): WotTeamsPositions {
-    return this._teamsBasePositions
+    return this._teamsBasePositions;
   }
 
   /**
@@ -28,6 +28,6 @@ export default class WotStandardBattle {
    * @param value
    */
   set teamsBasePositions (value: WotTeamsPositions) {
-    this._teamsBasePositions = value
+    this._teamsBasePositions = value;
   }
 }

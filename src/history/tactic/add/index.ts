@@ -1,2 +1,2 @@
-export * from './TacticHistoryAdd'
-export * from './types'
+export * from './TacticHistoryAdd';
+export * from './types';

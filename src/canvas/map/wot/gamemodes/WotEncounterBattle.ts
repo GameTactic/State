@@ -23,8 +23,8 @@ export default class WotEncounterBattle {
     teamsSpawnPositions: WotTeamsPositions,
     controlPoint: Point
   ) {
-    this._teamsSpawnPositions = teamsSpawnPositions
-    this._controlPoint = controlPoint
+    this._teamsSpawnPositions = teamsSpawnPositions;
+    this._controlPoint = controlPoint;
   }
 
   /**
@@ -32,7 +32,7 @@ export default class WotEncounterBattle {
    * @returns teamsSpawnPositions: WotTeamsSpawnPositions
    */
   get teamsSpawnPositions (): WotTeamsPositions {
-    return this._teamsSpawnPositions
+    return this._teamsSpawnPositions;
   }
 
   /**
@@ -40,7 +40,7 @@ export default class WotEncounterBattle {
    * @param value
    */
   set teamsSpawnPositions (value: WotTeamsPositions) {
-    this._teamsSpawnPositions = value
+    this._teamsSpawnPositions = value;
   }
 
   /**
@@ -48,7 +48,7 @@ export default class WotEncounterBattle {
    * @returns controlPoint: Point
    */
   get controlPoint (): Point {
-    return this._controlPoint
+    return this._controlPoint;
   }
 
   /**
@@ -56,6 +56,6 @@ export default class WotEncounterBattle {
    * @param value
    */
   set controlPoint (value: Point) {
-    this._controlPoint = value
+    this._controlPoint = value;
   }
 }

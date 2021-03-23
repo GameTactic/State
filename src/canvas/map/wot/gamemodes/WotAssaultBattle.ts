@@ -22,8 +22,8 @@ export default class WotAssaultBattle {
     teamsSpawnPositions: WotTeamsPositions,
     teamsBasePositions: WotTeamsPositions
   ) {
-    this._teamsSpawnPositions = teamsSpawnPositions
-    this._teamsBasePositions = teamsBasePositions
+    this._teamsSpawnPositions = teamsSpawnPositions;
+    this._teamsBasePositions = teamsBasePositions;
   }
 
   /**
@@ -31,7 +31,7 @@ export default class WotAssaultBattle {
    * @returns teamsSpawnPositions: WotTeamsSpawnPositions
    */
   get teamsSpawnPositions (): WotTeamsPositions {
-    return this._teamsSpawnPositions
+    return this._teamsSpawnPositions;
   }
 
   /**
@@ -39,7 +39,7 @@ export default class WotAssaultBattle {
    * @param value
    */
   set teamsSpawnPositions (value: WotTeamsPositions) {
-    this._teamsSpawnPositions = value
+    this._teamsSpawnPositions = value;
   }
 
   /**
@@ -47,7 +47,7 @@ export default class WotAssaultBattle {
    * @returns teamsBasePositions: WotTeamsBasePositions
    */
   get teamsBasePositions (): WotTeamsPositions {
-    return this._teamsBasePositions
+    return this._teamsBasePositions;
   }
 
   /**
@@ -55,6 +55,6 @@ export default class WotAssaultBattle {
    * @param value
    */
   set teamsBasePositions (value: WotTeamsPositions) {
-    this._teamsBasePositions = value
+    this._teamsBasePositions = value;
   }
 }

@@ -2,8 +2,8 @@
  * The class for a user role
  * @author Eirmas
  */
-import {RoleOptions, RoleType} from "./types";
-import User from "./User";
+import { RoleOptions, RoleType } from './types';
+import User from './User';
 
 export default class Role {
   /**
@@ -22,8 +22,8 @@ export default class Role {
    * @param options
    */
   constructor (options: RoleOptions) {
-    this._roleType = options.roleType
-    this._assignedBy = options.assignedBy
+    this._roleType = options.roleType;
+    this._assignedBy = options.assignedBy;
   }
 
   /**
@@ -31,7 +31,7 @@ export default class Role {
    * @returns User
    */
   get assignedBy (): User {
-    return this._assignedBy
+    return this._assignedBy;
   }
 
   /**
@@ -39,6 +39,6 @@ export default class Role {
    * @returns RoleType
    */
   get roleType (): RoleType {
-    return this._roleType
+    return this._roleType;
   }
 }

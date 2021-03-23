@@ -2,9 +2,9 @@
  * The class to extend to make a canvas element transformable
  * @author Eirmas
  */
-import CanvasElement from "./CanvasElement";
-import {TransformableOptions, TransformInterface} from "./types";
-import {Point} from "../../../util";
+import CanvasElement from './CanvasElement';
+import { TransformableOptions, TransformInterface } from './types';
+import { Point } from '../../../util';
 
 export default abstract class Transformable extends CanvasElement {
   /**
@@ -19,7 +19,7 @@ export default abstract class Transformable extends CanvasElement {
    * @param options
    */
   protected constructor (options: TransformableOptions) {
-    super(options)
+    super(options);
     this._transform = Object.assign({}, {
       skew: {
         x: 0,
@@ -30,7 +30,7 @@ export default abstract class Transformable extends CanvasElement {
         y: 1
       },
       rotation: 0
-    }, options.transform || {})
+    }, options.transform || {});
   }
 
   /**
@@ -38,7 +38,7 @@ export default abstract class Transformable extends CanvasElement {
    * @returns true
    */
   get isTransformable () {
-    return true
+    return true;
   }
 
   /**
@@ -46,7 +46,7 @@ export default abstract class Transformable extends CanvasElement {
    * @return transform: TransformInterface
    */
   get transform (): Required<TransformInterface> {
-    return this._transform
+    return this._transform;
   }
 
   /**
@@ -54,14 +54,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value
    */
   set transform (value: Required<TransformInterface>) {
-    this._transform = value
+    this._transform = value;
   }
 
   /**
    * Returns the skew
    */
   get skew (): Point {
-    return this._transform.skew
+    return this._transform.skew;
   }
 
   /**
@@ -69,14 +69,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: Point
    */
   set skew (value: Point) {
-    this._transform.skew = value
+    this._transform.skew = value;
   }
 
   /**
    * Returns the X-axis skew
    */
   get skewX (): number {
-    return this._transform.skew.x
+    return this._transform.skew.x;
   }
 
   /**
@@ -84,14 +84,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: number
    */
   set skewX (value: number) {
-    this._transform.skew.x = value
+    this._transform.skew.x = value;
   }
 
   /**
    * Returns the Y-axis skew
    */
   get skewY (): number {
-    return this._transform.skew.y
+    return this._transform.skew.y;
   }
 
   /**
@@ -99,14 +99,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: number
    */
   set skewY (value: number) {
-    this._transform.skew.y = value
+    this._transform.skew.y = value;
   }
 
   /**
    * Returns the scale
    */
   get scale (): Point {
-    return this._transform.scale
+    return this._transform.scale;
   }
 
   /**
@@ -114,14 +114,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: Point
    */
   set scale (value: Point) {
-    this._transform.scale = value
+    this._transform.scale = value;
   }
 
   /**
    * Returns the X-axis scale
    */
   get scaleX (): number {
-    return this._transform.scale.x
+    return this._transform.scale.x;
   }
 
   /**
@@ -129,14 +129,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: number
    */
   set scaleX (value: number) {
-    this._transform.scale.x = value
+    this._transform.scale.x = value;
   }
 
   /**
    * Returns the Y-axis scale
    */
   get scaleY (): number {
-    return this._transform.scale.y
+    return this._transform.scale.y;
   }
 
   /**
@@ -144,14 +144,14 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: number
    */
   set scaleY (value: number) {
-    this._transform.scale.y = value
+    this._transform.scale.y = value;
   }
 
   /**
    * Returns the rotation in radians
    */
   get rotation (): number {
-    return this._transform.rotation
+    return this._transform.rotation;
   }
 
   /**
@@ -161,6 +161,6 @@ export default abstract class Transformable extends CanvasElement {
    * @param value: number
    */
   set rotation (value: number) {
-    this._transform.rotation = value
+    this._transform.rotation = value;
   }
 }

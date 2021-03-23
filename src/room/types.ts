@@ -1,4 +1,4 @@
-import {Game} from "../games";
+import { Game } from '../games';
 
 export interface Room {
     game: Game,

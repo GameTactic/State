@@ -15,8 +15,8 @@ export default class WotMap extends Map {
    * @param options
    */
   constructor (options: WotMapOptions) {
-    super(options)
-    this._gameModes = options.gameModes
+    super(options);
+    this._gameModes = options.gameModes;
   }
 
   /**
@@ -24,7 +24,7 @@ export default class WotMap extends Map {
    * @returns MapVueComponent.WOT
    */
   getVueComponent (): MapVueComponent {
-    return MapVueComponent.WOT
+    return MapVueComponent.WOT;
   }
 
   /**
@@ -32,7 +32,7 @@ export default class WotMap extends Map {
    * @returns gameModes: WotGameModesData
    */
   get gameModes (): WotGameModesData {
-    return this._gameModes
+    return this._gameModes;
   }
 
   /**
@@ -40,6 +40,6 @@ export default class WotMap extends Map {
    * @param value
    */
   set gameModes (value: WotGameModesData) {
-    this._gameModes = value
+    this._gameModes = value;
   }
 }

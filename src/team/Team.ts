@@ -1,7 +1,7 @@
-import { v4 } from 'uuid'
-import Tactic from "../tactic/Tactic";
-import Entity from "./abtract/Entity";
-import {TeamOptions} from "./types";
+import { v4 } from 'uuid';
+import Tactic from '../tactic/Tactic';
+import Entity from './abtract/Entity';
+import { TeamOptions } from './types';
 
 /**
  * The team class
@@ -45,11 +45,11 @@ export default abstract class Team {
    * @protected
    */
   protected constructor (options: TeamOptions) {
-    this._id = options.id || v4()
-    this._tactic = options.tactic
-    this._name = options.name
-    this._color = options.color
-    this._entities = options.entities || []
+    this._id = options.id || v4();
+    this._tactic = options.tactic;
+    this._name = options.name;
+    this._color = options.color;
+    this._entities = options.entities || [];
   }
 
   /**
@@ -57,7 +57,7 @@ export default abstract class Team {
    * @returns id: string
    */
   get id (): string {
-    return this._id
+    return this._id;
   }
 
   /**
@@ -65,7 +65,7 @@ export default abstract class Team {
    * @returns tactic: Tactic
    */
   get tactic (): Tactic {
-    return this._tactic
+    return this._tactic;
   }
 
   /**
@@ -73,7 +73,7 @@ export default abstract class Team {
    * @param value: Tactic
    */
   set tactic (value: Tactic) {
-    this._tactic = value
+    this._tactic = value;
   }
 
   /**
@@ -81,7 +81,7 @@ export default abstract class Team {
    * @returns name: string
    */
   get name (): string {
-    return this._name
+    return this._name;
   }
 
   /**
@@ -89,7 +89,7 @@ export default abstract class Team {
    * @param value: string
    */
   set name (value: string) {
-    this._name = value
+    this._name = value;
   }
 
   /**
@@ -97,7 +97,7 @@ export default abstract class Team {
    * @returns color: number
    */
   get color (): number {
-    return this._color
+    return this._color;
   }
 
   /**
@@ -105,7 +105,7 @@ export default abstract class Team {
    * @param value: number
    */
   set color (value: number) {
-    this._color = value
+    this._color = value;
   }
 
   /**
@@ -113,7 +113,7 @@ export default abstract class Team {
    * @returns entities: Entity[]
    */
   get entities (): Entity[] {
-    return this._entities
+    return this._entities;
   }
 
   /**
@@ -121,6 +121,6 @@ export default abstract class Team {
    * @param value: Entity[]
    */
   set entities (value: Entity[]) {
-    this._entities = value
+    this._entities = value;
   }
 }

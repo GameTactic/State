@@ -1,2 +1,2 @@
-export * from './RoomHistoryPrivate'
-export * from './types'
+export * from './RoomHistoryPrivate';
+export * from './types';

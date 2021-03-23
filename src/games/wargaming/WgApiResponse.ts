@@ -1,6 +1,6 @@
-import Api from "../abstract/Api";
-import WgMetaApiResponse from "./WgMetaApiResponse";
-import WgDataApiResponse from "./WgDataApiResponse";
+import Api from '../abstract/Api';
+import WgMetaApiResponse from './WgMetaApiResponse';
+import WgDataApiResponse from './WgDataApiResponse';
 
 export default class WgApiResponse extends Api {
   /**
@@ -28,10 +28,10 @@ export default class WgApiResponse extends Api {
     meta: WgMetaApiResponse,
     data: WgDataApiResponse
   ) {
-    super()
-    this._status = status
-    this._meta = meta
-    this._data = data
+    super();
+    this._status = status;
+    this._meta = meta;
+    this._data = data;
   }
 
   /**
@@ -39,7 +39,7 @@ export default class WgApiResponse extends Api {
    * @returns status: string
    */
   get status (): string {
-    return this._status
+    return this._status;
   }
 
   /**
@@ -47,7 +47,7 @@ export default class WgApiResponse extends Api {
    * @returns meta: WgMetaApiResponse
    */
   get meta (): WgMetaApiResponse {
-    return this._meta
+    return this._meta;
   }
 
   /**
@@ -55,6 +55,6 @@ export default class WgApiResponse extends Api {
    * @returns data: WgDataApiResponse
    */
   get data (): WgDataApiResponse {
-    return this._data
+    return this._data;
   }
 }

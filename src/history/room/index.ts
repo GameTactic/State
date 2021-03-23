@@ -1,2 +1,2 @@
-export * from './private'
-export * from './types'
+export * from './private';
+export * from './types';

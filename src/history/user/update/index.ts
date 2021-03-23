@@ -1,2 +1,2 @@
-export * from './UserHistoryUpdate'
-export * from './types'
+export * from './UserHistoryUpdate';
+export * from './types';

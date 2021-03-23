@@ -1,5 +1,5 @@
-import WowsShipDistanceApiResponse from "./WowsShipDistanceApiResponse";
-import WowsShipConcealmentApiResponse from "./WowsShipConcealmentApiResponse";
+import WowsShipDistanceApiResponse from './WowsShipDistanceApiResponse';
+import WowsShipConcealmentApiResponse from './WowsShipConcealmentApiResponse';
 
 export default class WowsShipDefaultProfileApiResponse {
   /**
@@ -32,10 +32,10 @@ export default class WowsShipDefaultProfileApiResponse {
     torpedoes: WowsShipDistanceApiResponse | undefined,
     concealment: WowsShipConcealmentApiResponse | undefined
   ) {
-    this._atbas = atbas
-    this._artillery = artillery
-    this._torpedoes = torpedoes
-    this._concealment = concealment
+    this._atbas = atbas;
+    this._artillery = artillery;
+    this._torpedoes = torpedoes;
+    this._concealment = concealment;
   }
 
   /**
@@ -43,7 +43,7 @@ export default class WowsShipDefaultProfileApiResponse {
    * @returns atbas: WowsShipDistanceApiResponseWowsShipDistanceApiResponse
    */
   get atbas (): WowsShipDistanceApiResponse | undefined {
-    return this._atbas
+    return this._atbas;
   }
 
   /**
@@ -51,7 +51,7 @@ export default class WowsShipDefaultProfileApiResponse {
    * @returns artillery: WowsShipDistanceApiResponseWowsShipDistanceApiResponse
    */
   get artillery (): WowsShipDistanceApiResponse | undefined {
-    return this._artillery
+    return this._artillery;
   }
 
   /**
@@ -59,7 +59,7 @@ export default class WowsShipDefaultProfileApiResponse {
    * @returns torpedoes: WowsShipDistanceApiResponseWowsShipDistanceApiResponse
    */
   get torpedoes (): WowsShipDistanceApiResponse | undefined {
-    return this._torpedoes
+    return this._torpedoes;
   }
 
   /**
@@ -67,6 +67,6 @@ export default class WowsShipDefaultProfileApiResponse {
    * @returns concealment: WowsShipConcealmentApiResponse
    */
   get concealment (): WowsShipConcealmentApiResponse | undefined {
-    return this._concealment
+    return this._concealment;
   }
 }

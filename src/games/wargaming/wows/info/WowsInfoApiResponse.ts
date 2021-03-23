@@ -1,5 +1,5 @@
-import WgDataApiResponse from "../../WgDataApiResponse";
-import WowsInfoShipTypeImagesApiReponse from "./WowsInfoShipTypeImagesApiReponse";
+import WgDataApiResponse from '../../WgDataApiResponse';
+import WowsInfoShipTypeImagesApiReponse from './WowsInfoShipTypeImagesApiReponse';
 
 export default class WowsInfoApiResponse extends WgDataApiResponse {
   /**
@@ -23,9 +23,9 @@ export default class WowsInfoApiResponse extends WgDataApiResponse {
     shipTypes: { [p: string]: string },
     shipTypeImages: { [p: string]: WowsInfoShipTypeImagesApiReponse }
   ) {
-    super()
-    this._shipTypes = shipTypes
-    this._shipTypeImages = shipTypeImages
+    super();
+    this._shipTypes = shipTypes;
+    this._shipTypeImages = shipTypeImages;
   }
 
   /**
@@ -33,7 +33,7 @@ export default class WowsInfoApiResponse extends WgDataApiResponse {
    * @returns shipTypes: { [p: string]: string }
    */
   get shipTypes (): { [p: string]: string } {
-    return this._shipTypes
+    return this._shipTypes;
   }
 
   /**
@@ -41,6 +41,6 @@ export default class WowsInfoApiResponse extends WgDataApiResponse {
    * @returns shipTypeImages: { [p: string]: WowsInfoShipTypeImagesApiReponse }
    */
   get shipTypeImages (): { [p: string]: WowsInfoShipTypeImagesApiReponse } {
-    return this._shipTypeImages
+    return this._shipTypeImages;
   }
 }

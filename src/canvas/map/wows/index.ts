@@ -1,1 +1,1 @@
-export * from './WowsMaps'
+export * from './WowsMaps';

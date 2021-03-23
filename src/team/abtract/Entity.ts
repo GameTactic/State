@@ -1,6 +1,6 @@
-import { v4 } from 'uuid'
-import Team from "../Team";
-import {EntityOptions} from "./types";
+import { v4 } from 'uuid';
+import Team from '../Team';
+import { EntityOptions } from './types';
 
 /**
  * The entity class
@@ -26,8 +26,8 @@ export default abstract class Entity {
    * @protected
    */
   protected constructor (options: EntityOptions) {
-    this._id = v4()
-    this._team = options.team
+    this._id = v4();
+    this._team = options.team;
   }
 
   /**
@@ -36,7 +36,7 @@ export default abstract class Entity {
    * @returns id: string
    */
   get id (): string {
-    return this._id
+    return this._id;
   }
 
   /**
@@ -44,7 +44,7 @@ export default abstract class Entity {
    * @returns: team: Team
    */
   get team (): Team {
-    return this._team
+    return this._team;
   }
 
   /**
@@ -52,6 +52,6 @@ export default abstract class Entity {
    * @param value: Team
    */
   set team (value: Team) {
-    this._team = value
+    this._team = value;
   }
 }

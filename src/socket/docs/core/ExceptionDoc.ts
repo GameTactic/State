@@ -1,6 +1,6 @@
-import SocketDoc, {SocketEventType} from "../types";
+import SocketDoc, { SocketEventType } from '../types';
 
-export default class ExceptionDoc implements SocketDoc<SocketException> {
+export default class ExceptionDoc implements SocketDoc {
     title = 'Exception';
     description = 'Returns error from previous action.';
     type = SocketEventType.OUT;

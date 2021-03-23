@@ -1,5 +1,5 @@
-import WgDataApiResponse from "../../WgDataApiResponse";
-import WowsShipDefaultProfileApiResponse from "./WowsShipDefaultProfileApiResponse";
+import WgDataApiResponse from '../../WgDataApiResponse';
+import WowsShipDefaultProfileApiResponse from './WowsShipDefaultProfileApiResponse';
 
 export default class WowsShipApiResponse extends WgDataApiResponse {
   /**
@@ -63,14 +63,14 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
     name: string,
     type: string
   ) {
-    super()
-    this._isSpecial = isSpecial
-    this._isPremium = isPremium
-    this._shipId = shipId
-    this._defaultProfile = defaultProfile
-    this._tier = tier
-    this._name = name
-    this._type = type
+    super();
+    this._isSpecial = isSpecial;
+    this._isPremium = isPremium;
+    this._shipId = shipId;
+    this._defaultProfile = defaultProfile;
+    this._tier = tier;
+    this._name = name;
+    this._type = type;
   }
 
   /**
@@ -78,7 +78,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns isSpecial: boolean
    */
   get isSpecial (): boolean {
-    return this._isSpecial
+    return this._isSpecial;
   }
 
   /**
@@ -86,7 +86,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns isPremium: boolean
    */
   get isPremium (): boolean {
-    return this._isPremium
+    return this._isPremium;
   }
 
   /**
@@ -94,7 +94,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns shipId: number
    */
   get shipId (): number {
-    return this._shipId
+    return this._shipId;
   }
 
   /**
@@ -102,7 +102,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns defaultProfile: WowsShipDefaultProfileApiResponse
    */
   get defaultProfile (): WowsShipDefaultProfileApiResponse {
-    return this._defaultProfile
+    return this._defaultProfile;
   }
 
   /**
@@ -110,7 +110,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns tier: number
    */
   get tier (): number {
-    return this._tier
+    return this._tier;
   }
 
   /**
@@ -118,7 +118,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns name: string
    */
   get name (): string {
-    return this._name
+    return this._name;
   }
 
   /**
@@ -126,6 +126,6 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
    * @returns type: string
    */
   get type (): string {
-    return this._type
+    return this._type;
   }
 }

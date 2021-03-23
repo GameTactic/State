@@ -1,5 +1,5 @@
-import {TransformableOptions} from "../abstract/types";
-import {Point} from "../../../util";
+import { TransformableOptions } from '../abstract/types';
+import { Point } from '../../../util';
 
 export enum CircleStrokeStyle {
   NORMAL = 'normal',
@@ -25,4 +25,4 @@ export const defaultCircleOptions = {
   showRadius: true,
   fillOpacity: 0.6,
   borderOpacity: 1
-}
+};

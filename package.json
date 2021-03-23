@@ -9,18 +9,24 @@
   "scripts": {
     "prepack": "yarn run build",
     "index": "yarn cti -w -b ./src",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "devDependencies": {
     "create-ts-index": "^1.13.3",
-    "pixi.js": "5.2.1",
+    "eslint": "^7.22.0",
     "typescript": "^3.9.6"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
+    "@types/pixi.js": "^4.8.9",
     "@types/uuid": "^8.3.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "@types/eslint": "^6",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "eslint": "^7"
   }
 }

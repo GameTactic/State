@@ -1,1 +1,1 @@
-export * from './ExceptionDoc'
+export * from './ExceptionDoc';

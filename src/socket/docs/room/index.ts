@@ -1,1 +1,1 @@
-export * from './setIsPrivate'
+export * from './setIsPrivate';

@@ -1,1 +1,1 @@
-export * from './AddCanvasElementsDoc'
+export * from './AddCanvasElementsDoc';

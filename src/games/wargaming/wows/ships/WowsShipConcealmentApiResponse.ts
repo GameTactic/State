@@ -20,8 +20,8 @@ export default class WowsShipConcealmentApiResponse {
     detectDistanceByPlane: number,
     detectDistanceByShip: number
   ) {
-    this._detectDistanceByPlane = detectDistanceByPlane
-    this._detectDistanceByShip = detectDistanceByShip
+    this._detectDistanceByPlane = detectDistanceByPlane;
+    this._detectDistanceByShip = detectDistanceByShip;
   }
 
   /**
@@ -29,7 +29,7 @@ export default class WowsShipConcealmentApiResponse {
    * @returns detectDistanceByPlane: number
    */
   get detectDistanceByPlane (): number {
-    return this._detectDistanceByPlane
+    return this._detectDistanceByPlane;
   }
 
   /**
@@ -37,6 +37,6 @@ export default class WowsShipConcealmentApiResponse {
    * @returns detectDistanceByShip: number
    */
   get detectDistanceByShip (): number {
-    return this._detectDistanceByShip
+    return this._detectDistanceByShip;
   }
 }

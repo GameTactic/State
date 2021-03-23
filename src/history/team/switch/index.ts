@@ -1,2 +1,2 @@
-export * from './TeamHistorySwitch'
-export * from './types'
+export * from './TeamHistorySwitch';
+export * from './types';

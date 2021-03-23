@@ -1,11 +1,11 @@
-import RootCollection from "../../tactic/collection/RootCollection";
-import User from "../../user/User";
-import {Room} from "../../room";
-import Tactic from "../../tactic/Tactic";
-import Team from "../../team/Team";
-import CanvasElement from "../../canvas/elements/abstract/CanvasElement";
-import Map from "../../canvas/map/Map";
-import History from "../../history/History";
+import RootCollection from '../../tactic/collection/RootCollection';
+import User from '../../user/User';
+import { Room } from '../../room';
+import Tactic from '../../tactic/Tactic';
+import Team from '../../team/Team';
+import CanvasElement from '../../canvas/elements/abstract/CanvasElement';
+import Map from '../../canvas/map/Map';
+import History from '../../history/History';
 
 export interface SocketState {
     collection: RootCollection;

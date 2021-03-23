@@ -28,9 +28,9 @@ export default class WowsInfoShipTypeImagesApiReponse {
     image: string,
     imageElite: string
   ) {
-    this._imagePremium = imagePremium
-    this._image = image
-    this._imageElite = imageElite
+    this._imagePremium = imagePremium;
+    this._image = image;
+    this._imageElite = imageElite;
   }
 
   /**
@@ -38,7 +38,7 @@ export default class WowsInfoShipTypeImagesApiReponse {
    * @returns imagePremium: string
    */
   get imagePremium (): string {
-    return this._imagePremium
+    return this._imagePremium;
   }
 
   /**
@@ -46,7 +46,7 @@ export default class WowsInfoShipTypeImagesApiReponse {
    * @returns image: string
    */
   get image (): string {
-    return this._image
+    return this._image;
   }
 
   /**
@@ -54,6 +54,6 @@ export default class WowsInfoShipTypeImagesApiReponse {
    * @returns imageElite: string
    */
   get imageElite (): string {
-    return this._imageElite
+    return this._imageElite;
   }
 }

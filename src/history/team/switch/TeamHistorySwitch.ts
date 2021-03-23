@@ -2,13 +2,13 @@
  * This class contains data of an team switch event
  * @author Eirmas
  */
-import History from "../../History";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import {TeamHistorySwitchOptions} from './types';
-import Team from "../../../team/Team";
-import User from "../../../user/User";
-import {HistoryEventTeam} from "../types";
+import History from '../../History';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import { TeamHistorySwitchOptions } from './types';
+import Team from '../../../team/Team';
+import User from '../../../user/User';
+import { HistoryEventTeam } from '../types';
 
 export default class TeamHistorySwitch extends History {
     /**
@@ -36,10 +36,10 @@ export default class TeamHistorySwitch extends History {
                 module: HistoryEventModules.TEAM,
                 event: HistoryEventTeam.SWITCH
             })
-        })
-        this._user = options.user
-        this._newTeam = options.newTeam
-        this._oldTeam = options.oldTeam
+        });
+        this._user = options.user;
+        this._newTeam = options.newTeam;
+        this._oldTeam = options.oldTeam;
     }
 
     /**
@@ -47,7 +47,7 @@ export default class TeamHistorySwitch extends History {
      * @returns User
      */
     get user (): User {
-        return this._user
+        return this._user;
     }
 
     /**
@@ -55,7 +55,7 @@ export default class TeamHistorySwitch extends History {
      * @returns Team
      */
     get newTeam (): Team {
-        return this._newTeam
+        return this._newTeam;
     }
 
     /**
@@ -63,6 +63,6 @@ export default class TeamHistorySwitch extends History {
      * @returns Team
      */
     get oldTeam (): Team {
-        return this._oldTeam
+        return this._oldTeam;
     }
 }

@@ -2,7 +2,7 @@
  * A class for a history event
  * @author Eirmas
  */
-import {HistoryEventEnums, HistoryEventModules, HistoryEventOptions} from "./types";
+import { HistoryEventEnums, HistoryEventModules, HistoryEventOptions } from './types';
 
 export default class HistoryEvent {
   /**
@@ -22,8 +22,8 @@ export default class HistoryEvent {
    * @param options
    */
   constructor (options: HistoryEventOptions) {
-    this._module = options.module
-    this._event = options.event
+    this._module = options.module;
+    this._event = options.event;
   }
 
   /**
@@ -31,7 +31,7 @@ export default class HistoryEvent {
    * @returns module: HistoryEventModules
    */
   get module (): HistoryEventModules {
-    return this._module
+    return this._module;
   }
 
   /**
@@ -39,6 +39,6 @@ export default class HistoryEvent {
    * @returns event: HistoryEventEnums[HistoryEventModules]
    */
   get event (): HistoryEventEnums[HistoryEventModules] {
-    return this._event
+    return this._event;
   }
 }

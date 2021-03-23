@@ -41,10 +41,10 @@ export default class WotGameModesData {
     assaultBattle: WotAssaultBattle,
     teamBattle: WotTeamBattle
   ) {
-    this._standardBattle = standardBattle
-    this._encounterBattle = encounterBattle
-    this._assaultBattle = assaultBattle
-    this._teamBattle = teamBattle
+    this._standardBattle = standardBattle;
+    this._encounterBattle = encounterBattle;
+    this._assaultBattle = assaultBattle;
+    this._teamBattle = teamBattle;
   }
 
   /**
@@ -52,7 +52,7 @@ export default class WotGameModesData {
    * @returns standardBattle: WotStandardBattle
    */
   get standardBattle (): WotStandardBattle {
-    return this._standardBattle
+    return this._standardBattle;
   }
 
   /**
@@ -60,7 +60,7 @@ export default class WotGameModesData {
    * @param value
    */
   set standardBattle (value: WotStandardBattle) {
-    this._standardBattle = value
+    this._standardBattle = value;
   }
 
   /**
@@ -68,7 +68,7 @@ export default class WotGameModesData {
    * @returns encounterBattle: WotEncounterBattle
    */
   get encounterBattle (): WotEncounterBattle {
-    return this._encounterBattle
+    return this._encounterBattle;
   }
 
   /**
@@ -76,7 +76,7 @@ export default class WotGameModesData {
    * @param value
    */
   set encounterBattle (value: WotEncounterBattle) {
-    this._encounterBattle = value
+    this._encounterBattle = value;
   }
 
   /**
@@ -84,7 +84,7 @@ export default class WotGameModesData {
    * @returns assaultBattle: WotAssaultBattle
    */
   get assaultBattle (): WotAssaultBattle {
-    return this._assaultBattle
+    return this._assaultBattle;
   }
 
   /**
@@ -92,7 +92,7 @@ export default class WotGameModesData {
    * @param value
    */
   set assaultBattle (value: WotAssaultBattle) {
-    this._assaultBattle = value
+    this._assaultBattle = value;
   }
 
   /**
@@ -100,7 +100,7 @@ export default class WotGameModesData {
    * @returns teamBattle: WotTeamBattle
    */
   get teamBattle (): WotTeamBattle {
-    return this._teamBattle
+    return this._teamBattle;
   }
 
   /**
@@ -108,6 +108,6 @@ export default class WotGameModesData {
    * @param value
    */
   set teamBattle (value: WotTeamBattle) {
-    this._teamBattle = value
+    this._teamBattle = value;
   }
 }

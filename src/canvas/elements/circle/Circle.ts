@@ -2,10 +2,10 @@
  * This class represents a circle on the canvas
  * @author Eirmas
  */
-import Transformable from "../abstract/Transformable";
-import {CanvasElementInterface, CanvasElementName} from "../abstract/types";
-import {Point} from "../../../util";
-import {CircleOptions, CircleStrokeStyle, defaultCircleOptions} from "./types";
+import Transformable from '../abstract/Transformable';
+import { CanvasElementInterface, CanvasElementName } from '../abstract/types';
+import { Point } from '../../../util';
+import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';
 
 export default class Circle extends Transformable implements CanvasElementInterface {
   /**
@@ -69,17 +69,17 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param options: CircleOptions
    */
   constructor (options: CircleOptions) {
-    super(options)
-    const completedOptions = Object.assign({}, defaultCircleOptions, options)
-    this._fill = completedOptions.fill
-    this._borderFill = completedOptions.borderFill
-    this._size = completedOptions.size
-    this._from = completedOptions.from
-    this._to = completedOptions.to
-    this._strokeStyle = completedOptions.strokeStyle
-    this._showRadius = completedOptions.showRadius
-    this._fillOpacity = completedOptions.fillOpacity
-    this._borderOpacity = completedOptions.borderOpacity
+    super(options);
+    const completedOptions = Object.assign({}, defaultCircleOptions, options);
+    this._fill = completedOptions.fill;
+    this._borderFill = completedOptions.borderFill;
+    this._size = completedOptions.size;
+    this._from = completedOptions.from;
+    this._to = completedOptions.to;
+    this._strokeStyle = completedOptions.strokeStyle;
+    this._showRadius = completedOptions.showRadius;
+    this._fillOpacity = completedOptions.fillOpacity;
+    this._borderOpacity = completedOptions.borderOpacity;
   }
 
   /**
@@ -87,7 +87,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns CanvasElementName.CIRCLE
    */
   getName = (): CanvasElementName => {
-    return CanvasElementName.CIRCLE
+    return CanvasElementName.CIRCLE;
   }
 
   /**
@@ -95,7 +95,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns boolean
    */
   get showRadius (): boolean {
-    return this._showRadius
+    return this._showRadius;
   }
 
   /**
@@ -103,7 +103,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param value: boolean
    */
   set showRadius (value: boolean) {
-    this._showRadius = value
+    this._showRadius = value;
   }
 
   /**
@@ -111,7 +111,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns CircleStrokeStyle
    */
   get strokeStyle (): CircleStrokeStyle {
-    return this._strokeStyle
+    return this._strokeStyle;
   }
 
   /**
@@ -119,7 +119,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param value: CircleStrokeStyle
    */
   set strokeStyle (value: CircleStrokeStyle) {
-    this._strokeStyle = value
+    this._strokeStyle = value;
   }
 
   /**
@@ -127,7 +127,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns to: Point
    */
   get to (): Point {
-    return this._to
+    return this._to;
   }
 
   /**
@@ -135,7 +135,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param value: Point
    */
   set to (value: Point) {
-    this._to = value
+    this._to = value;
   }
 
   /**
@@ -143,7 +143,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns from: Point
    */
   get from (): Point {
-    return this._from
+    return this._from;
   }
 
   /**
@@ -151,7 +151,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param value: Point
    */
   set from (value: Point) {
-    this._from = value
+    this._from = value;
   }
 
   /**
@@ -159,7 +159,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns size: number
    */
   get size (): number {
-    return this._size
+    return this._size;
   }
 
   /**
@@ -167,7 +167,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param value: number
    */
   set size (value: number) {
-    this._size = value
+    this._size = value;
   }
 
   /**
@@ -175,7 +175,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns borderFill: number
    */
   get borderFill (): number {
-    return this._borderFill
+    return this._borderFill;
   }
 
   /**
@@ -185,9 +185,9 @@ export default class Circle extends Transformable implements CanvasElementInterf
    */
   set borderFill (value: number) {
     if (this.isHex(value.toString())) {
-      this._borderFill = value
+      this._borderFill = value;
     } else {
-      throw new Error('Provided number is not hexadecimal')
+      throw new Error('Provided number is not hexadecimal');
     }
   }
 
@@ -196,7 +196,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns fill: number
    */
   get fill (): number {
-    return this._fill
+    return this._fill;
   }
 
   /**
@@ -207,9 +207,9 @@ export default class Circle extends Transformable implements CanvasElementInterf
    */
   set fill (value: number) {
     if (this.isHex(value.toString())) {
-      this._fill = value
+      this._fill = value;
     } else {
-      throw new Error('Provided number is not hexadecimal')
+      throw new Error('Provided number is not hexadecimal');
     }
   }
 
@@ -218,7 +218,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns fillOpacity: number
    */
   get fillOpacity (): number {
-    return this._fillOpacity
+    return this._fillOpacity;
   }
 
   /**
@@ -229,9 +229,9 @@ export default class Circle extends Transformable implements CanvasElementInterf
    */
   set fillOpacity (value: number) {
     if (value >= 0 && value <= 1) {
-      this._fillOpacity = value
+      this._fillOpacity = value;
     } else {
-      throw new Error('The number must be between 0 and 1')
+      throw new Error('The number must be between 0 and 1');
     }
   }
 
@@ -240,7 +240,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @returns borderOpacity: number
    */
   get borderOpacity (): number {
-    return this._borderOpacity
+    return this._borderOpacity;
   }
 
   /**
@@ -251,9 +251,9 @@ export default class Circle extends Transformable implements CanvasElementInterf
    */
   set borderOpacity (value: number) {
     if (value >= 0 && value <= 1) {
-      this._borderOpacity = value
+      this._borderOpacity = value;
     } else {
-      throw new Error('The number must be between 0 and 1')
+      throw new Error('The number must be between 0 and 1');
     }
   }
 }

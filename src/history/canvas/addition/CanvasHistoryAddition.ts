@@ -2,12 +2,12 @@
  * This class contains data of an addition event to the canvas
  * @author Eirmas
  */
-import CanvasElement from "../../../canvas/elements/abstract/CanvasElement";
-import {CanvasHistoryAdditionOptions} from "./types";
-import History from "../../History";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import {HistoryEventCanvas} from "../types";
+import CanvasElement from '../../../canvas/elements/abstract/CanvasElement';
+import { CanvasHistoryAdditionOptions } from './types';
+import History from '../../History';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import { HistoryEventCanvas } from '../types';
 
 export default class CanvasHistoryAddition extends History {
   /**
@@ -23,8 +23,8 @@ export default class CanvasHistoryAddition extends History {
         module: HistoryEventModules.CANVAS,
         event: HistoryEventCanvas.ADDITION
       })
-    })
-    this._elements = options.elements
+    });
+    this._elements = options.elements;
   }
 
   /**
@@ -32,6 +32,6 @@ export default class CanvasHistoryAddition extends History {
    * @returns CanvasElement[]
    */
   get elements (): CanvasElement[] {
-    return this._elements
+    return this._elements;
   }
 }

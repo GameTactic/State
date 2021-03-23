@@ -1,1 +1,1 @@
-export * from './SetIsPrivateDoc'
+export * from './SetIsPrivateDoc';

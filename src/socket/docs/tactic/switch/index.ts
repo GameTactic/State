@@ -1,2 +1,2 @@
-export * from './switchTacticInDoc'
-export * from './switchTacticOutDoc'
+export * from './switchTacticInDoc';
+export * from './switchTacticOutDoc';

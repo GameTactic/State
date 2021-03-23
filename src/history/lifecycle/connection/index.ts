@@ -1,2 +1,2 @@
-export * from './LifecycleHistoryConnection'
-export * from './types'
+export * from './LifecycleHistoryConnection';
+export * from './types';

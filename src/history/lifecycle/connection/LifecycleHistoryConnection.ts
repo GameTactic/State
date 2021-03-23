@@ -2,12 +2,12 @@
  * This class contains data of an connection event
  * @author Eirmas
  */
-import User from "../../../user/User";
-import {LifecycleHistoryConnectionOptions} from "./types";
-import History from "../../History";
-import HistoryEvent from "../../HistoryEvent";
-import {HistoryEventModules} from "../../types";
-import {HistoryEventLifecycle} from "../types";
+import User from '../../../user/User';
+import { LifecycleHistoryConnectionOptions } from './types';
+import History from '../../History';
+import HistoryEvent from '../../HistoryEvent';
+import { HistoryEventModules } from '../../types';
+import { HistoryEventLifecycle } from '../types';
 
 export default class LifecycleHistoryConnection extends History {
     /**
@@ -23,8 +23,8 @@ export default class LifecycleHistoryConnection extends History {
                 module: HistoryEventModules.LIFECYCLE,
                 event: HistoryEventLifecycle.CONNECTION
             })
-        })
-        this._user = options.user
+        });
+        this._user = options.user;
     }
 
     /**
@@ -32,6 +32,6 @@ export default class LifecycleHistoryConnection extends History {
      * @returns CanvasElement
      */
     get element (): User {
-        return this._user
+        return this._user;
     }
 }

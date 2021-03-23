@@ -7,6 +7,6 @@ export default class WowsMaps extends Map {
    * @returns MapVueComponent.WOWS
    */
   getVueComponent (): MapVueComponent {
-    return MapVueComponent.WOWS
+    return MapVueComponent.WOWS;
   }
 }

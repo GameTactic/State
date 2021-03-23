@@ -28,9 +28,9 @@ export default class WotTankImageApiResponse {
     contourIcon: string,
     bigIcon: string
   ) {
-    this._smallIcon = smallIcon
-    this._contourIcon = contourIcon
-    this._bigIcon = bigIcon
+    this._smallIcon = smallIcon;
+    this._contourIcon = contourIcon;
+    this._bigIcon = bigIcon;
   }
 
   /**
@@ -38,7 +38,7 @@ export default class WotTankImageApiResponse {
    * @returns smallIcon: string
    */
   get smallIcon (): string {
-    return this._smallIcon
+    return this._smallIcon;
   }
 
   /**
@@ -46,7 +46,7 @@ export default class WotTankImageApiResponse {
    * @returns contourIcon: string
    */
   get contourIcon (): string {
-    return this._contourIcon
+    return this._contourIcon;
   }
 
   /**
@@ -54,6 +54,6 @@ export default class WotTankImageApiResponse {
    * @returns bigIcon: string
    */
   get bigIcon (): string {
-    return this._bigIcon
+    return this._bigIcon;
   }
 }

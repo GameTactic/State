@@ -22,8 +22,8 @@ export default class WotTeamsPositions {
     team1: Point[],
     team2: Point[]
   ) {
-    this._team1 = team1
-    this._team2 = team2
+    this._team1 = team1;
+    this._team2 = team2;
   }
 
   /**
@@ -31,7 +31,7 @@ export default class WotTeamsPositions {
    * @returns team1: Point[]
    */
   get team1 (): Point[] {
-    return this._team1
+    return this._team1;
   }
 
   /**
@@ -39,7 +39,7 @@ export default class WotTeamsPositions {
    * @param value
    */
   set team1 (value: Point[]) {
-    this._team1 = value
+    this._team1 = value;
   }
 
   /**
@@ -47,7 +47,7 @@ export default class WotTeamsPositions {
    * @returns team2: Point[]
    */
   get team2 (): Point[] {
-    return this._team2
+    return this._team2;
   }
 
   /**
@@ -55,6 +55,6 @@ export default class WotTeamsPositions {
    * @param value
    */
   set team2 (value: Point[]) {
-    this._team2 = value
+    this._team2 = value;
   }
 }
