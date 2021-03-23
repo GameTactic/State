@@ -1,6 +1,6 @@
 {
   "name": "@gametactic/state",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "State Object",
   "author": "Niko Granö <niko@gametactic.eu>",
   "license": "GPL-3.0-only",
@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "create-ts-index": "^1.13.3",
-    "typescript": "^3.9.6",
-    "pixi.js": "5.2.1"
+    "pixi.js": "5.2.1",
+    "typescript": "^3.9.6"
   },
   "files": [
     "dist"
