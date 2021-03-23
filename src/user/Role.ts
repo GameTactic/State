@@ -2,7 +2,7 @@
  * The class for a user role
  * @author Eirmas
  */
-import {RoleType} from "./types";
+import {RoleOptions, RoleType} from "./types";
 import User from "./User";
 
 export default class Role {
@@ -17,9 +17,13 @@ export default class Role {
    */
   private readonly _assignedBy: User
 
-  constructor (roleType: RoleType, assignedBy: User) {
-    this._roleType = roleType
-    this._assignedBy = assignedBy
+  /**
+   * Construct the role
+   * @param options
+   */
+  constructor (options: RoleOptions) {
+    this._roleType = options.roleType
+    this._assignedBy = options.assignedBy
   }
 
   /**
