@@ -8,9 +8,13 @@ export default class RootCollection {
   private _children: Collection[]
 
   constructor (options?: RootCollectionOptions) {
+    const finalObject = Object.assign({}, {
+      name: 'root',
+      children: []
+    }, options || {})
     this._id = v4()
-    this._name = options?.name || 'root'
-    this._children = options?.children || []
+    this._name = finalObject.name
+    this._children = finalObject.children
   }
 
   get id (): string {
