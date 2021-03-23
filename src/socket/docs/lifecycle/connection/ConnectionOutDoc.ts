@@ -9,7 +9,4 @@ export default class ConnectionOutDoc implements SocketDoc {
     event = 'connection';
 }
 
-export type ConnectionOutDocPayload = LifecycleHistoryConnection | {
-    state: PartialState;
-    history: LifecycleHistoryConnection;
-};
+export type ConnectionOutDocPayload = LifecycleHistoryConnection | PartialState;
