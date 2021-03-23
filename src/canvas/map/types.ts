@@ -1,7 +1,7 @@
 import User from '../../user/User';
 import Tactic from '../../tactic/Tactic';
 import { Dimensions, Point } from '../../util';
-import { Texture } from 'pixi.js';
+import { Texture } from '@pixi/core';
 
 export interface MapOptions {
   name: string;

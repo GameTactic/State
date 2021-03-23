@@ -1,5 +1,5 @@
 import { MapInterface, MapVueComponent } from '../types';
-import { Texture } from 'pixi.js';
+import { Texture } from '@pixi/core';
 import { Dimensions, Point } from '../../util';
 import User from '../../user/User';
 import Tactic from '../../tactic/Tactic';
@@ -115,7 +115,7 @@ export default class Map implements MapInterface {
    * Returns the PIXI texture of the map
    * @returns texture: PIXI.Texture
    */
-  get texture (): PIXI.Texture {
+  get texture (): Texture {
     return this._texture;
   }
 
@@ -123,7 +123,7 @@ export default class Map implements MapInterface {
    * Sets the texture for the map
    * @param value: PIXI.Texture
    */
-  set texture (value: PIXI.Texture) {
+  set texture (value: Texture) {
     this._texture = value;
   }
 
