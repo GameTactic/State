@@ -29,9 +29,9 @@ export default class LifecycleHistoryConnection extends History {
 
     /**
      * Return the user who connected
-     * @returns CanvasElement
+     * @returns user: User
      */
-    get element (): User {
+    get user (): User {
         return this._user;
     }
 }

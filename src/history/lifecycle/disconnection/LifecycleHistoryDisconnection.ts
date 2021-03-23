@@ -29,9 +29,9 @@ export default class LifecycleHistoryDisconnection extends History {
 
     /**
      * Return the user who disconnected
-     * @returns CanvasElement
+     * @returns user: User
      */
-    get element (): User {
+    get user (): User {
         return this._user;
     }
 }
