@@ -29,10 +29,10 @@ export default class TacticHistoryAdd extends History {
     }
 
     /**
-     * Return the added tactic
-     * @returns Tactic
+     * Return the added tactics data
+     * @returns data: TacticData
      */
-    get tactic (): Tactic {
-        return this._data.tactic
+    get tacticData (): TacticData {
+        return this._data
     }
 }
