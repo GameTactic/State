@@ -1,33 +1,41 @@
 import User from "../user/User";
 import HistoryEvent from "./HistoryEvent";
-import {Namespaces} from "../modules/types";
-import {HistoryEventCanvas} from "./canvas/types";
-import {HistoryEventAuthentication} from "./authentication/types";
-import {HistoryEventRoom} from "./room/types";
-import {HistoryEventUser} from "./user/types";
-import {HistoryEventTool} from "./tool/types";
-import {HistoryEventTeam} from "./team/types";
-import {HistoryEventTactic} from "./tactic/types";
+import {HistoryEventCanvas} from "./canvas";
+import {HistoryEventRoom} from "./room";
+import {HistoryEventUser} from "./user";
+import {HistoryEventTeam} from "./team";
+import {HistoryEventTactic} from "./tactic";
+import {HistoryEventLifecycle} from "./lifecycle";
 
-export interface HistoryOptions {
-  id?: string;
-  timestamp?: number;
-  creator: User;
+export interface HistoryOptions extends AbstractHistoryOptions {
   event: HistoryEvent;
 }
 
+export interface AbstractHistoryOptions {
+  id?: string;
+  timestamp?: number;
+  creator: User;
+}
+
 export interface HistoryEventOptions {
-  module: Namespaces;
-  event: HistoryEventEnums[Namespaces];
+  module: HistoryEventModules;
+  event: HistoryEventEnums[HistoryEventModules];
+}
+
+export enum HistoryEventModules {
+  CANVAS = 'CANVAS',
+  LIFECYCLE = 'LIFECYCLE',
+  ROOM = 'ROOM',
+  TACTIC = 'TACTIC',
+  TEAM = 'TEAM',
+  USER = 'USER'
 }
 
 export interface HistoryEventEnums {
-  [Namespaces.CANVAS]: HistoryEventCanvas;
-  [Namespaces.AUTHENTICATION]: HistoryEventAuthentication;
-  [Namespaces.ROOM]: HistoryEventRoom;
-  [Namespaces.USER]: HistoryEventUser;
-  [Namespaces.TOOL]: HistoryEventTool;
-  [Namespaces.TACTIC]: HistoryEventTactic;
-  [Namespaces.TEAM]: HistoryEventTeam;
-  [Namespaces.HISTORY]: null;
+  [HistoryEventModules.CANVAS]: HistoryEventCanvas;
+  [HistoryEventModules.LIFECYCLE]: HistoryEventLifecycle;
+  [HistoryEventModules.ROOM]: HistoryEventRoom;
+  [HistoryEventModules.TACTIC]: HistoryEventTactic;
+  [HistoryEventModules.TEAM]: HistoryEventTeam;
+  [HistoryEventModules.USER]: HistoryEventUser;
 }

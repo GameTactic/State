@@ -2,21 +2,20 @@
  * A class for a history event
  * @author Eirmas
  */
-import {HistoryEventEnums, HistoryEventOptions} from "./types";
-import {Namespaces} from "../modules/types";
+import {HistoryEventEnums, HistoryEventModules, HistoryEventOptions} from "./types";
 
 export default class HistoryEvent {
   /**
-   * The name of the module the event made changes to
+   * The name of the history module the event made changes to
    * @private
    */
-  private readonly _module: Namespaces
+  private readonly _module: HistoryEventModules
 
   /**
    * The event that took place
    * @private
    */
-  private readonly _event: HistoryEventEnums[Namespaces]
+  private readonly _event: HistoryEventEnums[HistoryEventModules]
 
   /**
    * Construct the object
@@ -28,18 +27,18 @@ export default class HistoryEvent {
   }
 
   /**
-   * Returns the name of the module the event made changes to
-   * @returns module: Namespaces
+   * Returns the name of the history module the event made changes to
+   * @returns module: HistoryEventModules
    */
-  get module (): Namespaces {
+  get module (): HistoryEventModules {
     return this._module
   }
 
   /**
    * Returns the event that took place
-   * @returns event: HistoryEventEnums[Namespaces]
+   * @returns event: HistoryEventEnums[HistoryEventModules]
    */
-  get event (): HistoryEventEnums[Namespaces] {
+  get event (): HistoryEventEnums[HistoryEventModules] {
     return this._event
   }
 }
