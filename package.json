@@ -13,15 +13,14 @@
   },
   "devDependencies": {
     "create-ts-index": "^1.13.3",
-    "konva": "^7.2.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "pixi.js": "5.2.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
     "@types/uuid": "^8.3.0",
-    "pixi.js": "5.2.1",
     "uuid": "^8.3.2"
   }
 }
