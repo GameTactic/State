@@ -1,5 +1,4 @@
 import { MapInterface, MapVueComponent } from '../types';
-import { Texture } from '@pixi/core';
 import { Dimensions, Point } from '../../util';
 import User from '../../user/User';
 import Tactic from '../../tactic/Tactic';
@@ -20,9 +19,10 @@ export default class Map implements MapInterface {
 
   /**
    * A PIXI Texture of the map
+   * Defined as object because of socket issues
    * @private
    */
-  private _texture: Texture
+  private _texture: Object
 
   /**
    * The ratio of the map.
@@ -115,7 +115,7 @@ export default class Map implements MapInterface {
    * Returns the PIXI texture of the map
    * @returns texture: PIXI.Texture
    */
-  get texture (): Texture {
+  get texture (): Object {
     return this._texture;
   }
 
@@ -123,7 +123,7 @@ export default class Map implements MapInterface {
    * Sets the texture for the map
    * @param value: PIXI.Texture
    */
-  set texture (value: Texture) {
+  set texture (value: Object) {
     this._texture = value;
   }
 
