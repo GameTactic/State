@@ -7,25 +7,26 @@ import CanvasElement from '../../canvas/elements/abstract/CanvasElement';
 import Map from '../../canvas/map/Map';
 import History from '../../history/History';
 
-export interface SocketState {
+export interface SocketStateOptions {
     collection: RootCollection;
-    users: { [key: string]: User };
-    tactics: { [key: string]: TacticData }
-    history: { [key: string]: History }
+    users: { [jti: string]: User };
+    tactics: { [id: string]: TacticData }
+    history: { [id: string]: History }
     room: Room
+    [key: string]: any
 }
 
 export interface TacticData {
     tactic: Tactic;
-    teams: { [key: string]: Team }
-    elements: { [key: string]: CanvasElement }
+    teams: { [id: string]: Team }
+    elements: { [id: string]: CanvasElement }
     map: Map;
 }
 
 export interface PartialState {
     room: Room,
     collection: RootCollection,
-    users: { [key: string]: User },
-    history: { [key: string]: History },
-    tactics: { [key: string]: Tactic }
+    users: { [jti: string]: User },
+    history: { [id: string]: History },
+    tactics: { [id: string]: Tactic }
 }

@@ -3,9 +3,10 @@
  * @author Eirmas
  */
 import Transformable from '../abstract/Transformable';
-import { CanvasElementInterface, CanvasElementName } from '../abstract/types';
+import { CanvasElementInterface, CanvasElementName } from '..';
 import { Point } from '../../../util';
 import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';
+import Validator from '../../../util/Validator';
 
 export default class Circle extends Transformable implements CanvasElementInterface {
   /**
@@ -184,7 +185,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @param value: number
    */
   set borderFill (value: number) {
-    if (this.isHex(value.toString())) {
+    if (Validator.isHex(value.toString())) {
       this._borderFill = value;
     } else {
       throw new Error('Provided number is not hexadecimal');
@@ -206,7 +207,7 @@ export default class Circle extends Transformable implements CanvasElementInterf
    * @throws Error
    */
   set fill (value: number) {
-    if (this.isHex(value.toString())) {
+    if (Validator.isHex(value.toString())) {
       this._fill = value;
     } else {
       throw new Error('Provided number is not hexadecimal');

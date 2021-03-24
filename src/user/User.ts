@@ -4,7 +4,20 @@
  */
 import { UserOptions } from './types';
 import Role from './Role';
+import {Serialize} from "serialazy";
 
+@Serialize<UserOptions, User>({
+  down: ((user: User) => ({
+    jti: user.jti,
+    name: user.name,
+    onTacticId: user.onTacticId,
+    onTeamId: user.onTeamId,
+    isOnline: user.isOnline,
+    lastOnline: user.lastOnline,
+    roles: user.roles
+  })),
+  up: ((options: UserOptions) => new User(options))
+})
 export default class User {
   /**
    * The users unique ID from the JWT token

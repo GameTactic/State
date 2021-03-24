@@ -1,16 +1,15 @@
-import User from '../../user/User';
-import Tactic from '../../tactic/Tactic';
 import { Dimensions, Point } from '../../util';
 
 export interface MapOptions {
   name: string;
   description: string;
-  creator: User;
-  tactic: Tactic;
+  creatorId: string;
+  tacticId: string;
   texture: Object;
   sizeConstant?: number;
   ratio?: Point;
-  dimension?: Dimensions;
+  dimensions?: Dimensions;
+  [key: string]: any;
 }
 
 export const defaultMapOptions = {
@@ -19,7 +18,7 @@ export const defaultMapOptions = {
     x: 1,
     y: 1
   },
-  dimension: {
+  dimensions: {
     width: 1000,
     height: 1000
   }

@@ -12,10 +12,10 @@ export default class Role {
    */
   private readonly _roleType: RoleType
   /**
-   * The user who assigned the role
+   * The id of the user who assigned the role
    * @private
    */
-  private readonly _assignedBy: User
+  private readonly _assignedBy: string
 
   /**
    * Construct the role
@@ -27,10 +27,10 @@ export default class Role {
   }
 
   /**
-   * Returns the user who assigned the role
-   * @returns User
+   * Returns the userId of who assigned the role
+   * @returns assignedBy: string
    */
-  get assignedBy (): User {
+  get assignedBy (): string {
     return this._assignedBy;
   }
 

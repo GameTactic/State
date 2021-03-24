@@ -2,9 +2,11 @@ import Collection from './collection/Collection';
 import User from '../user/User';
 
 export interface TacticOptions {
+  id?: string;
   name: string;
   collection: Collection;
-  creator: User;
+  creatorId: string;
+  [key: string]: any;
 }
 
 export interface CollectionOptions extends RootCollectionOptions {
@@ -14,6 +16,8 @@ export interface CollectionOptions extends RootCollectionOptions {
 }
 
 export interface RootCollectionOptions {
+  id?: string;
   name?: string;
   children?: Collection[];
+  [key: string]: any;
 }

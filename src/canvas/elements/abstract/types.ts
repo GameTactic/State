@@ -18,9 +18,11 @@ export interface TransformInterface {
 }
 
 export interface CanvasElementOptions {
+  id?: string;
   temporary: boolean;
-  creator: User;
-  tactic: Tactic;
+  creatorId: string;
+  tacticId: string;
+  [key: string]: any;
 }
 
 export interface TransformableOptions extends CanvasElementOptions {

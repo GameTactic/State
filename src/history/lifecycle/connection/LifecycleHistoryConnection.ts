@@ -2,19 +2,28 @@
  * This class contains data of an connection event
  * @author Eirmas
  */
-import User from '../../../user/User';
 import { LifecycleHistoryConnectionOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventLifecycle } from '../types';
+import { Serialize } from 'serialazy';
 
+@Serialize<LifecycleHistoryConnectionOptions, LifecycleHistoryConnection>({
+    down: ((history: LifecycleHistoryConnection) => ({
+        id: history.id,
+        userId: history.userId,
+        timestamp: history.timestamp,
+        creatorId: history.userId
+    })),
+    up: ((options: LifecycleHistoryConnectionOptions) => new LifecycleHistoryConnection(options))
+})
 export default class LifecycleHistoryConnection extends History {
     /**
-     * The user who connected
+     * The ID of the user who connected
      * @private
      */
-    private readonly _user: User
+    private readonly _userId: string
 
     constructor (options: LifecycleHistoryConnectionOptions) {
         super({
@@ -24,14 +33,14 @@ export default class LifecycleHistoryConnection extends History {
                 event: HistoryEventLifecycle.CONNECTION
             })
         });
-        this._user = options.user;
+        this._userId = options.userId;
     }
 
     /**
-     * Return the user who connected
-     * @returns user: User
+     * Return the ID of the user who connected
+     * @returns userId: string
      */
-    get user (): User {
-        return this._user;
+    get userId (): string {
+        return this._userId;
     }
 }

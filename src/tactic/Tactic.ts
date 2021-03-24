@@ -1,19 +1,28 @@
 import Collection from './collection/Collection';
 import { v4 } from 'uuid';
 import { TacticOptions } from './types';
-import User from '../user/User';
+import {Serialize} from "serialazy";
 
+@Serialize<TacticOptions, Tactic>({
+  down: ((tactic: Tactic) => ({
+    id: tactic.id,
+    name: tactic.name,
+    collection: tactic.collection,
+    creatorId: tactic.creatorId
+  })),
+  up: ((options: TacticOptions) => new Tactic(options))
+})
 export default class Tactic {
   private _id: string
   private _name: string
   private _collection: Collection
-  private _creator: User
+  private _creatorId: string
 
   constructor (options: TacticOptions) {
     this._id = v4();
     this._name = options.name;
     this._collection = options.collection;
-    this._creator = options.creator;
+    this._creatorId = options.creatorId;
   }
 
   get id (): string {
@@ -40,11 +49,11 @@ export default class Tactic {
     this._collection = value;
   }
 
-  get creator (): User {
-    return this._creator;
+  get creatorId (): string {
+    return this._creatorId;
   }
 
-  set creator (value: User) {
-    this._creator = value;
+  set creatorId (value: string) {
+    this._creatorId = value;
   }
 }

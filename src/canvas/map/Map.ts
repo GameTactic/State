@@ -1,9 +1,21 @@
 import { MapInterface, MapVueComponent } from '../types';
 import { Dimensions, Point } from '../../util';
-import User from '../../user/User';
-import Tactic from '../../tactic/Tactic';
 import { defaultMapOptions, MapOptions } from './types';
+import {Serialize} from "serialazy";
 
+@Serialize<MapOptions, Map>({
+  down: ((map: Map) => ({
+    name: map.name,
+    description: map.description,
+    texture: map.texture,
+    ratio: map.ratio,
+    creatorId: map.creatorId,
+    sizeConstant: map.sizeConstant,
+    dimensions: map.dimensions,
+    tacticId: map.tacticId
+  })),
+  up: ((options: MapOptions) => new Map(options))
+})
 export default class Map implements MapInterface {
   /**
    * The name of the map
@@ -32,10 +44,10 @@ export default class Map implements MapInterface {
   private _ratio: Point
 
   /**
-   * The user who initialized the map
+   * The id of the user who initialized the map
    * @private
    */
-  private readonly _creator: User
+  private readonly _creatorId: string
 
   /**
    * A constant to regulate the size of different properties of tools
@@ -50,10 +62,10 @@ export default class Map implements MapInterface {
   private _dimensions: Dimensions
 
   /**
-   * The tactic the map relates to
+   * The ID of the tactic the map relates to
    * @private
    */
-  private _tactic: Tactic
+  private _tacticId: string
 
   /**
    * Construct the map
@@ -66,9 +78,9 @@ export default class Map implements MapInterface {
     this._texture = finalOptions.texture;
     this._ratio = finalOptions.ratio;
     this._sizeConstant = finalOptions.sizeConstant;
-    this._creator = finalOptions.creator;
-    this._dimensions = finalOptions.dimension;
-    this._tactic = finalOptions.tactic;
+    this._creatorId = finalOptions.creator;
+    this._dimensions = finalOptions.dimensions;
+    this._tacticId = finalOptions.tactic;
   }
 
   /**
@@ -151,10 +163,10 @@ export default class Map implements MapInterface {
 
   /**
    * Returns the user who initialized the map
-   * @returns creator: User
+   * @returns creator: string
    */
-  get creator (): User {
-    return this._creator;
+  get creatorId (): string {
+    return this._creatorId;
   }
 
   /**
@@ -190,18 +202,18 @@ export default class Map implements MapInterface {
   }
 
   /**
-   * Returns the tactic the map relates to
-   * @returns tactic: Tactic
+   * Returns the ID of the tactic the map relates to
+   * @returns tactic: string
    */
-  get tactic (): Tactic {
-    return this._tactic;
+  get tacticId (): string {
+    return this._tacticId;
   }
 
   /**
-   * Sets the tactic the map relates to
-   * @param value: Tactic
+   * Sets the ID of the tactic the map relates to
+   * @param value: string
    */
-  set tactic (value: Tactic) {
-    this._tactic = value;
+  set tacticId (value: string) {
+    this._tacticId = value;
   }
 }

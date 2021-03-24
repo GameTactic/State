@@ -1,4 +1,3 @@
-import User from '../user/User';
 import HistoryEvent from './HistoryEvent';
 import { HistoryEventCanvas } from './canvas';
 import { HistoryEventRoom } from './room';
@@ -14,7 +13,8 @@ export interface HistoryOptions extends AbstractHistoryOptions {
 export interface AbstractHistoryOptions {
   id?: string;
   timestamp?: number;
-  creator: User;
+  creatorId: string;
+  [key: string]: any;
 }
 
 export interface HistoryEventOptions {

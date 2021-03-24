@@ -16,9 +16,10 @@ export interface UserOptions {
   isOnline: boolean;
   lastOnline: number;
   roles: Role[];
+  [key: string]: any;
 }
 
 export interface RoleOptions {
   roleType: RoleType;
-  assignedBy: User;
+  assignedBy: string;
 }

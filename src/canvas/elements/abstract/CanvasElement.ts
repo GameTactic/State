@@ -1,9 +1,13 @@
 import { v4 } from 'uuid';
-import User from '../../../user/User';
-import Tactic from '../../../tactic/Tactic';
 import { CanvasElementInterface, CanvasElementName, CanvasElementOptions } from './types';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
+
+  /**
+   * The ID of the element as a UUID
+   * @private
+   */
+  private readonly _id: string
   /**
    * Determines if the canvas element should be displayed for only a set period of time
    * @private
@@ -11,28 +15,22 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   private readonly _temporary: boolean
 
   /**
-   * The ID of the element as a UUID
+   * The ID of the creator of the canvas element
    * @private
    */
-  private readonly _id: string
+  private readonly _creatorId: string
 
   /**
-   * Creator of the canvas element
+   * The ID of the tactic the canvas element relates to
    * @private
    */
-  private readonly _creator: User
-
-  /**
-   * The tactic the canvas element relates to
-   * @private
-   */
-  private readonly _tactic: Tactic
+  private readonly _tacticId: string
 
   protected constructor (options: CanvasElementOptions) {
-    this._id = v4();
+    this._id = options.id || v4();
     this._temporary = options.temporary;
-    this._creator = options.creator;
-    this._tactic = options.tactic;
+    this._creatorId = options.creatorId;
+    this._tacticId = options.tacticId;
   }
 
   /**
@@ -68,27 +66,18 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   }
 
   /**
-   * Returns the creator of the canvas element
-   * @returns User
+   * Returns the ID of the creator of the canvas element
+   * @returns string
    */
-  get creator (): User {
-    return this._creator;
+  get creatorId (): string {
+    return this._creatorId;
   }
 
   /**
-   * Checks a string if it's a valid hexadecimal
-   * @param value: string
-   * @returns boolean
+   * Returns the ID of the tactic the canvas element relates to
+   * @returns tacticId: string
    */
-  isHex (value: string): boolean {
-    return Boolean(value.match(/^0x[0-9a-f]+$/i));
-  }
-
-  /**
-   * Returns the tactic the canvas element relates to
-   * @returns tactic: Tactic
-   */
-  get tactic (): Tactic {
-    return this._tactic;
+  get tacticId (): string {
+    return this._tacticId;
   }
 }

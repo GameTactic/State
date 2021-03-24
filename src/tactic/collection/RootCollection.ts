@@ -1,7 +1,16 @@
 import { v4 } from 'uuid';
 import Collection from './Collection';
 import { RootCollectionOptions } from '../types';
+import {Serialize} from "serialazy";
 
+@Serialize<RootCollectionOptions, RootCollection>({
+  down: ((rootCollection: RootCollection) => ({
+    id: rootCollection.id,
+    name: rootCollection.name,
+    children: rootCollection.children
+  })),
+  up: ((options: RootCollectionOptions) => new RootCollection(options))
+})
 export default class RootCollection {
   private _id: string
   private _name: string
@@ -9,10 +18,11 @@ export default class RootCollection {
 
   constructor (options?: RootCollectionOptions) {
     const finalObject = Object.assign({}, {
+      id: v4(),
       name: 'root',
       children: []
     }, options || {});
-    this._id = v4();
+    this._id = finalObject.id;
     this._name = finalObject.name;
     this._children = finalObject.children;
   }
