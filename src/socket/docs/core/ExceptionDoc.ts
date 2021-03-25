@@ -4,7 +4,7 @@ export default class ExceptionDoc implements SocketDoc {
     title = 'Exception';
     description = 'Returns error from previous action.';
     type = SocketEventType.OUT;
-    event = 'exception';
+    event = 'exception'; // Custom event
 }
 
 export interface SocketException {
