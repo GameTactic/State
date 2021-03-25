@@ -8,18 +8,10 @@ import SerializeHelper from '../../util/SerializeHelper';
   up: ((options: CollectionOptions) => new Collection(options))
 })
 export default class Collection extends RootCollection {
-  private _parentId: string
+  public parentId: string
 
   constructor (options: CollectionOptions) {
     super(options);
-    this._parentId = options.parentId;
-  }
-
-  get parent (): string {
-    return this._parentId;
-  }
-
-  set parent (value: string) {
-    this._parentId = value;
+    this.parentId = options.parentId;
   }
 }

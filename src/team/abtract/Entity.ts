@@ -11,15 +11,15 @@ import { EntityOptions } from './types';
 export default abstract class Entity {
   /**
    * The ID of the entity.
-   * @private
+   * @public
    */
-  private readonly _id: string
+  public readonly id: string
 
   /**
    * The team that the entity is related to
-   * @private
+   * @public
    */
-  private _teamId: string
+  public teamId: string
 
   /**
    * Construct the instance
@@ -27,32 +27,7 @@ export default abstract class Entity {
    * @protected
    */
   protected constructor (options: EntityOptions) {
-    this._id = options.id || v4();
-    this._teamId = options.teamId;
-  }
-
-  /**
-   * Return the ID of the entity
-   * Represented as an UUID string
-   * @returns id: string
-   */
-  get id (): string {
-    return this._id;
-  }
-
-  /**
-   * Return the team that the entity is related to
-   * @returns: team: string
-   */
-  get teamId (): string {
-    return this._teamId;
-  }
-
-  /**
-   * Set the team that the entity is related to
-   * @param value: string
-   */
-  set teamId (value: string) {
-    this._teamId = value;
+    this.id = options.id || v4();
+    this.teamId = options.teamId;
   }
 }

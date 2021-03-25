@@ -10,33 +10,33 @@ import { TeamOptions } from './types';
 export default abstract class Team {
   /**
    * The ID of the team. Represented by a UUIDv4 string
-   * @private
+   * @public
    */
-  private readonly _id: string
+  public readonly id: string
 
   /**
    * The ID of the tactic that the team is associated with
-   * @private
+   * @public
    */
-  private _tacticId: string
+  public tacticId: string
 
   /**
    * The name of the team
-   * @private
+   * @public
    */
-  private _name: string
+  public name: string
 
   /**
    * The color of the team
-   * @private
+   * @public
    */
-  private _color: number
+  public color: number
 
   /**
    * The team entities
-   * @private
+   * @public
    */
-  private _entities: Entity[]
+  public entities: Entity[]
 
   /**
    * Construct the instance
@@ -44,82 +44,10 @@ export default abstract class Team {
    * @protected
    */
   protected constructor (options: TeamOptions) {
-    this._id = options.id || v4();
-    this._tacticId = options.tacticId;
-    this._name = options.name;
-    this._color = options.color;
-    this._entities = options.entities || [];
-  }
-
-  /**
-   * Returns the ID of the team as an UUIDv4 string
-   * @returns id: string
-   */
-  get id (): string {
-    return this._id;
-  }
-
-  /**
-   * Returns the ID of the tactic that the team is related to
-   * @returns tactic: Tactic
-   */
-  get tacticId (): string {
-    return this._tacticId;
-  }
-
-  /**
-   * Sets the ID of the tactic that the team is related to
-   * @param value: Tactic
-   */
-  set tacticId (value: string) {
-    this._tacticId = value;
-  }
-
-  /**
-   * Returns the name of the team
-   * @returns name: string
-   */
-  get name (): string {
-    return this._name;
-  }
-
-  /**
-   * Sets the name of the team
-   * @param value: string
-   */
-  set name (value: string) {
-    this._name = value;
-  }
-
-  /**
-   * Returns the color of the team represented as a hexadecimal number
-   * @returns color: number
-   */
-  get color (): number {
-    return this._color;
-  }
-
-  /**
-   * Sets the color of the team
-   * @param value: number
-   */
-  set color (value: number) {
-    this._color = value;
-  }
-
-  /**
-   * Returns the teams entities
-   * @returns entities: Entity[]
-   */
-  get entities (): Entity[] {
-    return this._entities;
-  }
-
-  /**
-   * Sets the teams entities
-   * @param value: Entity[]
-   */
-  set entities (value: Entity[]) {
-    this._entities = value;
+    this.id = options.id || v4();
+    this.tacticId = options.tacticId;
+    this.name = options.name;
+    this.color = options.color;
+    this.entities = options.entities || [];
   }
 }

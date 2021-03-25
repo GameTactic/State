@@ -13,37 +13,21 @@ import SerializeHelper from '../util/SerializeHelper';
 export default class Role {
   /**
    * The users role
-   * @private
+   * @public
    */
-  private readonly _roleType: RoleType
+  public readonly roleType: RoleType
   /**
    * The id of the user who assigned the role
-   * @private
+   * @public
    */
-  private readonly _assigneeId: string
+  public readonly assigneeId: string
 
   /**
    * Construct the role
    * @param options
    */
   constructor (options: RoleOptions) {
-    this._roleType = options.roleType;
-    this._assigneeId = options.assigneeId;
-  }
-
-  /**
-   * Returns the userId of who assigned the role
-   * @returns assignedBy: string
-   */
-  get assigneeId (): string {
-    return this._assigneeId;
-  }
-
-  /**
-   * Returns the role type
-   * @returns RoleType
-   */
-  get roleType (): RoleType {
-    return this._roleType;
+    this.roleType = options.roleType;
+    this.assigneeId = options.assigneeId;
   }
 }
