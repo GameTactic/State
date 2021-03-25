@@ -11,11 +11,7 @@ export default class Collection extends RootCollection {
   private _parentId: string
 
   constructor (options: CollectionOptions) {
-    super({
-      name: options.name,
-      children: options.children,
-      creatorId: options.creatorId
-    });
+    super(options);
     this._parentId = options.parentId;
   }
 

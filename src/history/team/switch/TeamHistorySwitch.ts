@@ -50,7 +50,7 @@ export default class TeamHistorySwitch extends History {
      * Return the ID of the user who switched
      * @returns User
      */
-    get user (): string {
+    get userId (): string {
         return this._userId;
     }
 
@@ -58,7 +58,7 @@ export default class TeamHistorySwitch extends History {
      * Return the ID of the team the user switched to
      * @returns Team
      */
-    get newTeam (): string {
+    get newTeamId (): string {
         return this._newTeamId;
     }
 
@@ -66,7 +66,7 @@ export default class TeamHistorySwitch extends History {
      * Return the ID of the team the user switched from
      * @returns Team
      */
-    get oldTeam (): string {
+    get oldTeamId (): string {
         return this._oldTeamId;
     }
 }
