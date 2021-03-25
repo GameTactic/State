@@ -3,8 +3,7 @@
  * @author Eirmas
  */
 import CanvasElement from './CanvasElement';
-import {defaultTransformableOptions, TransformableOptions, TransformInterface} from './types';
-import { Point } from '../../../util';
+import { defaultTransformableOptions, TransformableOptions, TransformInterface } from './types';
 
 export default abstract class Transformable extends CanvasElement {
   /**

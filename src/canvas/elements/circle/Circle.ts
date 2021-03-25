@@ -3,10 +3,10 @@
  * @author Eirmas
  */
 import Transformable from '../abstract/Transformable';
-import {CanvasElementName} from '..';
-import {Point} from '../../../util';
-import {CircleOptions, CircleStrokeStyle, defaultCircleOptions} from './types';
-import {Serialize} from 'serialazy';
+import { CanvasElementName } from '..';
+import { Point } from '../../../util';
+import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';
+import { Serialize } from 'serialazy';
 import SerializeHelper from '../../../util/SerializeHelper';
 
 @Serialize<CircleOptions, Circle>({
@@ -93,6 +93,6 @@ export default class Circle extends Transformable {
     this.showRadius = completedOptions.showRadius;
     this.fillOpacity = completedOptions.fillOpacity;
     this.borderOpacity = completedOptions.borderOpacity;
-    this.name = CanvasElementName.CIRCLE
+    this.name = CanvasElementName.CIRCLE;
   }
 }

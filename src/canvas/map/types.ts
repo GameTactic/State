@@ -1,5 +1,5 @@
 import { Dimensions, Point } from '../../util';
-import {MapVueComponent} from "../types";
+import { MapVueComponent } from '../types';
 
 export interface MapOptions {
   name: string;

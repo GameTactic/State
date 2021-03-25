@@ -3,7 +3,7 @@ import { Dimensions, Point } from '../../util';
 import { defaultMapOptions, MapOptions } from './types';
 import { Serialize } from 'serialazy';
 import SerializeHelper from '../../util/SerializeHelper';
-import {MapVueComponent} from "../types";
+import { MapVueComponent } from '../types';
 
 @Serialize<MapOptions, Map>({
   down: ((map: Map) => SerializeHelper.toDown(map)),
@@ -81,6 +81,6 @@ export default class Map implements MapInterface {
     this.creatorId = finalOptions.creator;
     this.dimensions = finalOptions.dimensions;
     this.tacticId = finalOptions.tactic;
-    this.mapVueComponent = MapVueComponent.DEFAULT
+    this.mapVueComponent = MapVueComponent.DEFAULT;
   }
 }

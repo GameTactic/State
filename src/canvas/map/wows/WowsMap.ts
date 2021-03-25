@@ -1,9 +1,9 @@
-import {MapVueComponent} from '../../types';
+import { MapVueComponent } from '../../types';
 import Map from '../Map';
-import {Serialize} from 'serialazy';
-import {WowsMapOptions} from './types';
+import { Serialize } from 'serialazy';
+import { WowsMapOptions } from './types';
 import SerializeHelper from '../../../util/SerializeHelper';
-import {MapInterface} from "../types";
+import { MapInterface } from '../types';
 
 @Serialize<WowsMapOptions, WowsMap>({
   down: ((map: WowsMap) => SerializeHelper.toDown(map)),
@@ -19,6 +19,6 @@ export default class WowsMap extends Map implements MapInterface {
 
   constructor(options: WowsMapOptions) {
     super(options);
-    this.mapVueComponent = MapVueComponent.WOWS
+    this.mapVueComponent = MapVueComponent.WOWS;
   }
 }

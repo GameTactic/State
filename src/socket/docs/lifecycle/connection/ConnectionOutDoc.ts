@@ -1,7 +1,7 @@
 import SocketDoc, { SocketEventType } from '../../types';
 import LifecycleHistoryConnection from '../../../../history/lifecycle/connection/LifecycleHistoryConnection';
 import { PartialState } from '../../../state';
-import User from "../../../../user/User";
+import User from '../../../../user/User';
 
 export default class ConnectionOutDoc implements SocketDoc {
     title = 'Connect';

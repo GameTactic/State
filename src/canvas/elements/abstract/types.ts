@@ -38,4 +38,4 @@ export const defaultTransformableOptions = {
     y: 1
   },
   rotation: 0
-}
+};
