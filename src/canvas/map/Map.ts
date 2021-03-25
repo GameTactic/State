@@ -1,14 +1,8 @@
 import { MapInterface } from './types';
 import { Dimensions, Point } from '../../util';
 import { defaultMapOptions, MapOptions } from './types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../util/SerializeHelper';
 import { MapVueComponent } from '../types';
 
-@Serialize<MapOptions, Map>({
-  down: ((map: Map) => SerializeHelper.toDown(map)),
-  up: ((options: MapOptions) => new Map(options))
-})
 export default class Map implements MapInterface {
   /**
    * The name of the map

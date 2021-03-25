@@ -3,13 +3,7 @@ import WotEncounterBattle from './gamemodes/WotEncounterBattle';
 import WotAssaultBattle from './gamemodes/WotAssaultBattle';
 import WotTeamBattle from './gamemodes/WotTeamBattle';
 import { WotGameModesDataOptions } from './types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../../util/SerializeHelper';
 
-@Serialize<WotGameModesDataOptions, WotGameModesData>({
-  down: ((wotGameModesData: WotGameModesData) => SerializeHelper.toDown(wotGameModesData)),
-  up: ((options: WotGameModesDataOptions) => new WotGameModesData(options))
-})
 export default class WotGameModesData {
   /**
    * Standard battle data

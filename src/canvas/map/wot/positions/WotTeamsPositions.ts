@@ -1,12 +1,6 @@
 import { Point } from '../../../../util';
 import { WotTeamsPositionsOptions } from './types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../../../util/SerializeHelper';
 
-@Serialize<WotTeamsPositionsOptions, WotTeamsPositions>({
-  down: ((wotTeamsPositions: WotTeamsPositions) => SerializeHelper.toDown(wotTeamsPositions)),
-  up: ((options: WotTeamsPositionsOptions) => new WotTeamsPositions(options))
-})
 export default class WotTeamsPositions {
   /**
    * Team 1 position(s) coordinates

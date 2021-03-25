@@ -1,12 +1,6 @@
 import WotTeamsPositions from '../positions/WotTeamsPositions';
-import { Serialize } from 'serialazy';
 import { WotAssaultBattleOptions } from './types';
-import SerializeHelper from '../../../../util/SerializeHelper';
 
-@Serialize<WotAssaultBattleOptions, WotAssaultBattle>({
-  down: ((wotAssaultBattle: WotAssaultBattle) => SerializeHelper.toDown(wotAssaultBattle)),
-  up: ((options: WotAssaultBattleOptions) => new WotAssaultBattle(options))
-})
 export default class WotAssaultBattle {
   /**
    * Teams spawn(s) positions

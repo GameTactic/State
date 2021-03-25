@@ -1,13 +1,7 @@
 import { v4 } from 'uuid';
 import Collection from './Collection';
 import { RootCollectionOptions } from './types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../util/SerializeHelper';
 
-@Serialize<RootCollectionOptions, RootCollection>({
-  down: ((rootCollection: RootCollection) => SerializeHelper.toDown(rootCollection)),
-  up: ((options: RootCollectionOptions) => new RootCollection(options))
-})
 export default class RootCollection {
   public id: string
   public name: string

@@ -7,13 +7,7 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { TeamHistorySwitchOptions } from './types';
 import { HistoryEventTeam } from '../types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../../util/SerializeHelper';
 
-@Serialize<TeamHistorySwitchOptions, TeamHistorySwitch>({
-    down: ((history: TeamHistorySwitch) => SerializeHelper.toDown(history)),
-    up: ((options: TeamHistorySwitchOptions) => new TeamHistorySwitch(options))
-})
 export default class TeamHistorySwitch extends History {
     /**
      * The ID of the user who switched team

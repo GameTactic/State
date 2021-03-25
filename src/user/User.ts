@@ -4,13 +4,7 @@
  */
 import { UserOptions } from './types';
 import Role from './Role';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../util/SerializeHelper';
 
-@Serialize<UserOptions, User>({
-  down: ((user: User) => SerializeHelper.toDown(user)),
-  up: ((options: UserOptions) => new User(options))
-})
 export default class User {
   /**
    * The users unique ID from the JWT token

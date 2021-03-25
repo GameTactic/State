@@ -7,13 +7,7 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventTactic } from '../types';
 import { TacticHistorySwitchOptions } from './types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../../util/SerializeHelper';
 
-@Serialize<TacticHistorySwitchOptions, TacticHistorySwitch>({
-    down: ((history: TacticHistorySwitch) => SerializeHelper.toDown(history)),
-    up: ((options: TacticHistorySwitchOptions) => new TacticHistorySwitch(options))
-})
 export default class TacticHistorySwitch extends History {
     /**
      * The user who switched tactic

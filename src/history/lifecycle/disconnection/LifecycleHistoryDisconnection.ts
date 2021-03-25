@@ -7,13 +7,7 @@ import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventLifecycle } from '../types';
-import { Serialize } from 'serialazy';
-import SerializeHelper from '../../../util/SerializeHelper';
 
-@Serialize<LifecycleHistoryDisconnectionOptions, LifecycleHistoryDisconnection>({
-    down: ((history: LifecycleHistoryDisconnection) => SerializeHelper.toDown(history)),
-    up: ((options: LifecycleHistoryDisconnectionOptions) => new LifecycleHistoryDisconnection(options))
-})
 export default class LifecycleHistoryDisconnection extends History {
     /**
      * The ID of the user who disconnected
