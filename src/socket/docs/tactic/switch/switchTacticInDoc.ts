@@ -8,4 +8,6 @@ export default class SwitchTacticInDoc implements SocketDoc {
     type = SocketEventType.IN;
 }
 
-export type SwitchTacticInDocPayload = TacticHistorySwitch
+export type SwitchTacticInDocPayload = {
+    history: TacticHistorySwitch;
+}

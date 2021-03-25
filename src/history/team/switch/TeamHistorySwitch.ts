@@ -6,28 +6,32 @@ import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { TeamHistorySwitchOptions } from './types';
-import Team from '../../../team/Team';
-import User from '../../../user/User';
 import { HistoryEventTeam } from '../types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<TeamHistorySwitchOptions, TeamHistorySwitch>({
+    down: ((history: TeamHistorySwitch) => SerializeHelper.toDown(history)),
+    up: ((options: TeamHistorySwitchOptions) => new TeamHistorySwitch(options))
+})
 export default class TeamHistorySwitch extends History {
     /**
-     * The user who switched team
+     * The ID of the user who switched team
      * @private
      */
-    private readonly _user: User
+    private readonly _userId: string
 
     /**
-     * The team the user switched to
+     * The ID of the team the user switched to
      * @private
      */
-    private readonly _newTeam: Team
+    private readonly _newTeamId: string
 
     /**
-     * The team the user switched from
+     * The ID of the team the user switched from
      * @private
      */
-    private readonly _oldTeam: Team
+    private readonly _oldTeamId: string
 
     constructor (options: TeamHistorySwitchOptions) {
         super({
@@ -37,32 +41,32 @@ export default class TeamHistorySwitch extends History {
                 event: HistoryEventTeam.SWITCH
             })
         });
-        this._user = options.user;
-        this._newTeam = options.newTeam;
-        this._oldTeam = options.oldTeam;
+        this._userId = options.userId;
+        this._newTeamId = options.newTeamId;
+        this._oldTeamId = options.oldTeamId;
     }
 
     /**
-     * Return the user who switched
+     * Return the ID of the user who switched
      * @returns User
      */
-    get user (): User {
-        return this._user;
+    get user (): string {
+        return this._userId;
     }
 
     /**
-     * Return the team the user switched to
+     * Return the ID of the team the user switched to
      * @returns Team
      */
-    get newTeam (): Team {
-        return this._newTeam;
+    get newTeam (): string {
+        return this._newTeamId;
     }
 
     /**
-     * Return the team the user switched from
+     * Return the ID of the team the user switched from
      * @returns Team
      */
-    get oldTeam (): Team {
-        return this._oldTeam;
+    get oldTeam (): string {
+        return this._oldTeamId;
     }
 }

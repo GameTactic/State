@@ -1,5 +1,12 @@
 import WotTeamsPositions from '../positions/WotTeamsPositions';
+import { WotStandardBattleOptions } from './types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../../util/SerializeHelper';
 
+@Serialize<WotStandardBattleOptions, WotStandardBattle>({
+  down: ((wotStandardBattle: WotStandardBattle) => SerializeHelper.toDown(wotStandardBattle)),
+  up: ((options: WotStandardBattleOptions) => new WotStandardBattle(options))
+})
 export default class WotStandardBattle {
   /**
    * Teams base(s) positions
@@ -9,10 +16,10 @@ export default class WotStandardBattle {
 
   /**
    * Construct the standard battle positions
-   * @param teamsBasePositions
+   * @param options
    */
-  constructor (teamsBasePositions: WotTeamsPositions) {
-    this._teamsBasePositions = teamsBasePositions;
+  constructor (options: WotStandardBattleOptions) {
+    this._teamsBasePositions = options.teamsBasePositions;
   }
 
   /**

@@ -1,3 +1,5 @@
+import { WowsShipConcealmentApiResponseOptions } from './types';
+
 export default class WowsShipConcealmentApiResponse {
   /**
    * The detect distance by a plane
@@ -13,15 +15,11 @@ export default class WowsShipConcealmentApiResponse {
 
   /**
    * Construct the Wows concealment Api response object
-   * @param detectDistanceByPlane
-   * @param detectDistanceByShip
+   * @param options
    */
-  constructor (
-    detectDistanceByPlane: number,
-    detectDistanceByShip: number
-  ) {
-    this._detectDistanceByPlane = detectDistanceByPlane;
-    this._detectDistanceByShip = detectDistanceByShip;
+  constructor (options: WowsShipConcealmentApiResponseOptions) {
+    this._detectDistanceByPlane = options.detectDistanceByPlane;
+    this._detectDistanceByShip = options.detectDistanceByShip;
   }
 
   /**

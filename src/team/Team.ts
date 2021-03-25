@@ -1,5 +1,4 @@
 import { v4 } from 'uuid';
-import Tactic from '../tactic/Tactic';
 import Entity from './abtract/Entity';
 import { TeamOptions } from './types';
 
@@ -16,10 +15,10 @@ export default abstract class Team {
   private readonly _id: string
 
   /**
-   * The tactic that the team is associated with
+   * The ID of the tactic that the team is associated with
    * @private
    */
-  private _tactic: Tactic
+  private _tacticId: string
 
   /**
    * The name of the team
@@ -46,7 +45,7 @@ export default abstract class Team {
    */
   protected constructor (options: TeamOptions) {
     this._id = options.id || v4();
-    this._tactic = options.tactic;
+    this._tacticId = options.tacticId;
     this._name = options.name;
     this._color = options.color;
     this._entities = options.entities || [];
@@ -61,19 +60,19 @@ export default abstract class Team {
   }
 
   /**
-   * Returns the tactic that the team is related to
+   * Returns the ID of the tactic that the team is related to
    * @returns tactic: Tactic
    */
-  get tactic (): Tactic {
-    return this._tactic;
+  get tacticId (): string {
+    return this._tacticId;
   }
 
   /**
-   * Sets the tactic that the team is related to
+   * Sets the ID of the tactic that the team is related to
    * @param value: Tactic
    */
-  set tactic (value: Tactic) {
-    this._tactic = value;
+  set tacticId (value: string) {
+    this._tacticId = value;
   }
 
   /**

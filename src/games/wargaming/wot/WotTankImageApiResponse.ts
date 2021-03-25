@@ -1,3 +1,5 @@
+import { WotTankImageApiResponseOptions } from './types';
+
 export default class WotTankImageApiResponse {
   /**
    * Tank small icon path
@@ -19,18 +21,12 @@ export default class WotTankImageApiResponse {
 
   /**
    * Construct the Wot tank image Api response object
-   * @param smallIcon
-   * @param contourIcon
-   * @param bigIcon
+   * @param options
    */
-  constructor (
-    smallIcon: string,
-    contourIcon: string,
-    bigIcon: string
-  ) {
-    this._smallIcon = smallIcon;
-    this._contourIcon = contourIcon;
-    this._bigIcon = bigIcon;
+  constructor (options: WotTankImageApiResponseOptions) {
+    this._smallIcon = options.smallIcon;
+    this._contourIcon = options.contourIcon;
+    this._bigIcon = options.bigIcon;
   }
 
   /**

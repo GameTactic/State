@@ -8,14 +8,10 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventLifecycle } from '../types';
 import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
 @Serialize<LifecycleHistoryDisconnectionOptions, LifecycleHistoryDisconnection>({
-    down: ((history: LifecycleHistoryDisconnection) => ({
-        id: history.id,
-        userId: history.userId,
-        timestamp: history.timestamp,
-        creatorId: history.userId
-    })),
+    down: ((history: LifecycleHistoryDisconnection) => SerializeHelper.toDown(history)),
     up: ((options: LifecycleHistoryDisconnectionOptions) => new LifecycleHistoryDisconnection(options))
 })
 export default class LifecycleHistoryDisconnection extends History {

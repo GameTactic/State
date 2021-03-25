@@ -1,44 +1,29 @@
 import RootCollection from './RootCollection';
-import User from '../../user/User';
-import { CollectionOptions } from '../types';
-import {Serialize} from "serialazy";
+import { CollectionOptions } from './types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../util/SerializeHelper';
 
 @Serialize<CollectionOptions, Collection>({
-  down: ((collection: Collection) => ({
-    id: collection.id,
-    name: collection.name,
-    children: collection.children,
-    creator: collection.creator,
-    parent: collection.parent
-  })),
+  down: ((collection: Collection) => SerializeHelper.toDown(collection)),
   up: ((options: CollectionOptions) => new Collection(options))
 })
 export default class Collection extends RootCollection {
-  private _creator: User
-  private _parent: Collection | undefined
+  private _parentId: string
 
   constructor (options: CollectionOptions) {
     super({
       name: options.name,
-      children: options.children
+      children: options.children,
+      creatorId: options.creatorId
     });
-    this._creator = options.creator;
-    this._parent = options.parent;
+    this._parentId = options.parentId;
   }
 
-  get creator (): User {
-    return this._creator;
+  get parent (): string {
+    return this._parentId;
   }
 
-  set creator (value: User) {
-    this._creator = value;
-  }
-
-  get parent (): Collection | undefined {
-    return this._parent;
-  }
-
-  set parent (value: Collection | undefined) {
-    this._parent = value;
+  set parent (value: string) {
+    this._parentId = value;
   }
 }

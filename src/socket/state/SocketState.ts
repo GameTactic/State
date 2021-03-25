@@ -1,18 +1,13 @@
-import {SocketStateOptions, TacticData} from "./types";
-import RootCollection from "../../tactic/collection/RootCollection";
-import User from "../../user/User";
-import History from "../../history/History";
-import {Room} from "../../room";
-import { Serialize } from "serialazy";
+import { SocketStateOptions, TacticData } from './types';
+import RootCollection from '../../tactic/collection/RootCollection';
+import User from '../../user/User';
+import History from '../../history/History';
+import { Room } from '../../room';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../util/SerializeHelper';
 
 @Serialize<SocketStateOptions, SocketState>({
-    down: (socketState: SocketState) => ({
-        collection: socketState.collection,
-        users: socketState.users,
-        tactics: socketState.tactics,
-        history: socketState.history,
-        room: socketState.room
-    }),
+    down: (state: SocketState) => (SerializeHelper.toDown(state)),
     up: (options: SocketStateOptions) => Object.assign(new SocketState(options))
 })
 export default class SocketState {
@@ -23,11 +18,11 @@ export default class SocketState {
     private _room: Room
 
     constructor(options: SocketStateOptions) {
-        this._collection = options.collection
-        this._users = options.users
-        this._tactics = options.tactics
-        this._history = options.history
-        this._room = options.room
+        this._collection = options.collection;
+        this._users = options.users;
+        this._tactics = options.tactics;
+        this._history = options.history;
+        this._room = options.room;
     }
 
     get collection(): RootCollection {

@@ -1,5 +1,6 @@
 import CanvasHistoryAddition from '../../../../history/canvas/addition/CanvasHistoryAddition';
 import SocketDoc, { SocketEventType } from '../../types';
+import CanvasElement from '../../../../canvas/elements/abstract/CanvasElement';
 
 export default class AddCanvasElementsDoc implements SocketDoc {
     title = 'Add Canvas Element';
@@ -8,4 +9,7 @@ export default class AddCanvasElementsDoc implements SocketDoc {
     type = SocketEventType.IN_AND_OUT;
 }
 
-export type AddCanvasElementsDocPayload = CanvasHistoryAddition
+export type AddCanvasElementsDocPayload = {
+    history: CanvasHistoryAddition;
+    data: CanvasElement[];
+}

@@ -20,6 +20,7 @@ export interface AbstractHistoryOptions {
 export interface HistoryEventOptions {
   module: HistoryEventModules;
   event: HistoryEventEnums[HistoryEventModules];
+  [key: string]: any;
 }
 
 export enum HistoryEventModules {

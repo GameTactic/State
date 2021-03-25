@@ -1,5 +1,6 @@
 import WgDataApiResponse from '../../WgDataApiResponse';
 import WowsShipDefaultProfileApiResponse from './WowsShipDefaultProfileApiResponse';
+import { WowsShipApiResponseOptions } from './types';
 
 export default class WowsShipApiResponse extends WgDataApiResponse {
   /**
@@ -46,31 +47,17 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
 
   /**
    * Construct the Wows ship Api response
-   * @param isSpecial
-   * @param isPremium
-   * @param shipId
-   * @param defaultProfile
-   * @param tier
-   * @param name
-   * @param type
+   * @param options
    */
-  constructor (
-    isSpecial: boolean,
-    isPremium: boolean,
-    shipId: number,
-    defaultProfile: WowsShipDefaultProfileApiResponse,
-    tier: number,
-    name: string,
-    type: string
-  ) {
+  constructor (options: WowsShipApiResponseOptions) {
     super();
-    this._isSpecial = isSpecial;
-    this._isPremium = isPremium;
-    this._shipId = shipId;
-    this._defaultProfile = defaultProfile;
-    this._tier = tier;
-    this._name = name;
-    this._type = type;
+    this._isSpecial = options.isSpecial;
+    this._isPremium = options.isPremium;
+    this._shipId = options.shipId;
+    this._defaultProfile = options.defaultProfile;
+    this._tier = options.tier;
+    this._name = options.name;
+    this._type = options.type;
   }
 
   /**

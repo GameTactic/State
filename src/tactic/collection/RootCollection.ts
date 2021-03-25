@@ -1,22 +1,20 @@
 import { v4 } from 'uuid';
 import Collection from './Collection';
-import { RootCollectionOptions } from '../types';
-import {Serialize} from "serialazy";
+import { RootCollectionOptions } from './types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../util/SerializeHelper';
 
 @Serialize<RootCollectionOptions, RootCollection>({
-  down: ((rootCollection: RootCollection) => ({
-    id: rootCollection.id,
-    name: rootCollection.name,
-    children: rootCollection.children
-  })),
+  down: ((rootCollection: RootCollection) => SerializeHelper.toDown(rootCollection)),
   up: ((options: RootCollectionOptions) => new RootCollection(options))
 })
 export default class RootCollection {
   private _id: string
   private _name: string
   private _children: Collection[]
+  private _creatorId: string
 
-  constructor (options?: RootCollectionOptions) {
+  constructor (options: RootCollectionOptions) {
     const finalObject = Object.assign({}, {
       id: v4(),
       name: 'root',
@@ -25,6 +23,7 @@ export default class RootCollection {
     this._id = finalObject.id;
     this._name = finalObject.name;
     this._children = finalObject.children;
+    this._creatorId = options.creatorId;
   }
 
   get id (): string {
@@ -49,5 +48,13 @@ export default class RootCollection {
 
   set children (value: Collection[]) {
     this._children = value;
+  }
+
+  get creatorId (): string {
+    return this._creatorId;
+  }
+
+  set creatorId (value: string) {
+    this._creatorId = value;
   }
 }

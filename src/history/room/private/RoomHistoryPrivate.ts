@@ -7,7 +7,13 @@ import { RoomHistoryPrivateOptions } from './types';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventRoom } from '../types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<RoomHistoryPrivateOptions, RoomHistoryPrivate>({
+    down: ((history: RoomHistoryPrivate) => SerializeHelper.toDown(history)),
+    up: ((options: RoomHistoryPrivateOptions) => new RoomHistoryPrivate(options))
+})
 export default class RoomHistoryPrivate extends History {
     /**
      * The variable telling if the room was set to private or not

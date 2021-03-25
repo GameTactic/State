@@ -1,5 +1,6 @@
 import WgDataApiResponse from '../WgDataApiResponse';
 import WotTankImageApiResponse from './WotTankImageApiResponse';
+import { WotTankApiResponseOptions } from './types';
 
 export default class WotTankApiResponse extends WgDataApiResponse {
   /**
@@ -28,22 +29,14 @@ export default class WotTankApiResponse extends WgDataApiResponse {
 
   /**
    * Construct the Wot tank Api response
-   * @param tankId
-   * @param type
-   * @param name
-   * @param image
+   * @param options
    */
-  constructor (
-    tankId: number,
-    type: string,
-    name: string,
-    image: WotTankImageApiResponse
-  ) {
+  constructor (options: WotTankApiResponseOptions) {
     super();
-    this._tankId = tankId;
-    this._type = type;
-    this._name = name;
-    this._image = image;
+    this._tankId = options.tankId;
+    this._type = options.type;
+    this._name = options.name;
+    this._image = options.image;
   }
 
   /**

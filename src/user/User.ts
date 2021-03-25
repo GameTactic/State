@@ -4,18 +4,11 @@
  */
 import { UserOptions } from './types';
 import Role from './Role';
-import {Serialize} from "serialazy";
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../util/SerializeHelper';
 
 @Serialize<UserOptions, User>({
-  down: ((user: User) => ({
-    jti: user.jti,
-    name: user.name,
-    onTacticId: user.onTacticId,
-    onTeamId: user.onTeamId,
-    isOnline: user.isOnline,
-    lastOnline: user.lastOnline,
-    roles: user.roles
-  })),
+  down: ((user: User) => SerializeHelper.toDown(user)),
   up: ((options: UserOptions) => new User(options))
 })
 export default class User {

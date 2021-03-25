@@ -1,3 +1,3 @@
 export * from './types';
-export * from './map/index';
-export * from './elements/index';
+export * from './map';
+export * from './elements';

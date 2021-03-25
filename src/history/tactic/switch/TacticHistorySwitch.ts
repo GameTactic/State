@@ -5,29 +5,33 @@
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
-import Tactic from '../../../tactic/Tactic';
 import { HistoryEventTactic } from '../types';
 import { TacticHistorySwitchOptions } from './types';
-import User from '../../../user/User';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<TacticHistorySwitchOptions, TacticHistorySwitch>({
+    down: ((history: TacticHistorySwitch) => SerializeHelper.toDown(history)),
+    up: ((options: TacticHistorySwitchOptions) => new TacticHistorySwitch(options))
+})
 export default class TacticHistorySwitch extends History {
     /**
      * The user who switched tactic
      * @private
      */
-    private readonly _user: User
+    private readonly _userId: string
 
     /**
      * The tactic the user switched to
      * @private
      */
-    private readonly _newTactic: Tactic
+    private readonly _newTacticId: string
 
     /**
      * The tactic the user switched from
      * @private
      */
-    private readonly _oldTactic: Tactic
+    private readonly _oldTacticId: string
 
     constructor (options: TacticHistorySwitchOptions) {
         super({
@@ -37,32 +41,32 @@ export default class TacticHistorySwitch extends History {
                 event: HistoryEventTactic.SWITCH
             })
         });
-        this._user = options.user;
-        this._newTactic = options.newTactic;
-        this._oldTactic = options.oldTactic;
+        this._userId = options.userId;
+        this._newTacticId = options.newTacticId;
+        this._oldTacticId = options.oldTacticId;
     }
 
     /**
-     * Return the user who switched
+     * Return the ID of the user who switched
      * @returns User
      */
-    get user (): User {
-        return this._user;
+    get userId (): string {
+        return this._userId;
     }
 
     /**
-     * Return the tactic the user switched to
+     * Return the ID of the tactic the user switched to
      * @returns Tactic
      */
-    get newTactic (): Tactic {
-        return this._newTactic;
+    get newTacticId (): string {
+        return this._newTacticId;
     }
 
     /**
-     * Return the tactic the user switched from
-     * @returns Tactic
+     * Return the ID of the added tactic the user switched from
+     * @returns tacticId: string
      */
-    get oldTactic (): Tactic {
-        return this._oldTactic;
+    get oldTacticId (): string {
+        return this._oldTacticId;
     }
 }

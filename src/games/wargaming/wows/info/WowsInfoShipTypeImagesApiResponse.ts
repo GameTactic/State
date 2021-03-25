@@ -1,4 +1,6 @@
-export default class WowsInfoShipTypeImagesApiReponse {
+import { WowsInfoShipTypeImagesApiResponseOptions } from './types';
+
+export default class WowsInfoShipTypeImagesApiResponse {
   /**
    * Premium ship image path
    * @private
@@ -19,18 +21,12 @@ export default class WowsInfoShipTypeImagesApiReponse {
 
   /**
    * Construct the Wows ship type images Api response object
-   * @param imagePremium
-   * @param image
-   * @param imageElite
+   * @param options
    */
-  constructor (
-    imagePremium: string,
-    image: string,
-    imageElite: string
-  ) {
-    this._imagePremium = imagePremium;
-    this._image = image;
-    this._imageElite = imageElite;
+  constructor (options: WowsInfoShipTypeImagesApiResponseOptions) {
+    this._imagePremium = options.imagePremium;
+    this._image = options.image;
+    this._imageElite = options.imageElite;
   }
 
   /**

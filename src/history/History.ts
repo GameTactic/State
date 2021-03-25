@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
 import HistoryEvent from './HistoryEvent';
 import { HistoryOptions } from './types';
-import { ISO } from '../util/ISO';
+import { ISO } from '../util';
 
 /**
  * Base class for a canvas history.

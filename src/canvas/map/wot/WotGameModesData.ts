@@ -2,7 +2,14 @@ import WotStandardBattle from './gamemodes/WotStandardBattle';
 import WotEncounterBattle from './gamemodes/WotEncounterBattle';
 import WotAssaultBattle from './gamemodes/WotAssaultBattle';
 import WotTeamBattle from './gamemodes/WotTeamBattle';
+import { WotGameModesDataOptions } from './types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<WotGameModesDataOptions, WotGameModesData>({
+  down: ((wotGameModesData: WotGameModesData) => SerializeHelper.toDown(wotGameModesData)),
+  up: ((options: WotGameModesDataOptions) => new WotGameModesData(options))
+})
 export default class WotGameModesData {
   /**
    * Standard battle data
@@ -30,21 +37,13 @@ export default class WotGameModesData {
 
   /**
    * Construct the WoT Game modes
-   * @param standardBattle
-   * @param encounterBattle
-   * @param assaultBattle
-   * @param teamBattle
+   * @param options
    */
-  constructor (
-    standardBattle: WotStandardBattle,
-    encounterBattle: WotEncounterBattle,
-    assaultBattle: WotAssaultBattle,
-    teamBattle: WotTeamBattle
-  ) {
-    this._standardBattle = standardBattle;
-    this._encounterBattle = encounterBattle;
-    this._assaultBattle = assaultBattle;
-    this._teamBattle = teamBattle;
+  constructor (options: WotGameModesDataOptions) {
+    this._standardBattle = options.standardBattle;
+    this._encounterBattle = options.encounterBattle;
+    this._assaultBattle = options.assaultBattle;
+    this._teamBattle = options.teamBattle;
   }
 
   /**

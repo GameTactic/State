@@ -1,6 +1,13 @@
 import WotTeamsPositions from '../positions/WotTeamsPositions';
 import { Point } from '../../../../util';
+import { WotEncounterBattleOptions } from './types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../../util/SerializeHelper';
 
+@Serialize<WotEncounterBattleOptions, WotEncounterBattle>({
+  down: ((wotEncounterBattle: WotEncounterBattle) => SerializeHelper.toDown(wotEncounterBattle)),
+  up: ((options: WotEncounterBattleOptions) => new WotEncounterBattle(options))
+})
 export default class WotEncounterBattle {
   /**
    * Teams spawn(s) positions
@@ -16,15 +23,11 @@ export default class WotEncounterBattle {
 
   /**
    * Construct the encounter battle positions
-   * @param teamsSpawnPositions
-   * @param controlPoint
+   * @param options
    */
-  constructor (
-    teamsSpawnPositions: WotTeamsPositions,
-    controlPoint: Point
-  ) {
-    this._teamsSpawnPositions = teamsSpawnPositions;
-    this._controlPoint = controlPoint;
+  constructor (options: WotEncounterBattleOptions) {
+    this._teamsSpawnPositions = options.teamsSpawnPositions;
+    this._controlPoint = options.controlPoint;
   }
 
   /**

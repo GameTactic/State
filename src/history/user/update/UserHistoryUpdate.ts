@@ -6,21 +6,20 @@ import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { UserHistoryUpdateOptions } from './types';
-import User from '../../../user/User';
 import { HistoryEventUser } from '../types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<UserHistoryUpdateOptions, UserHistoryUpdate>({
+    down: ((history: UserHistoryUpdate) => SerializeHelper.toDown(history)),
+    up: ((options: UserHistoryUpdateOptions) => new UserHistoryUpdate(options))
+})
 export default class UserHistoryUpdate extends History {
     /**
-     * The old user object
+     * The ID of the user who was updated
      * @private
      */
-    private readonly _oldUser: User
-
-    /**
-     * The new user object
-     * @private
-     */
-    private readonly _newUser: User
+    private readonly _userId: string
 
     constructor (options: UserHistoryUpdateOptions) {
         super({
@@ -30,23 +29,14 @@ export default class UserHistoryUpdate extends History {
                 event: HistoryEventUser.UPDATE
             })
         });
-        this._oldUser = options.oldUser;
-        this._newUser = options.newUser;
+        this._userId = options.userId;
     }
 
     /**
-     * Returns the old user object
-     * @returns User
+     * Returns the ID of the user who was update
+     * @returns userId: string
      */
-    get oldUser (): User {
-        return this._oldUser;
-    }
-
-    /**
-     * Returns the new user object
-     * @returns User
-     */
-    get newUser (): User {
-        return this._newUser;
+    get userId (): string {
+        return this._userId;
     }
 }

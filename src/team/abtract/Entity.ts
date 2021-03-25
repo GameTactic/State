@@ -1,5 +1,4 @@
 import { v4 } from 'uuid';
-import Team from '../Team';
 import { EntityOptions } from './types';
 
 /**
@@ -20,7 +19,7 @@ export default abstract class Entity {
    * The team that the entity is related to
    * @private
    */
-  private _team: Team
+  private _teamId: string
 
   /**
    * Construct the instance
@@ -29,7 +28,7 @@ export default abstract class Entity {
    */
   protected constructor (options: EntityOptions) {
     this._id = options.id || v4();
-    this._team = options.team;
+    this._teamId = options.teamId;
   }
 
   /**
@@ -43,17 +42,17 @@ export default abstract class Entity {
 
   /**
    * Return the team that the entity is related to
-   * @returns: team: Team
+   * @returns: team: string
    */
-  get team (): Team {
-    return this._team;
+  get teamId (): string {
+    return this._teamId;
   }
 
   /**
    * Set the team that the entity is related to
-   * @param value: Team
+   * @param value: string
    */
-  set team (value: Team) {
-    this._team = value;
+  set teamId (value: string) {
+    this._teamId = value;
   }
 }

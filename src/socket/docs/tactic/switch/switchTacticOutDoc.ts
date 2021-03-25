@@ -9,4 +9,7 @@ export default class SwitchTacticOutDoc implements SocketDoc {
     type = SocketEventType.OUT;
 }
 
-export type SwitchTacticOutPayload = TacticHistorySwitch | TacticData;
+export type SwitchTacticOutPayload = {
+    history: TacticHistorySwitch;
+    data?: TacticData;
+};

@@ -1,5 +1,12 @@
 import { Point } from '../../../../util';
+import { WotTeamsPositionsOptions } from './types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../../util/SerializeHelper';
 
+@Serialize<WotTeamsPositionsOptions, WotTeamsPositions>({
+  down: ((wotTeamsPositions: WotTeamsPositions) => SerializeHelper.toDown(wotTeamsPositions)),
+  up: ((options: WotTeamsPositionsOptions) => new WotTeamsPositions(options))
+})
 export default class WotTeamsPositions {
   /**
    * Team 1 position(s) coordinates
@@ -15,15 +22,11 @@ export default class WotTeamsPositions {
 
   /**
    * Construct the team position(s) coordinates
-   * @param team1
-   * @param team2
+   * @param options
    */
-  constructor (
-    team1: Point[],
-    team2: Point[]
-  ) {
-    this._team1 = team1;
-    this._team2 = team2;
+  constructor (options: WotTeamsPositionsOptions) {
+    this._team1 = options.team1;
+    this._team2 = options.team2;
   }
 
   /**

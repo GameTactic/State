@@ -8,4 +8,6 @@ export default class SwitchTeamDoc implements SocketDoc {
     type = SocketEventType.IN_AND_OUT;
 }
 
-export type SwitchTeamDocPayload = TeamHistorySwitch;
+export type SwitchTeamDocPayload = {
+    history: TeamHistorySwitch;
+};

@@ -1,5 +1,6 @@
 import WgDataApiResponse from '../../WgDataApiResponse';
-import WowsInfoShipTypeImagesApiReponse from './WowsInfoShipTypeImagesApiReponse';
+import WowsInfoShipTypeImagesApiResponse from './WowsInfoShipTypeImagesApiResponse';
+import { WowsInfoApiResponseOptions } from './types';
 
 export default class WowsInfoApiResponse extends WgDataApiResponse {
   /**
@@ -12,20 +13,16 @@ export default class WowsInfoApiResponse extends WgDataApiResponse {
    * List of ship images by types
    * @private
    */
-  private readonly _shipTypeImages: { [key: string]: WowsInfoShipTypeImagesApiReponse }
+  private readonly _shipTypeImages: { [key: string]: WowsInfoShipTypeImagesApiResponse }
 
   /**
    * Construct the Wows info Api response object
-   * @param shipTypes
-   * @param shipTypeImages
+   * @param options
    */
-  constructor (
-    shipTypes: { [p: string]: string },
-    shipTypeImages: { [p: string]: WowsInfoShipTypeImagesApiReponse }
-  ) {
+  constructor (options: WowsInfoApiResponseOptions) {
     super();
-    this._shipTypes = shipTypes;
-    this._shipTypeImages = shipTypeImages;
+    this._shipTypes = options.shipTypes;
+    this._shipTypeImages = options.shipTypeImages;
   }
 
   /**
@@ -38,9 +35,9 @@ export default class WowsInfoApiResponse extends WgDataApiResponse {
 
   /**
    * Returns the list of ship images by types
-   * @returns shipTypeImages: { [p: string]: WowsInfoShipTypeImagesApiReponse }
+   * @returns shipTypeImages: { [p: string]: WowsInfoShipTypeImagesApiResponse }
    */
-  get shipTypeImages (): { [p: string]: WowsInfoShipTypeImagesApiReponse } {
+  get shipTypeImages (): { [p: string]: WowsInfoShipTypeImagesApiResponse } {
     return this._shipTypeImages;
   }
 }

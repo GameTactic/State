@@ -1,6 +1,4 @@
 import { Point } from '../../../util';
-import User from '../../../user/User';
-import Tactic from '../../../tactic/Tactic';
 
 export enum CanvasElementName {
   BASE = 'base',

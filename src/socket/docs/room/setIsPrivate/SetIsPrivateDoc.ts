@@ -8,4 +8,6 @@ export default class SetIsPrivateDoc implements SocketDoc {
     type = SocketEventType.IN_AND_OUT;
 }
 
-export type SetIsPrivateDocPayload = RoomHistoryPrivate;
+export type SetIsPrivateDocPayload = {
+    history: RoomHistoryPrivate;
+};

@@ -1,4 +1,3 @@
-import User from './User';
 import Role from './Role';
 
 export enum RoleType {
@@ -21,5 +20,6 @@ export interface UserOptions {
 
 export interface RoleOptions {
   roleType: RoleType;
-  assignedBy: string;
+  assigneeId: string;
+  [key: string]: any;
 }

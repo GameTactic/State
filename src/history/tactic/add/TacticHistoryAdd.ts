@@ -5,16 +5,21 @@
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
-import { TacticData } from '../../../socket/state';
 import { HistoryEventTactic } from '../types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 import { TacticHistoryAddOptions } from './types';
 
+@Serialize<TacticHistoryAddOptions, TacticHistoryAdd>({
+    down: ((history: TacticHistoryAdd) => SerializeHelper.toDown(history)),
+    up: ((options: TacticHistoryAddOptions) => new TacticHistoryAdd(options))
+})
 export default class TacticHistoryAdd extends History {
     /**
-     * The tactic data added
+     * The ID of the tactic added
      * @private
      */
-    private readonly _data: TacticData
+    private readonly _tacticId: string
 
     constructor (options: TacticHistoryAddOptions) {
         super({
@@ -24,14 +29,14 @@ export default class TacticHistoryAdd extends History {
                 event: HistoryEventTactic.ADD
             })
         });
-        this._data = options.data;
+        this._tacticId = options.tacticId;
     }
 
     /**
-     * Return the added tactics data
-     * @returns data: TacticData
+     * Return the ID of the added tactic
+     * @returns tacticId: string
      */
-    get tacticData (): TacticData {
-        return this._data;
+    get tacticId (): string {
+        return this._tacticId;
     }
 }

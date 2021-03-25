@@ -2,7 +2,13 @@ import WotGameModesData from './WotGameModesData';
 import { WotMapOptions } from './types';
 import { MapVueComponent } from '../../types';
 import Map from '../Map';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<WotMapOptions, Map>({
+  down: ((wotMap: WotMap) => SerializeHelper.toDown(wotMap)),
+  up: ((options: WotMapOptions) => new WotMap(options))
+})
 export default class WotMap extends Map {
   /**
    * Game modes for a WoT map

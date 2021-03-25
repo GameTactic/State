@@ -8,4 +8,6 @@ export default class DisconnectionOutDoc implements SocketDoc {
     event = 'disconnect';
 }
 
-export type DisconnectionOutDocPayload = LifecycleHistoryDisconnection;
+export type DisconnectionOutDocPayload = {
+    history: LifecycleHistoryDisconnection;
+};

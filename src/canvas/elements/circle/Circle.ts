@@ -7,7 +7,13 @@ import { CanvasElementInterface, CanvasElementName } from '..';
 import { Point } from '../../../util';
 import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';
 import Validator from '../../../util/Validator';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize<CircleOptions, Circle>({
+  down: ((circle: Circle) => SerializeHelper.toDown(circle)),
+  up: ((options: CircleOptions) => new Circle(options))
+})
 export default class Circle extends Transformable implements CanvasElementInterface {
   /**
    * The inner fill of the circle. Represented as a hexadecimal number

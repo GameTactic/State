@@ -1,1 +1,2 @@
-export * from './WowsMaps';
+export * from './WowsMap';
+export * from './types';

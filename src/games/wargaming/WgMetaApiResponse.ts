@@ -1,3 +1,5 @@
+import { WgMetaApiResponseOptions } from './types';
+
 export default class WgMetaApiResponse {
   /**
    * Number of results
@@ -31,23 +33,14 @@ export default class WgMetaApiResponse {
 
   /**
    * Construct the Wargaming Api response meta object
-   * @param count
-   * @param pageTotal
-   * @param total
-   * @param limit
-   * @param page
+   * @param options
    */
-  constructor (
-    count: number,
-    pageTotal: number,
-    total: number, limit:
-      number, page: number
-  ) {
-    this._count = count;
-    this._pageTotal = pageTotal;
-    this._total = total;
-    this._limit = limit;
-    this._page = page;
+  constructor (options: WgMetaApiResponseOptions) {
+    this._count = options.count;
+    this._pageTotal = options.pageTotal;
+    this._total = options.total;
+    this._limit = options.limit;
+    this._page = options.page;
   }
 
   /**

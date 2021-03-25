@@ -1,5 +1,6 @@
 import WowsShipDistanceApiResponse from './WowsShipDistanceApiResponse';
 import WowsShipConcealmentApiResponse from './WowsShipConcealmentApiResponse';
+import { WowsShipDefaultProfileApiResponseOptions } from './types';
 
 export default class WowsShipDefaultProfileApiResponse {
   /**
@@ -26,16 +27,15 @@ export default class WowsShipDefaultProfileApiResponse {
    */
   private readonly _concealment: WowsShipConcealmentApiResponse | undefined
 
-  constructor (
-    atbas: WowsShipDistanceApiResponse | undefined,
-    artillery: WowsShipDistanceApiResponse | undefined,
-    torpedoes: WowsShipDistanceApiResponse | undefined,
-    concealment: WowsShipConcealmentApiResponse | undefined
-  ) {
-    this._atbas = atbas;
-    this._artillery = artillery;
-    this._torpedoes = torpedoes;
-    this._concealment = concealment;
+  /**
+   * Construct the object
+   * @param options
+   */
+  constructor (options: WowsShipDefaultProfileApiResponseOptions) {
+    this._atbas = options.atbas;
+    this._artillery = options.artillery;
+    this._torpedoes = options.torpedoes;
+    this._concealment = options.concealment;
   }
 
   /**

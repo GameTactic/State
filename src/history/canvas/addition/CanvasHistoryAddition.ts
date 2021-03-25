@@ -2,19 +2,24 @@
  * This class contains data of an addition event to the canvas
  * @author Eirmas
  */
-import CanvasElement from '../../../canvas/elements/abstract/CanvasElement';
 import { CanvasHistoryAdditionOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventCanvas } from '../types';
+import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
+@Serialize({
+  down: ((history: CanvasHistoryAddition) => SerializeHelper.toDown(history)),
+  up: ((options: CanvasHistoryAdditionOptions) => new CanvasHistoryAddition(options))
+})
 export default class CanvasHistoryAddition extends History {
   /**
-   * The canvas elements added to the canvas
+   * The canvas element IDs added to the canvas
    * @private
    */
-  private readonly _elements: CanvasElement[]
+  private readonly _elementIds: Array<string>
 
   constructor (options: CanvasHistoryAdditionOptions) {
     super({
@@ -24,14 +29,14 @@ export default class CanvasHistoryAddition extends History {
         event: HistoryEventCanvas.ADDITION
       })
     });
-    this._elements = options.elements;
+    this._elementIds = options.elementIds;
   }
 
   /**
-   * Return the element from the addition
-   * @returns CanvasElement[]
+   * Return the element IDs from the addition
+   * @returns Array<string>
    */
-  get elements (): CanvasElement[] {
-    return this._elements;
+  get elementIds (): Array<string> {
+    return this._elementIds;
   }
 }

@@ -1,4 +1,4 @@
-import { TransformableOptions } from '../abstract/types';
+import { TransformableOptions } from '..';
 import { Point } from '../../../util';
 
 export enum CircleStrokeStyle {

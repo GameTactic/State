@@ -1,5 +1,6 @@
 import SocketDoc, { SocketEventType } from '../../types';
 import UserHistoryUpdate from '../../../../history/user/update/UserHistoryUpdate';
+import User from '../../../../user/User';
 
 export default class UpdateUserDoc implements SocketDoc {
     title = 'Update User';
@@ -8,4 +9,9 @@ export default class UpdateUserDoc implements SocketDoc {
     type = SocketEventType.IN_AND_OUT;
 }
 
-export type UpdateUserDocPayload = UserHistoryUpdate;
+export type UpdateUserDocPayload = {
+    history: UserHistoryUpdate;
+    data: {
+        user: User;
+    }
+};

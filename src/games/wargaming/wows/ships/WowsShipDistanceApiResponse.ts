@@ -1,3 +1,5 @@
+import { WowsShipDistanceApiResponseOptions } from './types';
+
 export default class WowsShipDistanceApiResponse {
   /**
    * Distance value
@@ -7,10 +9,10 @@ export default class WowsShipDistanceApiResponse {
 
   /**
    * Construct the Wows distance Api response object
-   * @param distance
+   * @param options
    */
-  constructor (distance: number) {
-    this._distance = distance;
+  constructor (options: WowsShipDistanceApiResponseOptions) {
+    this._distance = options.distance;
   }
 
   /**

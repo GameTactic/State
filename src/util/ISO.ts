@@ -3,7 +3,7 @@
  * @author Eirmas
  */
 export class ISO {
-    static timestamp (): number {
+    public static timestamp (): number {
         return (new Date()).getTime();
     }
 }

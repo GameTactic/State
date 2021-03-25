@@ -8,14 +8,10 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventLifecycle } from '../types';
 import { Serialize } from 'serialazy';
+import SerializeHelper from '../../../util/SerializeHelper';
 
 @Serialize<LifecycleHistoryConnectionOptions, LifecycleHistoryConnection>({
-    down: ((history: LifecycleHistoryConnection) => ({
-        id: history.id,
-        userId: history.userId,
-        timestamp: history.timestamp,
-        creatorId: history.userId
-    })),
+    down: ((history: LifecycleHistoryConnection) => SerializeHelper.toDown(history)),
     up: ((options: LifecycleHistoryConnectionOptions) => new LifecycleHistoryConnection(options))
 })
 export default class LifecycleHistoryConnection extends History {
