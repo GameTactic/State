@@ -17,9 +17,9 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class LifecycleHistoryConnection extends History {
     /**
      * The ID of the user who connected
-     * @private
+     * @public
      */
-    private readonly _userId: string
+    public readonly userId: string
 
     constructor (options: LifecycleHistoryConnectionOptions) {
         super({
@@ -29,14 +29,6 @@ export default class LifecycleHistoryConnection extends History {
                 event: HistoryEventLifecycle.CONNECTION
             })
         });
-        this._userId = options.userId;
-    }
-
-    /**
-     * Return the ID of the user who connected
-     * @returns userId: string
-     */
-    get userId (): string {
-        return this._userId;
+        this.userId = options.userId;
     }
 }

@@ -17,9 +17,9 @@ import { TacticHistoryAddOptions } from './types';
 export default class TacticHistoryAdd extends History {
     /**
      * The ID of the tactic added
-     * @private
+     * @public
      */
-    private readonly _tacticId: string
+    public readonly tacticId: string
 
     constructor (options: TacticHistoryAddOptions) {
         super({
@@ -29,14 +29,6 @@ export default class TacticHistoryAdd extends History {
                 event: HistoryEventTactic.ADD
             })
         });
-        this._tacticId = options.tacticId;
-    }
-
-    /**
-     * Return the ID of the added tactic
-     * @returns tacticId: string
-     */
-    get tacticId (): string {
-        return this._tacticId;
+        this.tacticId = options.tacticId;
     }
 }

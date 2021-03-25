@@ -17,21 +17,21 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class TacticHistorySwitch extends History {
     /**
      * The user who switched tactic
-     * @private
+     * @public
      */
-    private readonly _userId: string
+    public readonly userId: string
 
     /**
      * The tactic the user switched to
-     * @private
+     * @public
      */
-    private readonly _newTacticId: string
+    public readonly newTacticId: string
 
     /**
      * The tactic the user switched from
-     * @private
+     * @public
      */
-    private readonly _oldTacticId: string
+    public readonly oldTacticId: string
 
     constructor (options: TacticHistorySwitchOptions) {
         super({
@@ -41,32 +41,8 @@ export default class TacticHistorySwitch extends History {
                 event: HistoryEventTactic.SWITCH
             })
         });
-        this._userId = options.userId;
-        this._newTacticId = options.newTacticId;
-        this._oldTacticId = options.oldTacticId;
-    }
-
-    /**
-     * Return the ID of the user who switched
-     * @returns User
-     */
-    get userId (): string {
-        return this._userId;
-    }
-
-    /**
-     * Return the ID of the tactic the user switched to
-     * @returns Tactic
-     */
-    get newTacticId (): string {
-        return this._newTacticId;
-    }
-
-    /**
-     * Return the ID of the added tactic the user switched from
-     * @returns tacticId: string
-     */
-    get oldTacticId (): string {
-        return this._oldTacticId;
+        this.userId = options.userId;
+        this.newTacticId = options.newTacticId;
+        this.oldTacticId = options.oldTacticId;
     }
 }

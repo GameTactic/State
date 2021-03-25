@@ -17,9 +17,9 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class UserHistoryUpdate extends History {
     /**
      * The ID of the user who was updated
-     * @private
+     * @public
      */
-    private readonly _userId: string
+    public readonly userId: string
 
     constructor (options: UserHistoryUpdateOptions) {
         super({
@@ -29,14 +29,6 @@ export default class UserHistoryUpdate extends History {
                 event: HistoryEventUser.UPDATE
             })
         });
-        this._userId = options.userId;
-    }
-
-    /**
-     * Returns the ID of the user who was update
-     * @returns userId: string
-     */
-    get userId (): string {
-        return this._userId;
+        this.userId = options.userId;
     }
 }

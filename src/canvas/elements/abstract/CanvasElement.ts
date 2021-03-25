@@ -5,79 +5,43 @@ export default abstract class CanvasElement implements CanvasElementInterface {
 
   /**
    * The ID of the element as a UUID
-   * @private
+   * @public
    */
-  private readonly _id: string
+  public readonly id: string
   /**
    * Determines if the canvas element should be displayed for only a set period of time
-   * @private
+   * @public
    */
-  private readonly _temporary: boolean
+  public readonly temporary: boolean
 
   /**
    * The ID of the creator of the canvas element
-   * @private
+   * @public
    */
-  private readonly _creatorId: string
+  public readonly creatorId: string
 
   /**
    * The ID of the tactic the canvas element relates to
-   * @private
+   * @public
    */
-  private readonly _tacticId: string
-
-  protected constructor (options: CanvasElementOptions) {
-    this._id = options.id || v4();
-    this._temporary = options.temporary;
-    this._creatorId = options.creatorId;
-    this._tacticId = options.tacticId;
-  }
+  public readonly tacticId: string
 
   /**
    * Returns if the canvas element is transformable
    * @returns false
    */
-  get isTransformable () {
-    return false;
-  }
+  public isTransformable = false
 
   /**
    * Return the name of the canvas element
    * @returns CanvasElementName
    */
-  get name (): CanvasElementName {
-    return CanvasElementName.BASE;
-  }
+  public name = CanvasElementName.BASE
 
-  /**
-   * Returns the ID of the canvas element
-   * @return string: UUIDv4
-   */
-  get id (): string {
-    return this._id;
-  }
-
-  /**
-   * Determines weather the element should be displayed on the canvas for a fixed period time or not
-   * @return boolean
-   */
-  get temporary (): boolean {
-    return this._temporary;
-  }
-
-  /**
-   * Returns the ID of the creator of the canvas element
-   * @returns string
-   */
-  get creatorId (): string {
-    return this._creatorId;
-  }
-
-  /**
-   * Returns the ID of the tactic the canvas element relates to
-   * @returns tacticId: string
-   */
-  get tacticId (): string {
-    return this._tacticId;
+  protected constructor (options: CanvasElementOptions) {
+    this.id = options.id || v4();
+    this.temporary = options.temporary;
+    this.creatorId = options.creatorId;
+    this.tacticId = options.tacticId;
   }
 }

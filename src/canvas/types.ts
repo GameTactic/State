@@ -3,7 +3,3 @@ export enum MapVueComponent {
   WOT = 'wot',
   WOWS = 'wows'
 }
-
-export interface MapInterface {
-  getVueComponent: () => MapVueComponent;
-}

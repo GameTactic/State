@@ -17,9 +17,9 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class LifecycleHistoryDisconnection extends History {
     /**
      * The ID of the user who disconnected
-     * @private
+     * @public
      */
-    private readonly _userId: string
+    public readonly userId: string
 
     constructor (options: LifecycleHistoryDisconnectionOptions) {
         super({
@@ -29,14 +29,6 @@ export default class LifecycleHistoryDisconnection extends History {
                 event: HistoryEventLifecycle.DISCONNECTION
             })
         });
-        this._userId = options.userId;
-    }
-
-    /**
-     * Return the ID of the user who disconnected
-     * @returns userId: string
-     */
-    get userId (): string {
-        return this._userId;
+        this.userId = options.userId;
     }
 }

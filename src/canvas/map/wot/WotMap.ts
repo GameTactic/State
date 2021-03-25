@@ -1,20 +1,27 @@
 import WotGameModesData from './WotGameModesData';
-import { WotMapOptions } from './types';
-import { MapVueComponent } from '../../types';
+import {WotMapOptions} from './types';
+import {MapVueComponent} from '../../types';
 import Map from '../Map';
-import { Serialize } from 'serialazy';
+import {Serialize} from 'serialazy';
 import SerializeHelper from '../../../util/SerializeHelper';
+import {MapInterface} from "../types";
 
 @Serialize<WotMapOptions, Map>({
   down: ((wotMap: WotMap) => SerializeHelper.toDown(wotMap)),
   up: ((options: WotMapOptions) => new WotMap(options))
 })
-export default class WotMap extends Map {
+export default class WotMap extends Map implements MapInterface {
   /**
    * Game modes for a WoT map
-   * @private
+   * @public
    */
-  private _gameModes: WotGameModesData
+  public gameModes: WotGameModesData
+
+  /**
+   * Returns which vue component this map shall be rendered with
+   * @returns MapVueComponent.WOT
+   */
+  public mapVueComponent: MapVueComponent
 
   /**
    * Construct the WoT map
@@ -22,30 +29,7 @@ export default class WotMap extends Map {
    */
   constructor (options: WotMapOptions) {
     super(options);
-    this._gameModes = options.gameModes;
-  }
-
-  /**
-   * Returns which vue component this map shall be rendered with
-   * @returns MapVueComponent.WOT
-   */
-  getVueComponent (): MapVueComponent {
-    return MapVueComponent.WOT;
-  }
-
-  /**
-   * Returns game modes for the WoT map
-   * @returns gameModes: WotGameModesData
-   */
-  get gameModes (): WotGameModesData {
-    return this._gameModes;
-  }
-
-  /**
-   * Set the game modes for the WoT map
-   * @param value
-   */
-  set gameModes (value: WotGameModesData) {
-    this._gameModes = value;
+    this.gameModes = options.gameModes;
+    this.mapVueComponent = MapVueComponent.WOT
   }
 }

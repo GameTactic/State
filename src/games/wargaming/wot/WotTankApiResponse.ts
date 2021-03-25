@@ -5,27 +5,27 @@ import { WotTankApiResponseOptions } from './types';
 export default class WotTankApiResponse extends WgDataApiResponse {
   /**
    * Tank id
-   * @private
+   * @public
    */
-  private readonly _tankId: number;
+  public readonly tankId: number;
 
   /**
    * Tank type
-   * @private
+   * @public
    */
-  private readonly _type: string;
+  public readonly type: string;
 
   /**
    * Tank name
-   * @private
+   * @public
    */
-  private readonly _name: string;
+  public readonly name: string;
 
   /**
    * Tank images paths
-   * @private
+   * @public
    */
-  private readonly _image: WotTankImageApiResponse;
+  public readonly image: WotTankImageApiResponse;
 
   /**
    * Construct the Wot tank Api response
@@ -33,41 +33,9 @@ export default class WotTankApiResponse extends WgDataApiResponse {
    */
   constructor (options: WotTankApiResponseOptions) {
     super();
-    this._tankId = options.tankId;
-    this._type = options.type;
-    this._name = options.name;
-    this._image = options.image;
-  }
-
-  /**
-   * Returns the tank id
-   * @returns tankId: number
-   */
-  get tankId (): number {
-    return this._tankId;
-  }
-
-  /**
-   * Returns the tank type
-   * @returns type: string
-   */
-  get type (): string {
-    return this._type;
-  }
-
-  /**
-   * Returns the tank name
-   * @returns name: string
-   */
-  get name (): string {
-    return this._name;
-  }
-
-  /**
-   * Returns the tank images paths
-   * @returns image: WotTankImageApiResponse
-   */
-  get image (): WotTankImageApiResponse {
-    return this._image;
+    this.tankId = options.tankId;
+    this.type = options.type;
+    this.name = options.name;
+    this.image = options.image;
   }
 }

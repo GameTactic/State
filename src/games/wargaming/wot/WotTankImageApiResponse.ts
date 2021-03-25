@@ -3,53 +3,29 @@ import { WotTankImageApiResponseOptions } from './types';
 export default class WotTankImageApiResponse {
   /**
    * Tank small icon path
-   * @private
+   * @public
    */
-  private readonly _smallIcon: string;
+  public readonly smallIcon: string;
 
   /**
    * Tank profile icon path
-   * @private
+   * @public
    */
-  private readonly _contourIcon: string;
+  public readonly contourIcon: string;
 
   /**
    * Tank big icon path
-   * @private
+   * @public
    */
-  private readonly _bigIcon: string;
+  public readonly bigIcon: string;
 
   /**
    * Construct the Wot tank image Api response object
    * @param options
    */
   constructor (options: WotTankImageApiResponseOptions) {
-    this._smallIcon = options.smallIcon;
-    this._contourIcon = options.contourIcon;
-    this._bigIcon = options.bigIcon;
-  }
-
-  /**
-   * Returns the tank small icon path
-   * @returns smallIcon: string
-   */
-  get smallIcon (): string {
-    return this._smallIcon;
-  }
-
-  /**
-   * Returns the tank profile icon path
-   * @returns contourIcon: string
-   */
-  get contourIcon (): string {
-    return this._contourIcon;
-  }
-
-  /**
-   * Returns the tank big icon path
-   * @returns bigIcon: string
-   */
-  get bigIcon (): string {
-    return this._bigIcon;
+    this.smallIcon = options.smallIcon;
+    this.contourIcon = options.contourIcon;
+    this.bigIcon = options.bigIcon;
   }
 }

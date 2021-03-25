@@ -17,21 +17,21 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class TeamHistorySwitch extends History {
     /**
      * The ID of the user who switched team
-     * @private
+     * @public
      */
-    private readonly _userId: string
+    public readonly userId: string
 
     /**
      * The ID of the team the user switched to
-     * @private
+     * @public
      */
-    private readonly _newTeamId: string
+    public readonly newTeamId: string
 
     /**
      * The ID of the team the user switched from
-     * @private
+     * @public
      */
-    private readonly _oldTeamId: string
+    public readonly oldTeamId: string
 
     constructor (options: TeamHistorySwitchOptions) {
         super({
@@ -41,32 +41,8 @@ export default class TeamHistorySwitch extends History {
                 event: HistoryEventTeam.SWITCH
             })
         });
-        this._userId = options.userId;
-        this._newTeamId = options.newTeamId;
-        this._oldTeamId = options.oldTeamId;
-    }
-
-    /**
-     * Return the ID of the user who switched
-     * @returns User
-     */
-    get userId (): string {
-        return this._userId;
-    }
-
-    /**
-     * Return the ID of the team the user switched to
-     * @returns Team
-     */
-    get newTeamId (): string {
-        return this._newTeamId;
-    }
-
-    /**
-     * Return the ID of the team the user switched from
-     * @returns Team
-     */
-    get oldTeamId (): string {
-        return this._oldTeamId;
+        this.userId = options.userId;
+        this.newTeamId = options.newTeamId;
+        this.oldTeamId = options.oldTeamId;
     }
 }

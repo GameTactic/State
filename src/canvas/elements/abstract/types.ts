@@ -7,6 +7,7 @@ export enum CanvasElementName {
 
 export interface CanvasElementInterface {
   readonly name: CanvasElementName;
+  readonly isTransformable: boolean;
 }
 
 export interface TransformInterface {
@@ -25,4 +26,16 @@ export interface CanvasElementOptions {
 
 export interface TransformableOptions extends CanvasElementOptions {
   transform?: TransformInterface;
+}
+
+export const defaultTransformableOptions = {
+  skew: {
+    x: 0,
+    y: 0
+  },
+  scale: {
+    x: 1,
+    y: 1
+  },
+  rotation: 0
 }

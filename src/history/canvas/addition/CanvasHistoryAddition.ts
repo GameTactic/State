@@ -17,9 +17,9 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class CanvasHistoryAddition extends History {
   /**
    * The canvas element IDs added to the canvas
-   * @private
+   * @public
    */
-  private readonly _elementIds: Array<string>
+  public readonly elementIds: Array<string>
 
   constructor (options: CanvasHistoryAdditionOptions) {
     super({
@@ -29,14 +29,6 @@ export default class CanvasHistoryAddition extends History {
         event: HistoryEventCanvas.ADDITION
       })
     });
-    this._elementIds = options.elementIds;
-  }
-
-  /**
-   * Return the element IDs from the addition
-   * @returns Array<string>
-   */
-  get elementIds (): Array<string> {
-    return this._elementIds;
+    this.elementIds = options.elementIds;
   }
 }

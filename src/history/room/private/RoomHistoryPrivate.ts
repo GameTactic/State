@@ -17,9 +17,9 @@ import SerializeHelper from '../../../util/SerializeHelper';
 export default class RoomHistoryPrivate extends History {
     /**
      * The variable telling if the room was set to private or not
-     * @private
+     * @public
      */
-    private readonly _isPrivate: boolean
+    public readonly isPrivate: boolean
 
     constructor (options: RoomHistoryPrivateOptions) {
         super({
@@ -29,14 +29,6 @@ export default class RoomHistoryPrivate extends History {
                 event: HistoryEventRoom.SET_IS_PRIVATE
             })
         });
-        this._isPrivate = options.isPrivate;
-    }
-
-    /**
-     * Returns if the room was set to private or not
-     * @returns boolean
-     */
-    get isPrivate (): boolean {
-        return this._isPrivate;
+        this.isPrivate = options.isPrivate;
     }
 }

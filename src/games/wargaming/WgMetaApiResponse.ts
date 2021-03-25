@@ -3,83 +3,43 @@ import { WgMetaApiResponseOptions } from './types';
 export default class WgMetaApiResponse {
   /**
    * Number of results
-   * @private
+   * @public
    */
-  private readonly _count: number;
+  public readonly count: number;
 
   /**
    * Total number of pages
-   * @private
+   * @public
    */
-  private readonly _pageTotal: number;
+  public readonly pageTotal: number;
 
   /**
-   * Total number of results (same as _count ?)
-   * @private
+   * Total number of results (same as count ?)
+   * @public
    */
-  private readonly _total: number;
+  public readonly total: number;
 
   /**
    * Limit number of results per page
-   * @private
+   * @public
    */
-  private readonly _limit: number;
+  public readonly limit: number;
 
   /**
    * Active page number
-   * @private
+   * @public
    */
-  private readonly _page: number;
+  public readonly page: number;
 
   /**
    * Construct the Wargaming Api response meta object
    * @param options
    */
   constructor (options: WgMetaApiResponseOptions) {
-    this._count = options.count;
-    this._pageTotal = options.pageTotal;
-    this._total = options.total;
-    this._limit = options.limit;
-    this._page = options.page;
-  }
-
-  /**
-   * Returns the number of results
-   * @returns count: number
-   */
-  get count (): number {
-    return this._count;
-  }
-
-  /**
-   * Returns the total number of pages
-   * @returns pageTotal: number
-   */
-  get pageTotal (): number {
-    return this._pageTotal;
-  }
-
-  /**
-   * Returns the total number of results
-   * @returns total: number
-   */
-  get total (): number {
-    return this._total;
-  }
-
-  /**
-   * Returns the limit number of results per page
-   * @returns limit: number
-   */
-  get limit (): number {
-    return this._limit;
-  }
-
-  /**
-   * Returns the active page number
-   * @returns page: number
-   */
-  get page (): number {
-    return this._page;
+    this.count = options.count;
+    this.pageTotal = options.pageTotal;
+    this.total = options.total;
+    this.limit = options.limit;
+    this.page = options.page;
   }
 }

@@ -1,4 +1,5 @@
 import { Dimensions, Point } from '../../util';
+import {MapVueComponent} from "../types";
 
 export interface MapOptions {
   name: string;
@@ -23,3 +24,7 @@ export const defaultMapOptions = {
     height: 1000
   }
 };
+
+export interface MapInterface {
+  mapVueComponent: MapVueComponent;
+}
