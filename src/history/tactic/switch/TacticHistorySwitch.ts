@@ -19,13 +19,13 @@ export default class TacticHistorySwitch extends History {
      * The tactic the user switched to
      * @public
      */
-    public readonly newTacticId: string
+    public readonly newTacticId: string | undefined
 
     /**
      * The tactic the user switched from
      * @public
      */
-    public readonly oldTacticId: string
+    public readonly oldTacticId: string | undefined
 
     constructor (options: TacticHistorySwitchOptions) {
         super({
