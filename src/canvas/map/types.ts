@@ -6,7 +6,7 @@ export interface MapOptions {
   description: string;
   creatorId: string;
   tacticId: string;
-  texture: Object;
+  url: string;
   sizeConstant?: number;
   ratio?: Point;
   dimensions?: Dimensions;

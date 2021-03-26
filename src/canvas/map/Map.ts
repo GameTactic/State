@@ -17,11 +17,11 @@ export default class Map implements MapInterface {
   public description: string
 
   /**
-   * A PIXI Texture of the map
+   * The URL to the image of the map
    * Defined as object because of socket issues
    * @public
    */
-  public texture: Object
+  public url: string
 
   /**
    * The ratio of the map.
@@ -69,7 +69,7 @@ export default class Map implements MapInterface {
     const finalOptions: Required<MapOptions> = Object.assign({}, defaultMapOptions, options);
     this.name = finalOptions.name;
     this.description = finalOptions.description;
-    this.texture = finalOptions.texture;
+    this.url = finalOptions.url;
     this.ratio = finalOptions.ratio;
     this.sizeConstant = finalOptions.sizeConstant;
     this.creatorId = finalOptions.creator;
