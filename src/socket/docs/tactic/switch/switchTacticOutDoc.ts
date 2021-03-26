@@ -1,15 +1,16 @@
 import SocketDoc, { SocketEventType } from '../../types';
 import { TacticData } from '../../../state';
 import TacticHistorySwitch from '../../../../history/tactic/switch/TacticHistorySwitch';
+import {HistoryEventModules, HistoryEventTactic} from "../../../../history";
 
 export default class SwitchTacticOutDoc implements SocketDoc {
     title = 'Switch tactic';
     description = 'User has switched tactic. ';
-    event = 'tactic/switch';
+    event = `${HistoryEventModules.TACTIC}/${HistoryEventTactic.SWITCH}`;
     type = SocketEventType.OUT;
 }
 
-export type SwitchTacticOutPayload = {
+export type SwitchTacticOutDocPayload = {
     history: TacticHistorySwitch;
     data?: TacticData;
 };

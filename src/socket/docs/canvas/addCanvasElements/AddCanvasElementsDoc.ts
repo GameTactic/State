@@ -6,7 +6,7 @@ import { HistoryEventCanvas, HistoryEventModules } from '../../../../history';
 export default class AddCanvasElementsDoc implements SocketDoc {
     title = 'Add Canvas Element';
     description = 'Adds an element to the canvas.';
-    event = `${HistoryEventModules.LIFECYCLE}/${HistoryEventCanvas.ADDITION}`;
+    event = `${HistoryEventModules.CANVAS}/${HistoryEventCanvas.ADDITION}`;
     type = SocketEventType.IN_AND_OUT;
 }
 

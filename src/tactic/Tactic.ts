@@ -8,7 +8,7 @@ export default class Tactic {
   public creatorId: string
 
   constructor (options: TacticOptions) {
-    this.id = v4();
+    this.id = options.id || v4();
     this.name = options.name;
     this.collectionId = options.collectionId;
     this.creatorId = options.creatorId;
