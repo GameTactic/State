@@ -1,2 +1,2 @@
-export * from './circle';
 export * from './abstract';
+export * from './circle';

@@ -1,3 +1,3 @@
-export * from './types';
-export * from './Tactic';
 export * from './collection';
+export * from './Tactic';
+export * from './types';

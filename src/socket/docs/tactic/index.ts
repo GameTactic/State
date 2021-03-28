@@ -1,2 +1,2 @@
-export * from './switch';
 export * from './add';
+export * from './switch';

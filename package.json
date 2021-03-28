@@ -15,17 +15,15 @@
   "devDependencies": {
     "create-ts-index": "^1.13.3",
     "eslint": "^7.22.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@types/eslint": "^6",
     "@types/uuid": "^8.3.0",
-    "@typescript-eslint/eslint-plugin": "^4",
-    "@typescript-eslint/parser": "^4",
-    "eslint": "^7",
     "uuid": "^8.3.2"
   }
 }
