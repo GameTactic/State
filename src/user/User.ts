@@ -8,10 +8,10 @@ import Role from './Role';
 export default class User {
   /**
    * The users unique ID from the JWT token
-   * Represented as an UUID string
+   * Represented as an ULID string
    * @public
    */
-  public jti: string
+  public id: string
 
   /**
    * The users name
@@ -54,7 +54,7 @@ export default class User {
    * @param options: UserOptions
    */
   constructor (options: UserOptions) {
-    this.jti = options.jti;
+    this.id = options.id;
     this.name = options.name;
     this.onTacticId = options.onTacticId;
     this.onTeamId = options.onTeamId;

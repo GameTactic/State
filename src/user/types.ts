@@ -8,7 +8,7 @@ export enum RoleType {
 }
 
 export interface UserOptions {
-  jti: string;
+  id: string;
   name: string;
   onTacticId?: string;
   onTeamId?: string;
