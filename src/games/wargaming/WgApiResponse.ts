@@ -1,4 +1,4 @@
-import Api from '../abstract/Api';
+import Api from '../../api/Api';
 import WgMetaApiResponse from './WgMetaApiResponse';
 import WgDataApiResponse from './WgDataApiResponse';
 import { WgApiResponseOptions } from './types';
@@ -16,6 +16,10 @@ export default class WgApiResponse extends Api {
    */
   public readonly meta: WgMetaApiResponse
 
+  /**
+   * The Wargaming Api data object
+   * @public
+   */
   public readonly data: WgDataApiResponse
 
   /**

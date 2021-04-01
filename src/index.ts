@@ -1,3 +1,5 @@
+export * from './api';
+export * from './auth';
 export * from './authentication';
 export * from './canvas';
 export * from './games';

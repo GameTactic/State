@@ -1,2 +1,2 @@
-export * from './types';
 export * from './WotTeamsPositions';
+export * from './types';
