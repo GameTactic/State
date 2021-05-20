@@ -1,9 +1,9 @@
-import { IconPluginDao, IconPluginOptions } from './types';
-import Map from '../../map/Map';
+import { IconPluginOptions } from './types';
 import { v4 } from 'uuid';
 
 /**
  * An icon plugin can be used to give icons
+ * @author Eirmas
  */
 export default abstract class IconPlugin {
     /**
