@@ -6,7 +6,6 @@ export interface IconOptions extends TransformableOptions {
   label: string;
   url: string;
   dimensions: Dimensions;
-  teamId?: string;
   plugins?: Array<IconPlugin>;
 }
 

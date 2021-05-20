@@ -8,7 +8,7 @@ import { Dimensions } from '../../util';
  * @author Eirmas
  * @abstract
  */
-export default abstract class Icon extends Transformable {
+export default class Icon extends Transformable {
     /**
      * The label of the icon
      */
@@ -38,7 +38,7 @@ export default abstract class Icon extends Transformable {
      * @param options
      * @protected
      */
-    protected constructor (options: IconOptions) {
+    constructor (options: IconOptions) {
         super(options);
         this.label = options.label;
         this.plugins = options.plugins || [];

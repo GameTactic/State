@@ -6,7 +6,7 @@ import Icon from './Icon';
  * @author Eirmas
  * @abstract
  */
-export default abstract class Entity extends Icon {
+export default class Entity extends Icon {
   /**
    * The team the entity is in
    * Not all entities need to have a team
@@ -19,7 +19,7 @@ export default abstract class Entity extends Icon {
    * @param options
    * @protected
    */
-  protected constructor (options: EntityOptions) {
+  constructor (options: EntityOptions) {
     super(options);
     this.teamId = options.teamId;
   }
