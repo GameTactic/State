@@ -30,6 +30,12 @@ export default class Map implements MapInterface {
   public readonly creatorId: string
 
   /**
+   * A constant to fine tune the size of the map
+   * @public
+   */
+  public sizeConstant: number
+
+  /**
    * The map dimensions
    * @public
    */
@@ -56,9 +62,10 @@ export default class Map implements MapInterface {
     this.name = options.name;
     this.description = options.description;
     this.url = options.url;
-    this.creatorId = options.creator;
+    this.sizeConstant = options.sizeConstant || 1;
+    this.creatorId = options.creatorId;
     this.dimensions = options.dimensions;
-    this.tacticId = options.tactic;
+    this.tacticId = options.tacticId;
     this.mapVueComponent = MapVueComponent.DEFAULT;
   }
 }

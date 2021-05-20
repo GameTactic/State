@@ -8,6 +8,7 @@ export interface MapOptions {
   tacticId: string;
   url: string;
   dimensions: Dimensions;
+  sizeConstant?: number;
   [key: string]: any;
 }
 
