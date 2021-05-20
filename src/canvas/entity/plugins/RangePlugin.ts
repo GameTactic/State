@@ -1,5 +1,5 @@
 import IconPlugin from './IconPlugin';
-import { RangePluginOptions } from './types';
+import { IconPluginType, RangePluginOptions } from './types';
 
 /**
  * The range plugin displays a circle around the icon
@@ -30,6 +30,11 @@ export default class RangePlugin extends IconPlugin {
      * The opacity of the fill
      */
     public fillOpacity: number
+
+    /**
+     * The icon plugin type
+     */
+    public name = IconPluginType.RANGE
 
     /**
      * Construct the range plugin

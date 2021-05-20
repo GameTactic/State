@@ -1,4 +1,4 @@
-import { IconPluginOptions } from './types';
+import {IconPluginOptions, IconPluginType} from './types';
 import { v4 } from 'uuid';
 
 /**
@@ -30,6 +30,12 @@ export default abstract class IconPlugin {
      * Determines weather or not the plugin can be toggled in visibility on the canvas
      */
     public toggleable: boolean
+
+    /**
+     * The type of icon plugin
+     * Used to determine which class the plugin shall be rendered with in PIXI
+     */
+    public abstract name: IconPluginType
 
     /**
      * Construct the plugin

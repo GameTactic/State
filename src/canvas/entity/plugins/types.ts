@@ -1,3 +1,7 @@
+export enum IconPluginType {
+    RANGE = 'range'
+}
+
 export interface IconPluginOptions {
     id?: string;
     readonly: boolean;
