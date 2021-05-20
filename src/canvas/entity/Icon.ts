@@ -1,7 +1,7 @@
 import { IconOptions } from './types';
 import IconPlugin from './plugins/IconPlugin';
 import Transformable from '../elements/abstract/Transformable';
-import { Dimensions } from '../../util';
+import { Dimensions, Point } from '../../util';
 
 /**
  * The icon class
@@ -34,6 +34,13 @@ export default class Icon extends Transformable {
     public dimensions: Dimensions
 
     /**
+     * The point on the canvas to draw the icon
+     * Represents the top left corner of the image
+     * @public
+     */
+    public point: Point
+
+    /**
      * Construct the instance
      * @param options
      * @protected
@@ -44,5 +51,6 @@ export default class Icon extends Transformable {
         this.plugins = options.plugins || [];
         this.url = options.url;
         this.dimensions = options.dimensions;
+        this.point = options.point;
     }
 }
