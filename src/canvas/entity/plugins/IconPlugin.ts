@@ -5,7 +5,7 @@ import { v4 } from 'uuid';
 /**
  * An icon plugin can be used to give icons
  */
-export default abstract class IconPlugin implements IconPluginDao {
+export default abstract class IconPlugin {
     /**
      * The ID of the plugin
      */
@@ -43,14 +43,4 @@ export default abstract class IconPlugin implements IconPluginDao {
         this.visible = options.visible;
         this.toggleable = options.toggleable;
     }
-
-    /**
-     * The render function to draw the PIXI graphics
-     * Is called every time the plugin properties updates
-     * @param plugin the IconPlugin class. Should be the same instance as the render function exists within
-     * @param instance the PIXI sprite instance of the icon
-     * @param tool the tool used to draw the icon
-     * @param map the map
-     */
-    public abstract render(plugin: IconPlugin, instance?: any, tool?: any, map?: Map): void;
 }

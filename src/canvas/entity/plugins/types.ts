@@ -1,6 +1,3 @@
-import Map from '../../map/Map';
-import IconPlugin from './IconPlugin';
-
 export interface IconPluginOptions {
     id?: string;
     readonly: boolean;
@@ -9,7 +6,10 @@ export interface IconPluginOptions {
     toggleable: boolean;
 }
 
-export interface IconPluginDao {
-    initialize?: (instance: any) => void
-    render: (plugin: IconPlugin, instance?: any, tool?: any, map?: Map) => void;
+export interface RangePluginOptions extends IconPluginOptions {
+    range: number;
+    borderFill: string;
+    fill: string;
+    borderOpacity: number;
+    fillOpacity: number;
 }
