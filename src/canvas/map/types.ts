@@ -1,4 +1,4 @@
-import { Dimensions, Point } from '../../util';
+import { Dimensions } from '../../util';
 import { MapVueComponent } from '../types';
 
 export interface MapOptions {
@@ -7,23 +7,9 @@ export interface MapOptions {
   creatorId: string;
   tacticId: string;
   url: string;
-  sizeConstant?: number;
-  ratio?: Point;
-  dimensions?: Dimensions;
+  dimensions: Dimensions;
   [key: string]: any;
 }
-
-export const defaultMapOptions = {
-  sizeConstant: 1,
-  ratio: {
-    x: 1,
-    y: 1
-  },
-  dimensions: {
-    width: 1000,
-    height: 1000
-  }
-};
 
 export interface MapInterface {
   mapVueComponent: MapVueComponent;

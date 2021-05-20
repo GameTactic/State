@@ -1,6 +1,6 @@
 import { MapInterface } from './types';
-import { Dimensions, Point } from '../../util';
-import { defaultMapOptions, MapOptions } from './types';
+import { Dimensions } from '../../util';
+import { MapOptions } from './types';
 import { MapVueComponent } from '../types';
 
 export default class Map implements MapInterface {
@@ -24,23 +24,10 @@ export default class Map implements MapInterface {
   public url: string
 
   /**
-   * The ratio of the map.
-   * E.g. x: 1, y: 1 if the map is square.
-   * @public
-   */
-  public ratio: Point
-
-  /**
    * The id of the user who initialized the map
    * @public
    */
   public readonly creatorId: string
-
-  /**
-   * A constant to regulate the size of different properties of tools
-   * @public
-   */
-  public sizeConstant: number
 
   /**
    * The map dimensions
@@ -66,15 +53,12 @@ export default class Map implements MapInterface {
    * @param options: MapOptions
    */
   constructor (options: MapOptions) {
-    const finalOptions: Required<MapOptions> = Object.assign({}, defaultMapOptions, options);
-    this.name = finalOptions.name;
-    this.description = finalOptions.description;
-    this.url = finalOptions.url;
-    this.ratio = finalOptions.ratio;
-    this.sizeConstant = finalOptions.sizeConstant;
-    this.creatorId = finalOptions.creator;
-    this.dimensions = finalOptions.dimensions;
-    this.tacticId = finalOptions.tactic;
+    this.name = options.name;
+    this.description = options.description;
+    this.url = options.url;
+    this.creatorId = options.creator;
+    this.dimensions = options.dimensions;
+    this.tacticId = options.tactic;
     this.mapVueComponent = MapVueComponent.DEFAULT;
   }
 }

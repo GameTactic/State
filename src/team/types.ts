@@ -1,4 +1,4 @@
-import Entity from './abtract/Entity';
+import Entity from '../canvas/entity/Entity';
 
 export interface TeamOptions {
   id?: string;

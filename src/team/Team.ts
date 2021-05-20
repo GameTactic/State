@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import Entity from './abtract/Entity';
+import Entity from '../canvas/entity/Entity';
 import { TeamOptions } from './types';
 
 /**
