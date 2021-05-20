@@ -69,7 +69,7 @@ export default class Circle extends Transformable {
    * Returns the type of this canvas element
    * @returns CanvasElementName.CIRCLE
    */
-  public name: CanvasElementName
+  public name = CanvasElementName.CIRCLE
 
   /**
    * Construct the object
@@ -87,6 +87,5 @@ export default class Circle extends Transformable {
     this.showRadius = completedOptions.showRadius;
     this.fillOpacity = completedOptions.fillOpacity;
     this.borderOpacity = completedOptions.borderOpacity;
-    this.name = CanvasElementName.CIRCLE;
   }
 }

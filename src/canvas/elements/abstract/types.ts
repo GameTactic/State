@@ -2,7 +2,9 @@ import { Point } from '../../../util';
 
 export enum CanvasElementName {
   BASE = 'base',
-  CIRCLE = 'circle'
+  CIRCLE = 'circle',
+  ICON = 'icon',
+  ENTITY = 'entity'
 }
 
 export interface CanvasElementInterface {

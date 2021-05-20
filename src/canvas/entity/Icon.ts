@@ -2,11 +2,11 @@ import { IconOptions } from './types';
 import IconPlugin from './plugins/IconPlugin';
 import Transformable from '../elements/abstract/Transformable';
 import { Dimensions, Point } from '../../util';
+import { CanvasElementName } from '../elements/abstract';
 
 /**
  * The icon class
  * @author Eirmas
- * @abstract
  */
 export default class Icon extends Transformable {
     /**
@@ -39,6 +39,12 @@ export default class Icon extends Transformable {
      * @public
      */
     public point: Point
+
+    /**
+     * Return the name of the canvas element
+     * @returns CanvasElementName
+     */
+    public name = CanvasElementName.ICON;
 
     /**
      * Construct the instance

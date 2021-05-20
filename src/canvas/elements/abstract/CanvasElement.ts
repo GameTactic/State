@@ -36,7 +36,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * Return the name of the canvas element
    * @returns CanvasElementName
    */
-  public name = CanvasElementName.BASE
+  public abstract name: CanvasElementName
 
   protected constructor (options: CanvasElementOptions) {
     this.id = options.id || v4();

@@ -1,10 +1,10 @@
 import { EntityOptions } from './types';
 import Icon from './Icon';
+import { CanvasElementName } from '../elements/abstract';
 
 /**
  * The entity class
  * @author Eirmas
- * @abstract
  */
 export default class Entity extends Icon {
   /**
@@ -13,6 +13,12 @@ export default class Entity extends Icon {
    * @public
    */
   public teamId: string
+
+  /**
+   * Return the name of the canvas element
+   * @returns CanvasElementName
+   */
+  public name = CanvasElementName.ENTITY;
 
   /**
    * Construct the instance
