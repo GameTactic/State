@@ -6,7 +6,7 @@ import { TeamOptions } from './types';
  * @author Eirmas
  * @abstract
  */
-export default abstract class Team {
+export default class Team {
   /**
    * The ID of the team. Represented by a UUIDv4 string
    * @public
@@ -36,7 +36,7 @@ export default abstract class Team {
    * @param options
    * @protected
    */
-  protected constructor (options: TeamOptions) {
+  constructor (options: TeamOptions) {
     this.id = options.id || v4();
     this.tacticId = options.tacticId;
     this.name = options.name;
