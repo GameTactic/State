@@ -1,5 +1,4 @@
 import { v4 } from 'uuid';
-import Entity from '../canvas/entity/Entity';
 import { TeamOptions } from './types';
 
 /**
@@ -33,12 +32,6 @@ export default abstract class Team {
   public color: number
 
   /**
-   * The team entities
-   * @public
-   */
-  public entities: Entity[]
-
-  /**
    * Construct the instance
    * @param options
    * @protected
@@ -48,6 +41,5 @@ export default abstract class Team {
     this.tacticId = options.tacticId;
     this.name = options.name;
     this.color = options.color;
-    this.entities = options.entities || [];
   }
 }

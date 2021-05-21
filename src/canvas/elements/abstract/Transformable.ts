@@ -3,7 +3,12 @@
  * @author Eirmas
  */
 import CanvasElement from './CanvasElement';
-import { defaultTransformableOptions, TransformableOptions, TransformInterface } from './types';
+import {
+  defaultTransformableOptions,
+  TransformableOptions,
+  TransformInterface,
+  TransformPermissionsInterface
+} from './types';
 
 export default abstract class Transformable extends CanvasElement {
   /**
@@ -19,12 +24,19 @@ export default abstract class Transformable extends CanvasElement {
   public isTransformable = true
 
   /**
+   * Determines which transforms are allowed to be preformed
+   */
+  public permissions: TransformPermissionsInterface
+
+  /**
    * Construct the object
    * @protected
    * @param options
    */
   protected constructor (options: TransformableOptions) {
     super(options);
-    this.transform = Object.assign({}, defaultTransformableOptions, options.transform || {});
+    const finalOptions = Object.assign({}, defaultTransformableOptions, options);
+    this.transform = finalOptions.transform;
+    this.permissions = finalOptions.permissions;
   }
 }

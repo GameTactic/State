@@ -1,3 +1,3 @@
-export * from '../canvas/entity';
+export * from '../canvas/elements/entity';
 export * from './Team';
 export * from './types';

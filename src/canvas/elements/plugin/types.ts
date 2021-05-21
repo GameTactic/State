@@ -1,11 +1,11 @@
-export enum IconPluginType {
+export enum CanvasElementPluginType {
     RANGE = 'range',
     HIGHLIGHT = 'highlight'
 }
 
 export type HighlightListenerFunc = (enable: boolean, color: number) => void
 
-export interface IconPluginOptions {
+export interface CanvasElementPluginOptions {
     id?: string;
     readonly: boolean;
     label: string;
@@ -13,7 +13,7 @@ export interface IconPluginOptions {
     toggleable: boolean;
 }
 
-export interface RangePluginOptions extends IconPluginOptions {
+export interface RangePluginOptions extends CanvasElementPluginOptions {
     range: number;
     borderFill: number;
     fill: number;
@@ -21,6 +21,7 @@ export interface RangePluginOptions extends IconPluginOptions {
     fillOpacity: number;
 }
 
-export interface HighlightPluginOptions extends IconPluginOptions {
+export interface HighlightPluginOptions extends CanvasElementPluginOptions {
     listener: string;
+    color?: number;
 }

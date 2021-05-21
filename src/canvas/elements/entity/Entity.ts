@@ -1,6 +1,6 @@
 import { EntityOptions } from './types';
-import Icon from './Icon';
-import { CanvasElementName } from '../elements/abstract';
+import Icon from '../icon/Icon';
+import { CanvasElementName } from '../abstract';
 
 /**
  * The entity class

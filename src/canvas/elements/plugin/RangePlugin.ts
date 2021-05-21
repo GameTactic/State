@@ -1,11 +1,11 @@
-import IconPlugin from './IconPlugin';
-import { IconPluginType, RangePluginOptions } from './types';
+import CanvasElementPlugin from './CanvasElementPlugin';
+import { CanvasElementPluginType, RangePluginOptions} from './types';
 
 /**
  * The range plugin displays a circle around the icon
  * @author Eirmas
  */
-export default class RangePlugin extends IconPlugin {
+export default class RangePlugin extends CanvasElementPlugin {
     /**
      * The range of the circle to be drawn as the radius in the games units
      */
@@ -36,7 +36,7 @@ export default class RangePlugin extends IconPlugin {
     /**
      * The icon plugin type
      */
-    public name = IconPluginType.RANGE
+    public name = CanvasElementPluginType.RANGE
 
     /**
      * Construct the range plugin

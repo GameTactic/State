@@ -1,5 +1,6 @@
 import { v4 } from 'uuid';
 import { CanvasElementInterface, CanvasElementName, CanvasElementOptions } from './types';
+import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
 
@@ -38,10 +39,22 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    */
   public abstract name: CanvasElementName
 
+  /**
+   * The icon plugin for the canvas
+   * @public
+   */
+  public plugins: Array<CanvasElementPlugin>
+
+  /**
+   * Construct the canvas element
+   * @param options
+   * @protected
+   */
   protected constructor (options: CanvasElementOptions) {
     this.id = options.id || v4();
     this.temporary = options.temporary;
     this.creatorId = options.creatorId;
     this.tacticId = options.tacticId;
+    this.plugins = options.plugins || [];
   }
 }
