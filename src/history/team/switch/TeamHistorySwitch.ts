@@ -25,7 +25,7 @@ export default class TeamHistorySwitch extends History {
      * The ID of the team the user switched from
      * @public
      */
-    public readonly oldTeamId: string
+    public readonly oldTeamId: string | undefined
 
     constructor (options: TeamHistorySwitchOptions) {
         super({
