@@ -12,14 +12,16 @@ export default class RangePlugin extends IconPlugin {
     public range: number
 
     /**
-     * The color of the border
+     * The color of the border. Represented as a hexadecimal number
+     * E.g. 0xffffff (white)
      */
-    public borderFill: string
+    public borderFill: number
 
     /**
-     * The color of the circle fill
+     * The color of the circle fill. Represented as a hexadecimal number
+     * E.g. 0xffffff (white)
      */
-    public fill: string
+    public fill: number
 
     /**
      * The opacity of the border

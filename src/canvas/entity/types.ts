@@ -12,4 +12,6 @@ export interface IconOptions extends TransformableOptions {
 
 export interface EntityOptions extends IconOptions {
   teamId: string;
+  caption: string;
+  picture: string;
 }

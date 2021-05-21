@@ -17,17 +17,17 @@ export default abstract class IconPlugin {
     public label: string
 
     /**
-     * Determines weather or not the plugin can be altered by the user or not
+     * Determines whether or not the plugin can be altered by the user or not
      */
     public readonly: boolean
 
     /**
-     * Determines weather or not the plugin should be rendered visible on the canvas
+     * Determines whether or not the plugin should be rendered visible on the canvas
      */
     public visible: boolean
 
     /**
-     * Determines weather or not the plugin can be toggled in visibility on the canvas
+     * Determines whether or not the plugin can be toggled in visibility on the canvas
      */
     public toggleable: boolean
 

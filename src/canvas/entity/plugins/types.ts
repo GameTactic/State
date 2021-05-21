@@ -1,6 +1,9 @@
 export enum IconPluginType {
-    RANGE = 'range'
+    RANGE = 'range',
+    HIGHLIGHT = 'highlight'
 }
+
+export type HighlightListenerFunc = (enable: boolean, color: number) => void
 
 export interface IconPluginOptions {
     id?: string;
@@ -12,8 +15,12 @@ export interface IconPluginOptions {
 
 export interface RangePluginOptions extends IconPluginOptions {
     range: number;
-    borderFill: string;
-    fill: string;
+    borderFill: number;
+    fill: number;
     borderOpacity: number;
     fillOpacity: number;
+}
+
+export interface HighlightPluginOptions extends IconPluginOptions {
+    listener: string;
 }
