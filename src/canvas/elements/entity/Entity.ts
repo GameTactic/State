@@ -22,16 +22,6 @@ export default class Entity extends Icon {
   public name = CanvasElementName.ENTITY;
 
   /**
-   * The text that goes under the label for the entity inside the teams list of entities
-   */
-  public caption: string
-
-  /**
-   * The picture used for the entity inside the teams list of entities
-   */
-  public picture: string
-
-  /**
    * Construct the instance
    * @param options
    * @protected
@@ -39,7 +29,5 @@ export default class Entity extends Icon {
   constructor (options: EntityOptions) {
     super(options);
     this.teamId = options.teamId;
-    this.caption = options.caption;
-    this.picture = options.picture;
   }
 }

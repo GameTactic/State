@@ -49,8 +49,8 @@ export default abstract class CanvasElementPlugin {
     protected constructor(options: CanvasElementPluginOptions) {
         this.id = options.id || v4();
         this.label = options.label;
-        this.readonly = options.readonly;
-        this.visible = options.visible;
-        this.toggleable = options.toggleable;
+        this.readonly = options.readonly || true;
+        this.visible = options.visible || false;
+        this.toggleable = options.toggleable || true;
     }
 }

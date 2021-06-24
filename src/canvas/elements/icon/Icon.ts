@@ -14,8 +14,8 @@ export default class Icon extends Transformable {
     public label: string
 
     /**
-     * The URL to the image of the map
-     * Defined as object because of socket issues
+     * The URL to the image of the icon
+     * Defined as string because of socket issues
      * @public
      */
     public url: string
@@ -40,6 +40,16 @@ export default class Icon extends Transformable {
     public name = CanvasElementName.ICON;
 
     /**
+     * The text that goes under the label for the entity inside the teams list of entities
+     */
+    public caption: string
+
+    /**
+     * The picture used for the entity inside the teams list of entities
+     */
+    public picture: string
+
+    /**
      * Construct the instance
      * @param options
      * @protected
@@ -50,5 +60,7 @@ export default class Icon extends Transformable {
         this.url = options.url;
         this.dimensions = options.dimensions;
         this.point = options.point;
+        this.caption = options.caption;
+        this.picture = options.picture;
     }
 }
