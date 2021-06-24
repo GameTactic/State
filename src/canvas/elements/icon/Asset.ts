@@ -55,6 +55,16 @@ export default class Asset {
     public plugins: Array<CanvasElementPlugin>
 
     /**
+     * The text that goes under the label for the entity inside the teams list of entities
+     */
+    public caption: string
+
+    /**
+     * The picture used for the entity inside the teams list of entities
+     */
+    public picture: string
+
+    /**
      * Construct the asset
      * @param options
      */
@@ -67,5 +77,7 @@ export default class Asset {
         this.temporary = options.temporary;
         this.type = options.type;
         this.plugins = options.plugins;
+        this.caption = options.caption;
+        this.picture = options.picture;
     }
 }

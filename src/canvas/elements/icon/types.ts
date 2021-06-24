@@ -20,6 +20,8 @@ export interface AssetOptions {
     temporary: boolean;
     type: AssetType;
     plugins: Array<CanvasElementPlugin>;
+    caption: string;
+    picture: string;
 }
 
 export enum AssetType {
