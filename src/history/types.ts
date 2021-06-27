@@ -13,6 +13,7 @@ export interface HistoryOptions extends AbstractHistoryOptions {
 export interface AbstractHistoryOptions {
   id?: string;
   timestamp?: number;
+  revertable?: boolean;
   creatorId: string;
   [key: string]: any;
 }

@@ -20,8 +20,9 @@ export default class CanvasHistoryAddition extends History {
       ...options,
       event: new HistoryEvent({
         module: HistoryEventModules.CANVAS,
-        event: HistoryEventCanvas.ADDITION
-      })
+        event: HistoryEventCanvas.ADDITION,
+      }),
+      revertable: true
     });
     this.elementIds = options.elementIds;
   }

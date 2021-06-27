@@ -32,10 +32,16 @@ export default abstract class History {
    */
   public readonly event: HistoryEvent
 
+  /**
+   * Determines weather or not a history can be undone/redone
+   */
+  public readonly revertable: boolean
+
   protected constructor (options: HistoryOptions) {
     this.id = options.id || v4();
     this.timestamp = options.timestamp || ISO.timestamp();
     this.creatorId = options.creatorId;
     this.event = options.event;
+    this.revertable = options.revertable || false;
   }
 }
