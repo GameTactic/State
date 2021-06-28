@@ -33,7 +33,7 @@ export default abstract class Transformable extends CanvasElement {
    * @protected
    * @param options
    */
-  protected constructor (options: TransformableOptions) {
+  protected constructor(options: TransformableOptions) {
     super(options);
     const finalOptions = Object.assign({}, defaultTransformableOptions, options);
     this.transform = finalOptions.transform;

@@ -14,6 +14,8 @@ export interface CanvasElementInterface {
 }
 
 export interface TransformInterface {
+  position: Point;
+  dimensions: Point;
   skew?: Point;
   scale?: Point;
   rotation?: number;
@@ -37,7 +39,7 @@ export interface CanvasElementOptions {
 }
 
 export interface TransformableOptions extends CanvasElementOptions {
-  transform?: TransformInterface;
+  transform: TransformInterface;
   permissions?: TransformPermissionsInterface;
 }
 

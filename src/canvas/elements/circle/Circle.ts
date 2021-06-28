@@ -4,7 +4,6 @@
  */
 import Transformable from '../abstract/Transformable';
 import { CanvasElementName } from '..';
-import { Point } from '../../../util';
 import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';
 
 export default class Circle extends Transformable {
@@ -27,18 +26,6 @@ export default class Circle extends Transformable {
    * @public
    */
   public size: number
-
-  /**
-   * A point representing the center of the circle
-   * @public
-   */
-  public from: Point
-
-  /**
-   * A point on the border of the circle.
-   * @public
-   */
-  public to: Point
 
   /**
    * The style of the circles border
@@ -81,8 +68,6 @@ export default class Circle extends Transformable {
     this.fill = completedOptions.fill;
     this.borderFill = completedOptions.borderFill;
     this.size = completedOptions.size;
-    this.from = completedOptions.from;
-    this.to = completedOptions.to;
     this.strokeStyle = completedOptions.strokeStyle;
     this.showRadius = completedOptions.showRadius;
     this.fillOpacity = completedOptions.fillOpacity;

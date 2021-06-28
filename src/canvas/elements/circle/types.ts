@@ -1,5 +1,4 @@
 import { TransformableOptions } from '..';
-import { Point } from '../../../util';
 
 export enum CircleStrokeStyle {
   NORMAL = 'normal',
@@ -10,8 +9,6 @@ export interface CircleOptions extends TransformableOptions {
   fill: number;
   borderFill: number;
   size: number;
-  from: Point;
-  to: Point;
   strokeStyle?: CircleStrokeStyle;
   showRadius?: boolean;
   fillOpacity?: number;
@@ -19,7 +16,6 @@ export interface CircleOptions extends TransformableOptions {
 }
 
 export const defaultCircleOptions = {
-  transform: {},
   temporary: false,
   strokeStyle: CircleStrokeStyle.NORMAL,
   showRadius: true,
