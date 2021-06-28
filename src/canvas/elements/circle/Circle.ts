@@ -51,6 +51,10 @@ export default class Circle extends Transformable {
    */
   public borderOpacity: number
 
+  /**
+   * The radius rotation
+   */
+  public radiusRotation: number
 
   /**
    * Returns the type of this canvas element
@@ -72,5 +76,6 @@ export default class Circle extends Transformable {
     this.showRadius = completedOptions.showRadius;
     this.fillOpacity = completedOptions.fillOpacity;
     this.borderOpacity = completedOptions.borderOpacity;
+    this.radiusRotation = completedOptions.radiusRotation;
   }
 }

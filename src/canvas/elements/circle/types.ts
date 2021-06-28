@@ -11,6 +11,7 @@ export interface CircleOptions extends TransformableOptions {
   size: number;
   strokeStyle?: CircleStrokeStyle;
   showRadius?: boolean;
+  radiusRotation?: number;
   fillOpacity?: number;
   borderOpacity?: number;
 }
@@ -20,5 +21,6 @@ export const defaultCircleOptions = {
   strokeStyle: CircleStrokeStyle.NORMAL,
   showRadius: true,
   fillOpacity: 0.6,
-  borderOpacity: 1
+  borderOpacity: 1,
+  radiusRotation: 0
 };
