@@ -12,7 +12,7 @@ import {
 
 export default abstract class Transformable extends CanvasElement {
   /**
-   * The transform data. Includes skew, scale and rotation
+   * The transformation data. Includes skew, scale and rotation
    * @public
    */
   public transform: Required<TransformInterface>
