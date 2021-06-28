@@ -1,4 +1,4 @@
-import { Point } from '../../../util';
+import { Dimensions, Point } from '../../../util';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
 
 export enum CanvasElementName {
@@ -15,7 +15,7 @@ export interface CanvasElementInterface {
 
 export interface TransformInterface {
   position?: Point;
-  dimensions?: Point;
+  dimensions?: Dimensions;
   skew?: Point;
   scale?: Point;
   rotation?: number;
