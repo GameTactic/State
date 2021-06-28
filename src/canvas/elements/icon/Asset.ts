@@ -1,6 +1,6 @@
 import { AssetOptions, AssetType } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { defaultTransformableOptions, TransformInterface, TransformPermissionsInterface } from '../abstract';
+import { defaultTransformableOptions, TransformPermissionsInterface } from '../abstract';
 import { Dimensions } from '../../../util';
 
 /**
