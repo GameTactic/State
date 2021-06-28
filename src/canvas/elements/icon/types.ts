@@ -5,8 +5,6 @@ import { TransformableOptions, TransformInterface, TransformPermissionsInterface
 export interface IconOptions extends TransformableOptions {
     label: string;
     url: string;
-    dimensions: Dimensions;
-    point: Point;
     caption: string;
     picture: string;
 }
@@ -14,8 +12,7 @@ export interface IconOptions extends TransformableOptions {
 export interface AssetOptions {
     label: string;
     url: string;
-    dimensions: Dimensions;
-    transform?: Required<TransformInterface>;
+    transform: Required<TransformInterface>;
     permissions?: TransformPermissionsInterface;
     temporary: boolean;
     type: AssetType;

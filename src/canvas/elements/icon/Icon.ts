@@ -1,6 +1,5 @@
 import { IconOptions } from './types';
 import Transformable from '../abstract/Transformable';
-import { Dimensions, Point } from '../../../util';
 import { CanvasElementName } from '../abstract';
 
 /**
@@ -19,19 +18,6 @@ export default class Icon extends Transformable {
      * @public
      */
     public url: string
-
-    /**
-     * The icon dimensions
-     * @public
-     */
-    public dimensions: Dimensions
-
-    /**
-     * The point on the canvas to draw the icon
-     * Represents the top left corner of the image
-     * @public
-     */
-    public point: Point
 
     /**
      * Return the name of the canvas element
@@ -58,8 +44,6 @@ export default class Icon extends Transformable {
         super(options);
         this.label = options.label;
         this.url = options.url;
-        this.dimensions = options.dimensions;
-        this.point = options.point;
         this.caption = options.caption;
         this.picture = options.picture;
     }

@@ -14,8 +14,8 @@ export interface CanvasElementInterface {
 }
 
 export interface TransformInterface {
-  position: Point;
-  dimensions: Point;
+  position?: Point;
+  dimensions?: Point;
   skew?: Point;
   scale?: Point;
   rotation?: number;
@@ -52,6 +52,14 @@ export const defaultTransformableOptions = {
     scale: {
       x: 1,
       y: 1
+    },
+    position: {
+      x: 0,
+      y: 0
+    },
+    dimensions: {
+      width: 0,
+      height: 0
     },
     rotation: 0
   },
