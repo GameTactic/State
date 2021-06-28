@@ -22,12 +22,6 @@ export default class Asset {
     public url: string;
 
     /**
-     * The transform data. Includes skew, scale and rotation
-     * @public
-     */
-    public transform: Required<TransformInterface>
-
-    /**
      * Determines which transforms are allowed to be preformed
      */
     public permissions: TransformPermissionsInterface
