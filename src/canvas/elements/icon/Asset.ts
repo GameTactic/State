@@ -1,6 +1,7 @@
 import { AssetOptions, AssetType } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
 import { defaultTransformableOptions, TransformInterface, TransformPermissionsInterface } from '../abstract';
+import { Dimensions } from '../../../util';
 
 /**
  * An asset includes data to construct multiple icons
@@ -60,13 +61,18 @@ export default class Asset {
     public picture: string
 
     /**
+     * The dimensions of the asset
+     */
+    public dimensions: Dimensions
+
+    /**
      * Construct the asset
      * @param options
      */
     constructor (options: AssetOptions) {
         this.label = options.label;
         this.url = options.url;
-        this.transform = options.transform || defaultTransformableOptions.transform;
+        this.dimensions = options.dimensions;
         this.permissions = options.permissions || defaultTransformableOptions.permissions;
         this.temporary = options.temporary;
         this.type = options.type;

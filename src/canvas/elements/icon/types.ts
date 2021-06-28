@@ -1,6 +1,6 @@
 import { Dimensions, Point } from '../../../util';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { TransformableOptions, TransformInterface, TransformPermissionsInterface } from '../abstract';
+import { TransformableOptions, TransformPermissionsInterface } from '../abstract';
 
 export interface IconOptions extends TransformableOptions {
     label: string;
@@ -12,7 +12,7 @@ export interface IconOptions extends TransformableOptions {
 export interface AssetOptions {
     label: string;
     url: string;
-    transform: Required<TransformInterface>;
+    dimensions: Dimensions;
     permissions?: TransformPermissionsInterface;
     temporary: boolean;
     type: AssetType;
