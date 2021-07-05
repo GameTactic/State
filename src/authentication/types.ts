@@ -1,9 +1,14 @@
 export interface JWT {
     aud: string; // Ulid of OAuth Client
-    nbf: number; // Not valid before
     iat: number; // Issued at
     exp: number; // Expires at
-    iss: number; // Issuer name
-    sub: string; // Ulid of User
+    sub: string; // ULID of User
+}
+
+export interface AccessToken extends JWT {
+    scopes: string[] // List of accepted scopes
+}
+
+export interface IDToken extends JWT {
     nickname: string; // Data from OpenID scope `profile`
 }
