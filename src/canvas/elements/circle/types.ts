@@ -1,11 +1,11 @@
-import { TransformableOptions } from '..';
+import { CanvasElementOptions } from '..';
 
 export enum CircleStrokeStyle {
   NORMAL = 'normal',
   DASHED = 'dashed'
 }
 
-export interface CircleOptions extends TransformableOptions {
+export interface CircleOptions extends CanvasElementOptions {
   fill: number;
   borderFill: number;
   size: number;

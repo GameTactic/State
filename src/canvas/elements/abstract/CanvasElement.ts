@@ -1,9 +1,14 @@
 import { v4 } from 'uuid';
-import { CanvasElementInterface, CanvasElementName, CanvasElementOptions } from './types';
+import {
+  CanvasElementInterface,
+  CanvasElementName,
+  CanvasElementOptions, defaultTransformableOptions,
+  TransformInterface,
+  TransformPermissionsInterface
+} from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
-
   /**
    * The ID of the element as a UUID
    * @public
@@ -28,16 +33,21 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   public readonly tacticId: string
 
   /**
-   * Returns if the canvas element is transformable
-   * @returns false
-   */
-  public isTransformable = false
-
-  /**
    * Return the name of the canvas element
    * @returns CanvasElementName
    */
   public abstract name: CanvasElementName
+
+  /**
+   * The transformation data. Includes skew, scale and rotation
+   * @public
+   */
+  public transform: Required<TransformInterface>
+
+  /**
+   * Determines which transforms are allowed to be preformed
+   */
+  public permissions: TransformPermissionsInterface
 
   /**
    * The icon plugin for the canvas
@@ -51,10 +61,13 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @protected
    */
   protected constructor (options: CanvasElementOptions) {
+    const finalOptions = Object.assign({}, defaultTransformableOptions, options);
     this.id = options.id || v4();
     this.temporary = options.temporary;
     this.creatorId = options.creatorId;
     this.tacticId = options.tacticId;
     this.plugins = options.plugins || [];
+    this.transform = finalOptions.transform;
+    this.permissions = finalOptions.permissions;
   }
 }

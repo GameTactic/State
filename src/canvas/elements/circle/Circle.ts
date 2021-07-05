@@ -2,11 +2,11 @@
  * This class represents a circle on the canvas
  * @author Eirmas
  */
-import Transformable from '../abstract/Transformable';
 import { CanvasElementName } from '..';
 import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';
+import CanvasElement from '../abstract/CanvasElement';
 
-export default class Circle extends Transformable {
+export default class Circle extends CanvasElement {
   /**
    * The inner fill of the circle. Represented as a hexadecimal number
    * E.g. 0xffffff (white)

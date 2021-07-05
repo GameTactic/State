@@ -10,7 +10,6 @@ export enum CanvasElementName {
 
 export interface CanvasElementInterface {
   readonly name: CanvasElementName;
-  readonly isTransformable: boolean;
 }
 
 export interface TransformInterface {
@@ -34,13 +33,10 @@ export interface CanvasElementOptions {
   temporary: boolean;
   creatorId: string;
   tacticId: string;
-  plugins?: Array<CanvasElementPlugin>
-  [key: string]: any;
-}
-
-export interface TransformableOptions extends CanvasElementOptions {
   transform: TransformInterface;
   permissions?: TransformPermissionsInterface;
+  plugins?: Array<CanvasElementPlugin>
+  [key: string]: any;
 }
 
 export const defaultTransformableOptions = {

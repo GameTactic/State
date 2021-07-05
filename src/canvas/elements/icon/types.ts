@@ -1,8 +1,8 @@
-import { Dimensions, Point } from '../../../util';
+import { Dimensions } from '../../../util';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { TransformableOptions, TransformPermissionsInterface } from '../abstract';
+import { CanvasElementOptions, TransformPermissionsInterface } from '../abstract';
 
-export interface IconOptions extends TransformableOptions {
+export interface IconOptions extends CanvasElementOptions {
     label: string;
     url: string;
     caption: string;

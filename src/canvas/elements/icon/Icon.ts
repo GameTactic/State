@@ -1,12 +1,12 @@
 import { IconOptions } from './types';
-import Transformable from '../abstract/Transformable';
 import { CanvasElementName } from '../abstract';
+import CanvasElement from '../abstract/CanvasElement';
 
 /**
  * The icon class
  * @author Eirmas
  */
-export default class Icon extends Transformable {
+export default class Icon extends CanvasElement {
     /**
      * The label of the icon
      */
