@@ -1,5 +1,6 @@
 import { Dimensions, Point } from '../../../util';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
+import { Matrix } from '../transform';
 
 export enum CanvasElementName {
   BASE = 'base',
@@ -20,12 +21,11 @@ export interface TransformInterface {
   rotation?: number;
 }
 
-export interface TransformPermissionsInterface {
+export interface TransformPermissions {
   skewX: boolean;
   skewY: boolean;
   scaleX: boolean;
   scaleY: boolean;
-  rotation: boolean;
 }
 
 export interface CanvasElementOptions {
@@ -33,37 +33,36 @@ export interface CanvasElementOptions {
   temporary: boolean;
   creatorId: string;
   tacticId: string;
-  transform: TransformInterface;
-  permissions?: TransformPermissionsInterface;
+  dimensions: Dimensions;
+  rotation?: number;
+  transform?: Matrix;
+  parentTransform?: Matrix;
+  permissions?: TransformPermissions;
   plugins?: Array<CanvasElementPlugin>
   [key: string]: any;
 }
 
-export const defaultTransformableOptions = {
+export const defaultCanvasElementOptions = {
+  parentTransform: {
+    scaleX: 1,
+    skewY: 0,
+    skewX: 0,
+    scaleY: 1,
+    translateX: 0,
+    translateY: 0
+  },
   transform: {
-    skew: {
-      x: 0,
-      y: 0
-    },
-    scale: {
-      x: 1,
-      y: 1
-    },
-    position: {
-      x: 0,
-      y: 0
-    },
-    dimensions: {
-      width: 0,
-      height: 0
-    },
-    rotation: 0
+    scaleX: 1,
+    skewY: 0,
+    skewX: 0,
+    scaleY: 1,
+    translateX: 0,
+    translateY: 0
   },
   permissions: {
     skewX: true,
     skewY: true,
     scaleX: true,
-    scaleY: true,
-    rotation: true
+    scaleY: true
   }
 };

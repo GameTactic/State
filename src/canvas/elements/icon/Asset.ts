@@ -1,6 +1,6 @@
 import { AssetOptions, AssetType } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { defaultTransformableOptions, TransformPermissionsInterface } from '../abstract';
+import { defaultCanvasElementOptions, TransformPermissions } from '../abstract';
 import { Dimensions } from '../../../util';
 
 /**
@@ -24,7 +24,7 @@ export default class Asset {
     /**
      * Determines which transforms are allowed to be preformed
      */
-    public permissions: TransformPermissionsInterface
+    public permissions: TransformPermissions
 
     /**
      * Determines if the canvas element should be displayed for only a set period of time
@@ -67,7 +67,7 @@ export default class Asset {
         this.label = options.label;
         this.url = options.url;
         this.dimensions = options.dimensions;
-        this.permissions = options.permissions || defaultTransformableOptions.permissions;
+        this.permissions = options.permissions || defaultCanvasElementOptions.permissions;
         this.temporary = options.temporary;
         this.type = options.type;
         this.plugins = options.plugins;

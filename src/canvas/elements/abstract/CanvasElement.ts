@@ -2,11 +2,13 @@ import { v4 } from 'uuid';
 import {
   CanvasElementInterface,
   CanvasElementName,
-  CanvasElementOptions, defaultTransformableOptions,
-  TransformInterface,
-  TransformPermissionsInterface
+  CanvasElementOptions,
+  TransformPermissions,
+  defaultCanvasElementOptions
 } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
+import { Matrix } from '../transform';
+import { Dimensions } from '../../../util';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
   /**
@@ -42,12 +44,27 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * The transformation data. Includes skew, scale and rotation
    * @public
    */
-  public transform: Required<TransformInterface>
+  public transform: Matrix
+
+  /**
+   * The dimensions of the elemenet
+   */
+  public dimensions: Dimensions
+
+  /**
+   * The rotation of the element
+   */
+  public rotation: number;
+
+  /**
+   * The parent transform
+   */
+  public parentTransform: Matrix
 
   /**
    * Determines which transforms are allowed to be preformed
    */
-  public permissions: TransformPermissionsInterface
+  public permissions: TransformPermissions
 
   /**
    * The icon plugin for the canvas
@@ -61,13 +78,16 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * @protected
    */
   protected constructor (options: CanvasElementOptions) {
-    const finalOptions = Object.assign({}, defaultTransformableOptions, options);
+    const finalOptions = Object.assign({}, defaultCanvasElementOptions, options);
     this.id = options.id || v4();
     this.temporary = options.temporary;
     this.creatorId = options.creatorId;
     this.tacticId = options.tacticId;
     this.plugins = options.plugins || [];
+    this.rotation = options.rotation ?? 0;
+    this.dimensions = options.dimensions;
     this.transform = finalOptions.transform;
     this.permissions = finalOptions.permissions;
+    this.parentTransform = finalOptions.parentTransform;
   }
 }

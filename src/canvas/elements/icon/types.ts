@@ -1,6 +1,6 @@
 import { Dimensions } from '../../../util';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { CanvasElementOptions, TransformPermissionsInterface } from '../abstract';
+import { CanvasElementOptions, TransformPermissions } from '../abstract';
 
 export interface IconOptions extends CanvasElementOptions {
     label: string;
@@ -13,7 +13,7 @@ export interface AssetOptions {
     label: string;
     url: string;
     dimensions: Dimensions;
-    permissions?: TransformPermissionsInterface;
+    permissions?: TransformPermissions;
     temporary: boolean;
     type: AssetType;
     plugins: Array<CanvasElementPlugin>;
