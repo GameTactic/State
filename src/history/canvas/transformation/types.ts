@@ -1,5 +1,5 @@
 import { AbstractHistoryOptions } from '../../types';
-import { TransformInterface } from '../../../canvas/elements/abstract';
+import { Matrix } from '../../../canvas/elements/transform';
 
 export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptions {
   changes: Array<TransformationChange>;
@@ -7,6 +7,12 @@ export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptio
 
 export interface TransformationChange {
   elementId: string;
-  from: Required<TransformInterface>;
-  to: Required<TransformInterface>;
+  from: {
+    local: Matrix;
+    parent: Matrix;
+  };
+  to: {
+    local: Matrix;
+    parent: Matrix;
+  };
 }
