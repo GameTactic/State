@@ -84,7 +84,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
     this.creatorId = options.creatorId;
     this.tacticId = options.tacticId;
     this.plugins = options.plugins || [];
-    this.rotation = options.rotation ?? 0;
+    this.rotation = options.rotation || 0;
     this.dimensions = options.dimensions;
     this.transform = finalOptions.transform;
     this.permissions = finalOptions.permissions;
