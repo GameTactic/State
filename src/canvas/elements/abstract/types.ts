@@ -36,21 +36,12 @@ export interface CanvasElementOptions {
   dimensions: Dimensions;
   rotation?: number;
   transform?: Matrix;
-  parentTransform?: Matrix;
   permissions?: TransformPermissions;
   plugins?: Array<CanvasElementPlugin>
   [key: string]: any;
 }
 
 export const defaultCanvasElementOptions = {
-  parentTransform: {
-    scaleX: 1,
-    skewY: 0,
-    skewX: 0,
-    scaleY: 1,
-    translateX: 0,
-    translateY: 0
-  },
   transform: {
     scaleX: 1,
     skewY: 0,

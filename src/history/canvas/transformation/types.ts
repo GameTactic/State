@@ -14,11 +14,9 @@ export interface TransformationChange {
   from: {
     rotation: number;
     transform: Matrix;
-    parentTransform: Matrix;
   };
   to: {
     rotation: number;
     transform: Matrix;
-    parentTransform: Matrix;
   };
 }

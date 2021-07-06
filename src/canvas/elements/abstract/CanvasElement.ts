@@ -47,7 +47,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   public transform: Matrix
 
   /**
-   * The dimensions of the elemenet
+   * The dimensions of the element
    */
   public dimensions: Dimensions
 
@@ -55,11 +55,6 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * The rotation of the element
    */
   public rotation: number;
-
-  /**
-   * The parent transform
-   */
-  public parentTransform: Matrix
 
   /**
    * Determines which transforms are allowed to be preformed
@@ -88,6 +83,5 @@ export default abstract class CanvasElement implements CanvasElementInterface {
     this.dimensions = options.dimensions;
     this.transform = finalOptions.transform;
     this.permissions = finalOptions.permissions;
-    this.parentTransform = finalOptions.parentTransform;
   }
 }
