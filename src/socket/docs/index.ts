@@ -1,5 +1,4 @@
 export * from './canvas';
-export * from './core';
 export * from './lifecycle';
 export * from './room';
 export * from './tactic';
