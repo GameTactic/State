@@ -13,4 +13,6 @@ export default class SwitchTacticOutDoc implements SocketDoc {
 export type SwitchTacticOutDocPayload = {
     history: TacticHistorySwitch;
     data?: TacticData;
+    newTeamId?: string;
+    newViewId?: string;
 };

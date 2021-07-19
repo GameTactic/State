@@ -5,6 +5,6 @@ export interface MapOptions {
     name: string;
     description: string;
     views: Array<View>;
-    url: string;
+    cover: string;
     [key: string]: any;
 }
