@@ -2,9 +2,9 @@ import HistoryEvent from './HistoryEvent';
 import { HistoryEventCanvas } from './canvas';
 import { HistoryEventRoom } from './room';
 import { HistoryEventUser } from './user';
-import { HistoryEventTeam } from './team';
 import { HistoryEventTactic } from './tactic';
 import { HistoryEventLifecycle } from './lifecycle';
+import { HistoryEventTeam } from './team';
 
 export interface HistoryOptions extends AbstractHistoryOptions {
   event: HistoryEvent;
