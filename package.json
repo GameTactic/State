@@ -9,7 +9,7 @@
   "scripts": {
     "prepack": "yarn run build",
     "index": "yarn cti -w -b ./src",
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "devDependencies": {

@@ -32,7 +32,7 @@ export interface CanvasElementOptions {
   id?: string;
   temporary: boolean;
   creatorId: string;
-  tacticId: string;
+  viewId: string;
   dimensions: Dimensions;
   rotation?: number;
   transform?: Matrix;

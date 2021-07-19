@@ -29,10 +29,10 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   public readonly creatorId: string
 
   /**
-   * The ID of the tactic the canvas element relates to
+   * The ID of the view the canvas element relates to
    * @public
    */
-  public readonly tacticId: string
+  public readonly viewId: string
 
   /**
    * Return the name of the canvas element
@@ -77,7 +77,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
     this.id = options.id || v4();
     this.temporary = options.temporary;
     this.creatorId = options.creatorId;
-    this.tacticId = options.tacticId;
+    this.viewId = options.viewId;
     this.plugins = options.plugins || [];
     this.rotation = options.rotation || 0;
     this.dimensions = options.dimensions;
