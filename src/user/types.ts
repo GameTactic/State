@@ -11,6 +11,7 @@ export interface UserOptions {
   id: string;
   name: string;
   onTacticId?: string;
+  onViewId?: string;
   onTeamId?: string;
   isOnline: boolean;
   lastOnline: number;

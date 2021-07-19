@@ -1,4 +1,4 @@
-export * from './wot';
-export * from './wows';
+export * from './grid';
+export * from './view';
 export * from './Map';
 export * from './types';

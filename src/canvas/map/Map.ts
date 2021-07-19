@@ -1,71 +1,46 @@
-import { MapInterface } from './types';
-import { Dimensions } from '../../util';
 import { MapOptions } from './types';
-import { MapVueComponent } from '../types';
+import { Game } from '../../games';
+import View from './view/View';
 
-export default class Map implements MapInterface {
-  /**
-   * The name of the map
-   * @public
-   */
-  public name: string
+export default class Map {
+    /**
+     * The name of the map
+     * @public
+     */
+    public name: string
 
-  /**
-   * Description of the map
-   * @public
-   */
-  public description: string
+    /**
+     * Description of the map
+     * @public
+     */
+    public description: string
 
-  /**
-   * The URL to the image of the map
-   * Defined as object because of socket issues
-   * @public
-   */
-  public url: string
+    /**
+     * The URL to the cover image of the map
+     * @public
+     */
+    public cover: string
 
-  /**
-   * The id of the user who initialized the map
-   * @public
-   */
-  public readonly creatorId: string
+    /**
+     * The views of the map
+     * Maps can have multiple views, but most of them only have one.
+     * Rainbow Six Siege has different floors for their maps which is the reason we do it this way.
+     */
+    public views: Array<View>
 
-  /**
-   * A constant to fine tune the size of the map
-   * @public
-   */
-  public sizeConstant: number
+    /**
+     * The game the map is related to
+     */
+    public game: Game = Game.NONE
 
-  /**
-   * The map dimensions
-   * @public
-   */
-  public dimensions: Dimensions
-
-  /**
-   * The ID of the tactic the map relates to
-   * @public
-   */
-  public tacticId: string
-
-
-  /**
-   * Returns which vue component this map shall be rendered with
-   * @returns MapVueComponent.DEFAULT
-   */
-  public mapVueComponent: MapVueComponent
-
-  /**
-   * Construct the map
-   * @param options: MapOptions
-   */
-  constructor (options: MapOptions) {
-    this.name = options.name;
-    this.description = options.description;
-    this.url = options.url;
-    this.sizeConstant = options.sizeConstant || 1;
-    this.creatorId = options.creatorId;
-    this.dimensions = options.dimensions;
-    this.tacticId = options.tacticId;
-    this.mapVueComponent = MapVueComponent.DEFAULT;
-  }
+    /**
+     * Construct the map
+     * @param options: MapOptions
+     */
+    constructor (options: MapOptions) {
+        this.name = options.name;
+        this.description = options.description;
+        this.cover = options.cover;
+        this.views = options.views;
+    }
 }

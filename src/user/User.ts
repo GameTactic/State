@@ -26,6 +26,11 @@ export default class User {
   public onTacticId: string | undefined
 
   /**
+   * The view the user is currently viewing
+   */
+  public onViewId: string | undefined
+
+  /**
    * The team the user currently has selected
    * @public
    */
@@ -57,6 +62,7 @@ export default class User {
     this.id = options.id;
     this.name = options.name;
     this.onTacticId = options.onTacticId;
+    this.onViewId = options.onViewId;
     this.onTeamId = options.onTeamId;
     this.isOnline = options.isOnline;
     this.lastOnline = options.lastOnline;

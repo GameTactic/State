@@ -1,3 +1,4 @@
 export enum HistoryEventUser {
-    UPDATE = 'UPDATE'
+    UPDATE = 'UPDATE',
+    SWITCH_MAP = 'SWITCH_MAP'
 }

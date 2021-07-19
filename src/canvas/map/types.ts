@@ -1,17 +1,10 @@
-import { Dimensions } from '../../util';
-import { MapVueComponent } from '../types';
+import View from './view/View';
 
 export interface MapOptions {
-  name: string;
-  description: string;
-  creatorId: string;
-  tacticId: string;
-  url: string;
-  dimensions: Dimensions;
-  sizeConstant?: number;
-  [key: string]: any;
-}
-
-export interface MapInterface {
-  mapVueComponent: MapVueComponent;
+    id?: string;
+    name: string;
+    description: string;
+    views: Array<View>;
+    url: string;
+    [key: string]: any;
 }
