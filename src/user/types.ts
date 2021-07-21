@@ -2,9 +2,12 @@ import Role from './Role';
 
 export enum RoleType {
   RESERVED = 0x0,
-  OWNER = 0x1,
-  ADMIN = 0x2,
-  USER = 0x3
+  SYSTEM = 0x1,
+  MODERATOR = 0x2,
+  OWNER = 0x3,
+  ADMINISTRATOR = 0x4,
+  MEMBER = 0x5,
+  GUEST = 0x6
 }
 
 export interface UserOptions {
@@ -15,7 +18,7 @@ export interface UserOptions {
   onTeamId?: string;
   isOnline: boolean;
   lastOnline: number;
-  roles: Role[];
+  role: Role;
   [key: string]: any;
 }
 

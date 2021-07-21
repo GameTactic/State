@@ -49,10 +49,10 @@ export default class User {
   public lastOnline: number
 
   /**
-   * The users roles
+   * The users role
    * @public
    */
-  public roles: Role[]
+  public role: Role
 
   /**
    * Construct the object
@@ -66,6 +66,6 @@ export default class User {
     this.onTeamId = options.onTeamId;
     this.isOnline = options.isOnline;
     this.lastOnline = options.lastOnline;
-    this.roles = options.roles;
+    this.role = options.role;
   }
 }

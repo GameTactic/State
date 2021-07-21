@@ -1,9 +1,8 @@
-import Api from '../../api/Api';
 import WgMetaApiResponse from './WgMetaApiResponse';
 import WgDataApiResponse from './WgDataApiResponse';
 import { WgApiResponseOptions } from './types';
 
-export default class WgApiResponse extends Api {
+export default class WgApiResponse {
   /**
    * The Wargaming Api response status
    * @public
@@ -27,7 +26,6 @@ export default class WgApiResponse extends Api {
    * @param options
    */
   protected constructor (options: WgApiResponseOptions) {
-    super();
     this.status = options.status;
     this.meta = options.meta;
     this.data = options.data;
