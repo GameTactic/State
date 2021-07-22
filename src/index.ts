@@ -4,6 +4,7 @@ export * from './authentication';
 export * from './canvas';
 export * from './games';
 export * from './history';
+export * from './misc';
 export * from './room';
 export * from './socket';
 export * from './tactic';

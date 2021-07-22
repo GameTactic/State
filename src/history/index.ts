@@ -1,4 +1,5 @@
 export * from './canvas';
+export * from './chat';
 export * from './lifecycle';
 export * from './room';
 export * from './tactic';

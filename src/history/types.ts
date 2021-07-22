@@ -5,6 +5,7 @@ import { HistoryEventUser } from './user';
 import { HistoryEventTactic } from './tactic';
 import { HistoryEventLifecycle } from './lifecycle';
 import { HistoryEventTeam } from './team';
+import { HistoryEventChat } from './chat/types';
 
 export interface HistoryOptions extends AbstractHistoryOptions {
   event: HistoryEvent;
@@ -29,7 +30,8 @@ export enum HistoryEventModules {
   ROOM = 'ROOM',
   TACTIC = 'TACTIC',
   TEAM = 'TEAM',
-  USER = 'USER'
+  USER = 'USER',
+  CHAT = 'CHAT'
 }
 
 export interface HistoryEventEnums {
@@ -39,4 +41,5 @@ export interface HistoryEventEnums {
   [HistoryEventModules.TACTIC]: HistoryEventTactic;
   [HistoryEventModules.TEAM]: HistoryEventTeam;
   [HistoryEventModules.USER]: HistoryEventUser;
+  [HistoryEventModules.CHAT]: HistoryEventChat;
 }

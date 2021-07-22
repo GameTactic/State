@@ -5,12 +5,14 @@ import Tactic from '../../tactic/Tactic';
 import Team from '../../team/Team';
 import CanvasElement from '../../canvas/elements/abstract/CanvasElement';
 import Map from '../../canvas/map/Map';
+import Message from '../../misc/message/Message';
 
 export interface SocketStateOptions {
     collection: RootCollection;
     users: { [jti: string]: User };
     tactics: { [id: string]: TacticData };
     room: Room;
+    chat: Array<Message>
     [key: string]: any;
 }
 
@@ -26,6 +28,7 @@ export interface PartialState {
     collection: RootCollection;
     users: { [jti: string]: User };
     tactics: { [id: string]: Tactic };
+    chat: Array<Message>;
     map?: Map;
     elements?: { [id: string]: CanvasElement };
     teams?: { [id: string]: Team };

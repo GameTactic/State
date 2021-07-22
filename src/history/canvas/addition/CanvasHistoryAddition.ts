@@ -16,7 +16,7 @@ export default class CanvasHistoryAddition extends History {
   public readonly elementIds: Array<string>
 
   /**
-   * Construct the hisotry object
+   * Construct the history object
    * @param options
    */
   constructor (options: CanvasHistoryAdditionOptions) {
