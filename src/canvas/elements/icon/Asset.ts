@@ -60,6 +60,19 @@ export default class Asset {
     public dimensions: Dimensions
 
     /**
+     * Determines weather or not the asset should be displayed on the default bar
+     * Only the most frequently used assets should be default assets
+     */
+    public isDefault: boolean
+
+    /**
+     * The categories the asset falls under
+     * This can be 'Marksman' for league of legends, 'Utility' etc.
+     * Should use the pretty name as it will be displayed in the filter.
+     */
+    public categories: Array<string>
+
+    /**
      * Construct the asset
      * @param options
      */
@@ -73,5 +86,7 @@ export default class Asset {
         this.plugins = options.plugins;
         this.caption = options.caption;
         this.picture = options.picture;
+        this.isDefault = options.isDefault || false;
+        this.categories = options.categories || [];
     }
 }

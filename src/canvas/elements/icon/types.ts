@@ -19,6 +19,8 @@ export interface AssetOptions {
     plugins: Array<CanvasElementPlugin>;
     caption: string;
     picture: string;
+    isDefault?: boolean;
+    categories?: Array<string>;
 }
 
 export enum AssetType {
