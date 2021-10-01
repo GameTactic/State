@@ -1,13 +1,17 @@
-import SocketDoc, { SocketEventType } from '../../types';
+import SocketDoc from '../../types';
 import UserHistoryUpdate from '../../../../history/user/update/UserHistoryUpdate';
 import User from '../../../../user/User';
 import { HistoryEventModules, HistoryEventUser } from '../../../../history';
 
-export default class UpdateUserDoc implements SocketDoc {
-    title = 'Update User';
-    description = 'Updates a user.';
-    event = `${HistoryEventModules.USER}/${HistoryEventUser.UPDATE}`;
-    type = SocketEventType.IN_AND_OUT;
+export default class UpdateUserDoc extends SocketDoc {
+    public constructor() {
+        super({
+            title: 'Update User',
+            description: 'Updates a user',
+            module: HistoryEventModules.USER,
+            event: HistoryEventUser.UPDATE
+        });
+    }
 }
 
 export type UpdateUserDocPayload = {

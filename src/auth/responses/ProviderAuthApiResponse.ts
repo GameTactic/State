@@ -1,5 +1,5 @@
-import AuthApiResponse from "../AuthApiResponse";
-import ProviderAuthApiEntity from "./provider/ProviderAuthApiEntity";
+import AuthApiResponse from '../AuthApiResponse';
+import ProviderAuthApiEntity from './provider/ProviderAuthApiEntity';
 
 export default class ProviderAuthApiResponse extends AuthApiResponse {
 

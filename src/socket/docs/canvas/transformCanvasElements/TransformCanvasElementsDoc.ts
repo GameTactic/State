@@ -1,12 +1,16 @@
-import SocketDoc, { SocketEventType } from '../../types';
+import SocketDoc from '../../types';
 import { HistoryEventCanvas, HistoryEventModules } from '../../../../history';
 import CanvasHistoryTransformation from '../../../../history/canvas/transformation/CanvasHistoryTransformation';
 
-export default class TransformCanvasElementsDoc implements SocketDoc {
-    title = 'Transform Canvas Element';
-    description = 'Transforms an element from the canvas.';
-    event = `${HistoryEventModules.CANVAS}/${HistoryEventCanvas.TRANSFORMATION}`;
-    type = SocketEventType.IN_AND_OUT;
+export default class TransformCanvasElementsDoc extends SocketDoc {
+    public constructor() {
+        super({
+            title: 'Transform Canvas Element',
+            description: 'Transforms an element on the canvas.',
+            module: HistoryEventModules.CANVAS,
+            event: HistoryEventCanvas.TRANSFORMATION
+        });
+    }
 }
 
 export type TransformCanvasElementsDocPayload = {

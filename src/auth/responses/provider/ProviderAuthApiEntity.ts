@@ -1,4 +1,4 @@
-import ProviderRegionAuthApiEntity from "./ProviderRegionAuthApiEntity";
+import ProviderRegionAuthApiEntity from './ProviderRegionAuthApiEntity';
 
 export default class ProviderAuthApiEntity {
     /**

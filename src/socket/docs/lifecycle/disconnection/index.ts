@@ -1,2 +1,2 @@
-export * from './DisconnectionInDoc';
-export * from './DisconnectionOutDoc';
+export * from './DisconnectionDoc';
+export * from '../../room/leave/LeaveDoc';

@@ -1,4 +1,4 @@
-import {CanvasHistoryTransformationOptions, TransformationChange} from './types';
+import { CanvasHistoryTransformationOptions, TransformationChange } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';

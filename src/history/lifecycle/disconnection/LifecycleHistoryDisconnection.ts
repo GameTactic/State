@@ -1,5 +1,5 @@
 /**
- * This class contains data of an disconnection event
+ * This class contains data of an leave event
  * @author Eirmas
  */
 import { LifecycleHistoryDisconnectionOptions } from './types';

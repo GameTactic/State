@@ -1,6 +1,6 @@
-import {Game} from "../games";
-import Asset from "../canvas/elements/icon/Asset";
-import Map from "../canvas/map/Map";
+import { Game } from '../games';
+import Asset from '../canvas/elements/icon/Asset';
+import Map from '../canvas/map/Map';
 
 export interface ApiOptions {
     name: string;
