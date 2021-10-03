@@ -43,6 +43,6 @@ export default abstract class SocketDoc {
         } else {
             this.event = `${options.module}/${options.event}`;
         }
-        this.requireRoom = options.requireRoom || true;
+        this.requireRoom = options.requireRoom !== undefined ? options.requireRoom : true;
     }
 }
