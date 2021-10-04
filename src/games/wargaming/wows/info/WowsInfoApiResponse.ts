@@ -16,7 +16,7 @@ export default class WowsInfoApiResponse extends WgDataApiResponse {
   public readonly shipTypeImages: { [key: string]: WowsInfoShipTypeImagesApiResponse }
 
   /**
-   * Construct the Wows info Api response object
+   * Construct the Wows info GameAssets response object
    * @param options
    */
   constructor (options: WowsInfoApiResponseOptions) {

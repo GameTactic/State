@@ -4,25 +4,25 @@ import { WgApiResponseOptions } from './types';
 
 export default class WgApiResponse {
   /**
-   * The Wargaming Api response status
+   * The Wargaming GameAssets response status
    * @public
    */
   public readonly status: string;
 
   /**
-   * The Wargaming Api response meta object
+   * The Wargaming GameAssets response meta object
    * @public
    */
   public readonly meta: WgMetaApiResponse
 
   /**
-   * The Wargaming Api data object
+   * The Wargaming GameAssets data object
    * @public
    */
   public readonly data: WgDataApiResponse
 
   /**
-   * Construct the Wargaming Api response object
+   * Construct the Wargaming GameAssets response object
    * @param options
    */
   protected constructor (options: WgApiResponseOptions) {

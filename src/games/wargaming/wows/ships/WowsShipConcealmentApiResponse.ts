@@ -14,7 +14,7 @@ export default class WowsShipConcealmentApiResponse {
   public readonly detectDistanceByShip: number;
 
   /**
-   * Construct the Wows concealment Api response object
+   * Construct the Wows concealment GameAssets response object
    * @param options
    */
   constructor (options: WowsShipConcealmentApiResponseOptions) {

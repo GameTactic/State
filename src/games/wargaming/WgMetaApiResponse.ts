@@ -32,7 +32,7 @@ export default class WgMetaApiResponse {
   public readonly page: number;
 
   /**
-   * Construct the Wargaming Api response meta object
+   * Construct the Wargaming GameAssets response meta object
    * @param options
    */
   constructor (options: WgMetaApiResponseOptions) {

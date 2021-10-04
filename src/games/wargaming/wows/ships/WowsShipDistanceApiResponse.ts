@@ -8,7 +8,7 @@ export default class WowsShipDistanceApiResponse {
   public readonly distance: number;
 
   /**
-   * Construct the Wows distance Api response object
+   * Construct the Wows distance GameAssets response object
    * @param options
    */
   constructor (options: WowsShipDistanceApiResponseOptions) {

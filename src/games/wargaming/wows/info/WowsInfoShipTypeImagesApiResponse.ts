@@ -20,7 +20,7 @@ export default class WowsInfoShipTypeImagesApiResponse {
   public readonly imageElite: string;
 
   /**
-   * Construct the Wows ship type images Api response object
+   * Construct the Wows ship type images GameAssets response object
    * @param options
    */
   constructor (options: WowsInfoShipTypeImagesApiResponseOptions) {

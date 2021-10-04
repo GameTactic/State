@@ -46,7 +46,7 @@ export default class WowsShipApiResponse extends WgDataApiResponse {
   public readonly type: string;
 
   /**
-   * Construct the Wows ship Api response
+   * Construct the Wows ship GameAssets response
    * @param options
    */
   constructor (options: WowsShipApiResponseOptions) {

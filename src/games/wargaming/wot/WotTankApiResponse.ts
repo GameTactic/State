@@ -28,7 +28,7 @@ export default class WotTankApiResponse extends WgDataApiResponse {
   public readonly image: WotTankImageApiResponse;
 
   /**
-   * Construct the Wot tank Api response
+   * Construct the Wot tank GameAssets response
    * @param options
    */
   constructor (options: WotTankApiResponseOptions) {

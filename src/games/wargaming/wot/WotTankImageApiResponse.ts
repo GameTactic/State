@@ -20,7 +20,7 @@ export default class WotTankImageApiResponse {
   public readonly bigIcon: string;
 
   /**
-   * Construct the Wot tank image Api response object
+   * Construct the Wot tank image GameAssets response object
    * @param options
    */
   constructor (options: WotTankImageApiResponseOptions) {
