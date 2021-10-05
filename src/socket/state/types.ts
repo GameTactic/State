@@ -1,6 +1,6 @@
 import RootCollection from '../../tactic/collection/RootCollection';
 import User from '../../user/User';
-import { Room } from '../../room';
+import Room from '../../room/Room';
 import Tactic from '../../tactic/Tactic';
 import Team from '../../team/Team';
 import CanvasElement from '../../canvas/elements/abstract/CanvasElement';

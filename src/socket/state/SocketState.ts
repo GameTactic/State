@@ -1,7 +1,7 @@
 import { SocketStateOptions, TacticData } from './types';
 import RootCollection from '../../tactic/collection/RootCollection';
 import User from '../../user/User';
-import { Room } from '../../room';
+import Room from '../../room/Room';
 import Message from '../../misc/message/Message';
 
 export default class SocketState {
