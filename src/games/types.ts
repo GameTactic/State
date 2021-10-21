@@ -1,5 +1,6 @@
 export enum Game {
-    NONE = 'none',
+    WOT = 'wot',
     WOWS = 'wows',
-    WOT = 'wot'
+    CSGO = 'csgo',
+    R6 = 'r6'
 }

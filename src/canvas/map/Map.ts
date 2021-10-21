@@ -31,7 +31,7 @@ export default class Map {
     /**
      * The game the map is related to
      */
-    public game: Game = Game.NONE
+    public game: Game
 
     /**
      * Construct the map
@@ -42,5 +42,6 @@ export default class Map {
         this.description = options.description;
         this.cover = options.cover;
         this.views = options.views;
+        this.game = options.game;
     }
 }
