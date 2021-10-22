@@ -1,6 +1,6 @@
 import { AbstractHistoryOptions } from '../../types';
 
-export interface RoomHistoryJoinOptions extends AbstractHistoryOptions {
+export interface RoomHistoryConnectOptions extends AbstractHistoryOptions {
     userId: string;
     roomId: string;
 }

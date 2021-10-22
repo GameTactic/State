@@ -1,4 +1,4 @@
-import { RoomHistoryJoinOptions } from './types';
+import { RoomHistoryConnectOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
@@ -8,7 +8,7 @@ import { HistoryEventRoom } from '../types';
  * This class contains data of an room connect event
  * @author Eirmas
  */
-export default class RoomHistoryJoin extends History {
+export default class RoomHistoryConnect extends History {
     /**
      * The ID of the user who joined the room
      * @public
@@ -20,12 +20,12 @@ export default class RoomHistoryJoin extends History {
      */
     public readonly roomId: string
 
-    constructor (options: RoomHistoryJoinOptions) {
+    constructor (options: RoomHistoryConnectOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.ROOM,
-                event: HistoryEventRoom.JOIN
+                event: HistoryEventRoom.CONNECT
             })
         });
         this.userId = options.userId;

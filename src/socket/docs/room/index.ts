@@ -1,3 +1,3 @@
 export * from './setIsPrivate';
-export * from './join';
-export * from './leave';
+export * from './connect';
+export * from './disconnect';

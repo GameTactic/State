@@ -1,20 +1,20 @@
 import SocketDoc from '../../SocketDoc';
 import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
-import RoomHistoryLeave from '../../../../history/room/leave/RoomHistoryLeave';
+import RoomHistoryDisconnect from '../../../../history/room/disconnect/RoomHistoryDisconnect';
 import {SubscriberLevel} from "../../types";
 
-export default class LeaveDoc extends SocketDoc {
+export default class RoomDisconnectDoc extends SocketDoc {
     public constructor() {
         super({
-            title: 'Leave room',
+            title: 'Disconnect room',
             description: 'Disconnects user to a room in socket',
             module: HistoryEventModules.ROOM,
-            event: HistoryEventRoom.LEAVE,
+            event: HistoryEventRoom.DISCONNECT,
             level: SubscriberLevel.ROOM
         });
     }
 }
 
-export type LeaveDocPayload = {
-    history: RoomHistoryLeave;
+export type DisconnectRoomDocPayload = {
+    history: RoomHistoryDisconnect;
 };

@@ -3,7 +3,7 @@ import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
 import RoomHistoryCreate from '../../../../history/room/create/RoomHistoryCreate';
 import {SubscriberLevel} from "../../types";
 
-export default class CreateDoc extends SocketDoc {
+export default class RoomCreateDoc extends SocketDoc {
     public constructor() {
         super({
             title: 'Create room',
@@ -15,6 +15,6 @@ export default class CreateDoc extends SocketDoc {
     }
 }
 
-export type CreateDocPayload = {
+export type RoomCreateDocPayload = {
     history: RoomHistoryCreate;
 }

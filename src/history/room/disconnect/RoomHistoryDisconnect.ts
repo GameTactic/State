@@ -1,4 +1,4 @@
-import { RoomHistoryLeaveOptions } from './types';
+import { RoomHistoryDisconnectOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
@@ -8,7 +8,7 @@ import { HistoryEventRoom } from '../types';
  * This class contains data of an room disconnect event
  * @author Eirmas
  */
-export default class RoomHistoryLeave extends History {
+export default class RoomHistoryDisconnect extends History {
     /**
      * The ID of the user who left the room
      * @public
@@ -20,12 +20,12 @@ export default class RoomHistoryLeave extends History {
      */
     public readonly roomId: string
 
-    constructor (options: RoomHistoryLeaveOptions) {
+    constructor (options: RoomHistoryDisconnectOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.ROOM,
-                event: HistoryEventRoom.LEAVE
+                event: HistoryEventRoom.DISCONNECT
             })
         });
         this.userId = options.userId;

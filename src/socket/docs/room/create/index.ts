@@ -1,1 +1,1 @@
-export * from './CreateDoc';
+export * from './RoomCreateDoc';
