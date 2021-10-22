@@ -12,7 +12,7 @@ export default class JoinDoc extends SocketDoc {
             description: 'Connects user to a room in socket',
             module: HistoryEventModules.ROOM,
             event: HistoryEventRoom.JOIN,
-            level: SubscriberLevel.NONE
+            level: SubscriberLevel.ROOM
         });
     }
 }

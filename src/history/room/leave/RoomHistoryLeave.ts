@@ -5,7 +5,7 @@ import { HistoryEventModules } from '../../types';
 import { HistoryEventRoom } from '../types';
 
 /**
- * This class contains data of an room leave event
+ * This class contains data of an room disconnect event
  * @author Eirmas
  */
 export default class RoomHistoryLeave extends History {

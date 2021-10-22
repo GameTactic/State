@@ -1,5 +1,5 @@
 /**
- * This class contains data of an join event
+ * This class contains data of an connect event
  * @author Eirmas
  */
 import { LifecycleHistoryConnectionOptions } from './types';
