@@ -1,7 +1,7 @@
 import SocketDoc from '../../SocketDoc';
 import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
 import RoomHistoryDisconnect from '../../../../history/room/disconnect/RoomHistoryDisconnect';
-import {SubscriberLevel} from "../../types";
+import { SubscriberLevel } from '../../types';
 
 export default class RoomDisconnectDoc extends SocketDoc {
     public constructor() {
@@ -15,6 +15,8 @@ export default class RoomDisconnectDoc extends SocketDoc {
     }
 }
 
-export type DisconnectRoomDocPayload = {
+export type RoomDisconnectInDocPayload = void;
+
+export type RoomDisconnectOutDocPayload = {
     history: RoomHistoryDisconnect;
 };

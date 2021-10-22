@@ -1,1 +1,1 @@
-export * from './AddTacticDoc';
+export * from './TacticAddDoc';

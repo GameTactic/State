@@ -1,1 +1,1 @@
-export * from './ConnectTacticDoc';
+export * from './TacticConnectDoc';

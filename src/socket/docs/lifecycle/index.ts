@@ -1,3 +1,2 @@
-export * from './connection';
-export * from './disconnecting';
-export * from './disconnection';
+export * from './connect';
+export * from './disconnect';

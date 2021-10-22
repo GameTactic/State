@@ -1,1 +1,1 @@
-export * from './DisconnectTacticDoc';
+export * from './TacticDisconnectDoc';

@@ -3,7 +3,7 @@ import { PartialState } from '../../../state';
 import User from '../../../../user/User';
 import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
 import RoomHistoryConnect from '../../../../history/room/connect/RoomHistoryConnect';
-import {SubscriberLevel} from "../../types";
+import { SubscriberLevel } from '../../types';
 
 export default class RoomConnectDoc extends SocketDoc {
     public constructor() {

@@ -1,7 +1,7 @@
 import Asset from '../canvas/elements/icon/Asset';
 import Map from '../canvas/map/Map';
 import { GameAssetsOptions } from './types';
-import GameData from "./GameData";
+import GameData from './GameData';
 
 /**
  * This class contains all game specific data

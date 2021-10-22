@@ -1,7 +1,7 @@
 import SocketDoc from '../../SocketDoc';
 import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
 import RoomHistoryCreate from '../../../../history/room/create/RoomHistoryCreate';
-import {SubscriberLevel} from "../../types";
+import { SubscriberLevel } from '../../types';
 
 export default class RoomCreateDoc extends SocketDoc {
     public constructor() {

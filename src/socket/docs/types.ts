@@ -10,10 +10,11 @@ export interface SocketDocOptions {
 }
 
 /**
- * Determines what a subscriber event is for to fill its requirements
+ * Determines what level the subscription is for to fill it's requirements
  */
 export enum SubscriberLevel {
     NONE = 0x0,
     ROOM = 0x1,
-    TACTIC = 0x2
+    TACTIC = 0x2,
+    TEAM = 0x3
 }
