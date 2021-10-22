@@ -1,7 +1,8 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import TacticHistorySwitch from '../../../../history/tactic/switch/TacticHistorySwitch';
 import { HistoryEventModules, HistoryEventTactic } from '../../../../history';
 import { TacticData } from '../../../state';
+import {SubscriberLevel} from "../../types";
 
 export default class SwitchTacticDoc extends SocketDoc {
     public constructor() {
@@ -9,7 +10,8 @@ export default class SwitchTacticDoc extends SocketDoc {
             title: 'Switch tactic',
             description: 'User switches tactic',
             module: HistoryEventModules.TACTIC,
-            event: HistoryEventTactic.SWITCH
+            event: HistoryEventTactic.SWITCH,
+            level: SubscriberLevel.ROOM
         });
     }
 }

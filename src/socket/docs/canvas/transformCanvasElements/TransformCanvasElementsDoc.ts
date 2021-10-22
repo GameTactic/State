@@ -1,6 +1,7 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import { HistoryEventCanvas, HistoryEventModules } from '../../../../history';
 import CanvasHistoryTransformation from '../../../../history/canvas/transformation/CanvasHistoryTransformation';
+import {SubscriberLevel} from "../../types";
 
 export default class TransformCanvasElementsDoc extends SocketDoc {
     public constructor() {
@@ -8,7 +9,8 @@ export default class TransformCanvasElementsDoc extends SocketDoc {
             title: 'Transform Canvas Element',
             description: 'Transforms an element on the canvas.',
             module: HistoryEventModules.CANVAS,
-            event: HistoryEventCanvas.TRANSFORMATION
+            event: HistoryEventCanvas.TRANSFORMATION,
+            level: SubscriberLevel.TACTIC
         });
     }
 }

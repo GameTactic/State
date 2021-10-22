@@ -1,7 +1,8 @@
 import CanvasHistoryAddition from '../../../../history/canvas/addition/CanvasHistoryAddition';
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import CanvasElement from '../../../../canvas/elements/abstract/CanvasElement';
 import { HistoryEventCanvas, HistoryEventModules } from '../../../../history';
+import {SubscriberLevel} from "../../types";
 
 export default class AddCanvasElementsDoc extends SocketDoc {
     public constructor() {
@@ -9,7 +10,8 @@ export default class AddCanvasElementsDoc extends SocketDoc {
             title: 'Add Canvas Element',
             description: 'Adds an element to the canvas.',
             module: HistoryEventModules.CANVAS,
-            event: HistoryEventCanvas.ADDITION
+            event: HistoryEventCanvas.ADDITION,
+            level: SubscriberLevel.TACTIC
         });
     }
 }

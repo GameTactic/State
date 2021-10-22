@@ -5,44 +5,15 @@ export interface SocketDocOptions {
     description: string;
     module: HistoryEventModules;
     event: HistoryEventEnums[HistoryEventModules];
+    level: SubscriberLevel;
     overrideEvent?: string;
-    requireRoom?: boolean;
 }
 
-export default abstract class SocketDoc {
-    /**
-     * The title of the socket event
-     */
-    public title: string;
-
-    /**
-     * Description of what this event does
-     */
-    public description: string;
-
-    /**
-     * The event to listen for
-     */
-    public event: string;
-
-    /**
-     * Determines weather this event requires the user to be in a room for this event to actually trigger
-     */
-    public requireRoom: boolean;
-
-    /**
-     * Construct the SocketDoc.
-     * @param {SocketDocOptions} options - The options to create the SocketDoc.
-     * @protected
-     */
-    protected constructor(options: SocketDocOptions) {
-        this.title = options.title;
-        this.description = options.description;
-        if (options.overrideEvent) {
-            this.event = options.overrideEvent;
-        } else {
-            this.event = `${options.module}/${options.event}`;
-        }
-        this.requireRoom = options.requireRoom !== undefined ? options.requireRoom : true;
-    }
+/**
+ * Determines what a subscriber event is for to fill its requirements
+ */
+export enum SubscriberLevel {
+    NONE = 0x0,
+    ROOM = 0x1,
+    TACTIC = 0x2
 }

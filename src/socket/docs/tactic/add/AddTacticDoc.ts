@@ -1,8 +1,9 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import TacticHistoryAdd from '../../../../history/tactic/add/TacticHistoryAdd';
 import { TacticData } from '../../../state';
 import { HistoryEventModules, HistoryEventTactic } from '../../../../history';
 import Tactic from '../../../../tactic/Tactic';
+import {SubscriberLevel} from "../../types";
 
 export default class AddTacticDoc extends SocketDoc {
     public constructor() {
@@ -10,7 +11,8 @@ export default class AddTacticDoc extends SocketDoc {
             title: 'Create new tactic',
             description: 'Creates a new tactic',
             module: HistoryEventModules.TACTIC,
-            event: HistoryEventTactic.ADD
+            event: HistoryEventTactic.ADD,
+            level: SubscriberLevel.ROOM
         });
     }
 }

@@ -1,5 +1,6 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import { HistoryEventLifecycle, HistoryEventModules } from '../../../../history';
+import {SubscriberLevel} from "../../types";
 
 export default class ConnectionDoc extends SocketDoc {
     public constructor() {
@@ -8,8 +9,8 @@ export default class ConnectionDoc extends SocketDoc {
             description: 'Connects user to socket',
             module: HistoryEventModules.LIFECYCLE,
             event: HistoryEventLifecycle.CONNECTION,
-            overrideEvent: 'join',
-            requireRoom: false
+            overrideEvent: 'connection',
+            level: SubscriberLevel.NONE
         });
     }
 }

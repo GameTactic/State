@@ -1,5 +1,6 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import { HistoryEventLifecycle, HistoryEventModules } from '../../../../history';
+import {SubscriberLevel} from "../../types";
 
 export default class DisconnectingDoc extends SocketDoc {
     public constructor() {
@@ -9,7 +10,7 @@ export default class DisconnectingDoc extends SocketDoc {
             module: HistoryEventModules.LIFECYCLE,
             event: HistoryEventLifecycle.DISCONNECTING,
             overrideEvent: 'disconnecting',
-            requireRoom: false
+            level: SubscriberLevel.NONE
         });
     }
 }

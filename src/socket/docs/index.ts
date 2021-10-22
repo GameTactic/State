@@ -1,3 +1,4 @@
+export * from './SocketDoc';
 export * from './canvas';
 export * from './lifecycle';
 export * from './room';

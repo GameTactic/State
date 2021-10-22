@@ -1,6 +1,7 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
 import RoomHistoryCreate from '../../../../history/room/create/RoomHistoryCreate';
+import {SubscriberLevel} from "../../types";
 
 export default class CreateDoc extends SocketDoc {
     public constructor() {
@@ -9,7 +10,7 @@ export default class CreateDoc extends SocketDoc {
             description: 'Creates a room',
             module: HistoryEventModules.ROOM,
             event: HistoryEventRoom.CREATE,
-            requireRoom: false
+            level: SubscriberLevel.NONE
         });
     }
 }

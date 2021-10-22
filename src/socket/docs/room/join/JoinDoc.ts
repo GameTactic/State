@@ -1,8 +1,9 @@
-import SocketDoc from '../../types';
+import SocketDoc from '../../SocketDoc';
 import { PartialState } from '../../../state';
 import User from '../../../../user/User';
 import { HistoryEventModules, HistoryEventRoom } from '../../../../history';
 import RoomHistoryJoin from '../../../../history/room/join/RoomHistoryJoin';
+import {SubscriberLevel} from "../../types";
 
 export default class JoinDoc extends SocketDoc {
     public constructor() {
@@ -11,7 +12,7 @@ export default class JoinDoc extends SocketDoc {
             description: 'Connects user to a room in socket',
             module: HistoryEventModules.ROOM,
             event: HistoryEventRoom.JOIN,
-            requireRoom: false
+            level: SubscriberLevel.NONE
         });
     }
 }
