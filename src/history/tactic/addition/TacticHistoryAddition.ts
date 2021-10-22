@@ -1,26 +1,26 @@
 /**
- * This class contains data of an tactic add event
+ * This class contains data of an tactic addition event
  * @author Eirmas
  */
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventTactic } from '../types';
-import { TacticHistoryAddOptions } from './types';
+import { TacticHistoryAdditionOptions } from './types';
 
-export default class TacticHistoryAdd extends History {
+export default class TacticHistoryAddition extends History {
     /**
      * The ID of the tactic added
      * @public
      */
     public readonly tacticId: string
 
-    constructor (options: TacticHistoryAddOptions) {
+    constructor (options: TacticHistoryAdditionOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.TACTIC,
-                event: HistoryEventTactic.ADD
+                event: HistoryEventTactic.ADDITION
             })
         });
         this.tacticId = options.tacticId;

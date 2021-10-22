@@ -1,6 +1,6 @@
 import { AbstractHistoryOptions } from '../../types';
 import Room from '../../../room/Room';
 
-export interface RoomHistoryCreateOptions extends AbstractHistoryOptions {
+export interface RoomHistoryAdditionOptions extends AbstractHistoryOptions {
     room: Room;
 }

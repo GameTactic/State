@@ -1,6 +1,5 @@
 export enum HistoryEventRoom {
-    SET_IS_PRIVATE = 'SET_IS_PRIVATE',
+    ADDITION = 'ADDITION',
     CONNECT = 'CONNECT',
-    DISCONNECT = 'DISCONNECT',
-    CREATE = 'CREATE'
+    DISCONNECT = 'DISCONNECT'
 }

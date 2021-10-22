@@ -1,3 +1,3 @@
 export * from './connect';
-export * from './create';
+export * from './addition';
 export * from './disconnect';

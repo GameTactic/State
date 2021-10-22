@@ -1,5 +1,5 @@
 export enum HistoryEventTactic {
-    ADD = 'ADD',
+    ADDITION = 'ADDITION',
     CONNECT = 'CONNECT',
     DISCONNECT = 'DISCONNECT'
 }

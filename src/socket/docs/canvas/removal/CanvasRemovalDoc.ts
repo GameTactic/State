@@ -15,6 +15,6 @@ export default class CanvasRemovalDoc extends SocketDoc {
     }
 }
 
-export type CanvasRemovalDocDocPayload = {
+export type CanvasRemovalDocPayload = {
     history: CanvasHistoryRemoval;
 }
