@@ -1,4 +1,5 @@
 export enum HistoryEventHub {
     CONNECT = 'CONNECT',
-    DISCONNECT = 'DISCONNECT'
+    DISCONNECT = 'DISCONNECT',
+    ADDITION = 'ADDITION',
 }

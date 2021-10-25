@@ -1,5 +1,5 @@
 /**
- * This class contains data of a hub disconnect event
+ * This class contains data of an disconnect event
  * @author Eirik Måseidvåg
  */
 import { HubHistoryDisconnectOptions } from './types';
@@ -9,6 +9,12 @@ import { HistoryEventModules } from '../../types';
 import { HistoryEventHub } from '../types';
 
 export default class HubHistoryDisconnect extends History {
+    /**
+     * The ID of the user who disconnected
+     * @public
+     */
+    public readonly userId: string
+
     constructor (options: HubHistoryDisconnectOptions) {
         super({
             ...options,
@@ -17,5 +23,6 @@ export default class HubHistoryDisconnect extends History {
                 event: HistoryEventHub.DISCONNECT
             })
         });
+        this.userId = options.userId;
     }
 }

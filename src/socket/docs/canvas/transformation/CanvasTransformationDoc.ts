@@ -10,7 +10,7 @@ export default class CanvasTransformationDoc extends SocketDoc {
             description: 'Transforms an element on the canvas.',
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.TRANSFORMATION,
-            level: SubscriberLevel.TACTIC
+            level: SubscriberLevel.VIEW
         });
     }
 }

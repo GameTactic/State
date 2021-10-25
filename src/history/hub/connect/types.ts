@@ -1,3 +1,5 @@
 import { AbstractHistoryOptions } from '../../types';
 
-export type HubHistoryConnectOptions = AbstractHistoryOptions;
+export interface HubHistoryConnectOptions extends AbstractHistoryOptions {
+    userId: string
+}

@@ -6,7 +6,7 @@ import Message from '../../../misc/message/Message';
 import { HistoryEventChat } from '../types';
 
 /**
- * This class contains data of an addition event to the chat
+ * This class contains data of an roomAddition event to the chat
  * @author Eirik Måseidvåg
  */
 export default class ChatHistoryAddition extends History {

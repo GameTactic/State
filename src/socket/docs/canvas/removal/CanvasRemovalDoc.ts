@@ -10,7 +10,7 @@ export default class CanvasRemovalDoc extends SocketDoc {
             description: 'Removes an element from the canvas.',
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.REMOVAL,
-            level: SubscriberLevel.TACTIC
+            level: SubscriberLevel.VIEW
         });
     }
 }

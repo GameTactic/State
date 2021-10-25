@@ -11,7 +11,7 @@ export default class CanvasAdditionDoc extends SocketDoc {
             description: 'Adds an element to the canvas.',
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.ADDITION,
-            level: SubscriberLevel.TACTIC
+            level: SubscriberLevel.VIEW
         });
     }
 }

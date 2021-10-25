@@ -1,9 +1,7 @@
 import SocketDoc from '../../SocketDoc';
-import { PartialState } from '../../../state';
-import User from '../../../../user/User';
 import { HistoryEventModules, HistoryEventHub } from '../../../../history';
-import HubHistoryConnect from '../../../../history/hub/connect/HubHistoryConnect';
 import { SubscriberLevel } from '../../types';
+import Room from '../../../../room/Room';
 
 export default class HubConnectDoc extends SocketDoc {
     public constructor() {
@@ -12,19 +10,13 @@ export default class HubConnectDoc extends SocketDoc {
             description: 'Connects user to a hub in socket',
             module: HistoryEventModules.HUB,
             event: HistoryEventHub.CONNECT,
-            level: SubscriberLevel.ROOM
+            level: SubscriberLevel.HUB
         });
     }
 }
 
-export type HubConnectInDocPayload = {
-    history: HubHistoryConnect;
-}
+export type HubConnectInDocPayload = void
 
 export type HubConnectOutDocPayload = {
-    history: HubHistoryConnect;
-    data: {
-        user: User;
-        state?: PartialState;
-    };
+    rooms: Array<Room>;
 };

@@ -6,8 +6,8 @@ import { HistoryEventTactic } from './tactic';
 import { HistoryEventLifecycle } from './lifecycle';
 import { HistoryEventTeam } from './team';
 import { HistoryEventChat } from './chat';
-import { HistoryEventHub } from './hub';
-import {HistoryEventView} from "./view";
+import { HistoryEventView } from './view';
+import {HistoryEventHub} from "./hub";
 
 export interface HistoryOptions extends AbstractHistoryOptions {
   event: HistoryEvent;

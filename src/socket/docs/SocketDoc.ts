@@ -23,7 +23,7 @@ export default abstract class SocketDoc {
 
     /**
      * Construct the SocketDoc.
-     * @param {SocketDocOptions} options - The options to addition the SocketDoc.
+     * @param {SocketDocOptions} options - The options to roomAddition the SocketDoc.
      * @protected
      */
     protected constructor(options: SocketDocOptions) {
