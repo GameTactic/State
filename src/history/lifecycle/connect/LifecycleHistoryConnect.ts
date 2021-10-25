@@ -1,6 +1,6 @@
 /**
  * This class contains data of an connect event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import { LifecycleHistoryConnectOptions } from './types';
 import History from '../../History';

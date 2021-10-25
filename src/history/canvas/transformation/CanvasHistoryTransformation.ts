@@ -6,7 +6,7 @@ import { HistoryEventCanvas } from '../types';
 
 /**
  * This class contains data of a Transformation event to transformable canvas elements
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class CanvasHistoryTransformation extends History {
   /**

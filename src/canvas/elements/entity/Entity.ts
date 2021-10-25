@@ -5,7 +5,7 @@ import { CanvasElementName } from '../abstract';
 /**
  * The entity class
  * An entity is an icon that exist within a team
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class Entity extends Icon {
   /**

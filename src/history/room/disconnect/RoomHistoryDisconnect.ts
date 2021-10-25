@@ -6,7 +6,7 @@ import { HistoryEventRoom } from '../types';
 
 /**
  * This class contains data of an room disconnect event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class RoomHistoryDisconnect extends History {
     /**

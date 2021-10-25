@@ -1,6 +1,6 @@
 /**
  * This class represents a circle on the canvas
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import { CanvasElementName } from '..';
 import { CircleOptions, CircleStrokeStyle, defaultCircleOptions } from './types';

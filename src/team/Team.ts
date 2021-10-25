@@ -3,7 +3,7 @@ import { TeamOptions } from './types';
 
 /**
  * The team class
- * @author Eirmas
+ * @author Eirik Måseidvåg
  * @abstract
  */
 export default class Team {

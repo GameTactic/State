@@ -10,7 +10,7 @@ export default class RoomAdditionDoc extends SocketDoc {
             description: 'Adds a room',
             module: HistoryEventModules.ROOM,
             event: HistoryEventRoom.ADDITION,
-            level: SubscriberLevel.NONE
+            level: SubscriberLevel.VIEW
         });
     }
 }

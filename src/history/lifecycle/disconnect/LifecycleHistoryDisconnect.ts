@@ -1,6 +1,6 @@
 /**
  * This class contains data of an disconnect event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import { LifecycleHistoryDisconnectOptions } from './types';
 import History from '../../History';

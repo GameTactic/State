@@ -7,7 +7,7 @@ import { HistoryEventChat } from '../types';
 
 /**
  * This class contains data of an addition event to the chat
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class ChatHistoryAddition extends History {
     /**

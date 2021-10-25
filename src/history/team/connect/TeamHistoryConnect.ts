@@ -6,7 +6,7 @@ import { HistoryEventTeam } from '../types';
 
 /**
  * This class contains data of an team connect event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class TeamHistoryConnect extends History {
     /**

@@ -1,6 +1,6 @@
 /**
  * The class for a user role
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import { RoleOptions, RoleType } from './types';
 

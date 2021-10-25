@@ -6,7 +6,7 @@ import { HistoryEventCanvas } from '../types';
 
 /**
  * This class contains data of an addition event to the canvas
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class CanvasHistoryAddition extends History {
   /**

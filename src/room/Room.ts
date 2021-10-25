@@ -5,7 +5,7 @@ import { v4 } from 'uuid';
 /**
  * The room object. Data including general room details
  *
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class Room {
     /**

@@ -6,7 +6,7 @@ import { Dimensions } from '../../../util';
 /**
  * An asset includes data to construct multiple icons
  * The difference between an asset and an asset is that an asset does not include data such as point on canvas, ID etc...
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class Asset {
     /**

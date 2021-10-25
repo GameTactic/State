@@ -1,6 +1,6 @@
 /**
  * A simple class to generate an ISO timestamp of the current date and time
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export class ISO {
     public static timestamp (): number {

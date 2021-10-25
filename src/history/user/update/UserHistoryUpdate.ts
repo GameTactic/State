@@ -1,6 +1,6 @@
 /**
  * This class contains data of an user update event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';

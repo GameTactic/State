@@ -1,6 +1,6 @@
 /**
  * This class contains data of a tactic disconnect event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';

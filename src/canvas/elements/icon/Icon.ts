@@ -4,7 +4,7 @@ import CanvasElement from '../abstract/CanvasElement';
 
 /**
  * The icon class
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class Icon extends CanvasElement {
     /**

@@ -1,6 +1,6 @@
 /**
  * A class for a history event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 import { HistoryEventEnums, HistoryEventModules, HistoryEventOptions } from './types';
 

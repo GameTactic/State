@@ -7,7 +7,7 @@ import Room from '../../../room/Room';
 
 /**
  * This class contains data of a room creation event
- * @author Eirmas
+ * @author Eirik Måseidvåg
  */
 export default class RoomHistoryAddition extends History {
     /**
