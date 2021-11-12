@@ -6,6 +6,7 @@ export interface GameDataOptions {
     name: string;
     cover: string;
     game: Game;
+    acronym: string;
 }
 
 export interface GameAssetsOptions extends GameDataOptions {

@@ -15,7 +15,7 @@ export default class ProviderAuthApiEntity {
      * Path in the authentication microservice to start login process
      * @public
      */
-    public readonly path: string|null;
+    public readonly path: string | null;
     /**
      * Is using multiple regions
      * @public
@@ -27,10 +27,10 @@ export default class ProviderAuthApiEntity {
      */
     public readonly regions: Array<ProviderRegionAuthApiEntity>;
 
-    constructor(
+    public constructor(
         name: string,
         icon: string,
-        path: string|null,
+        path: string | null,
         multiRegion: boolean,
         regions: Array<ProviderRegionAuthApiEntity>
     ) {

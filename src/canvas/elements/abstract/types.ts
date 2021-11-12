@@ -37,7 +37,8 @@ export interface CanvasElementOptions {
   rotation?: number;
   transform?: Matrix;
   permissions?: TransformPermissions;
-  plugins?: Array<CanvasElementPlugin>
+  plugins?: Array<CanvasElementPlugin>;
+  timestamp?: Date;
   [key: string]: any;
 }
 
@@ -55,5 +56,7 @@ export const defaultCanvasElementOptions = {
     skewY: true,
     scaleX: true,
     scaleY: true
-  }
+  },
+  plugins: [],
+  rotation: 0
 };

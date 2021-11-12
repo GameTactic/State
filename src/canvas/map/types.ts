@@ -1,5 +1,6 @@
 import View from './view/View';
 import { Game } from '../../games';
+import Image from '../../misc/image/Image';
 
 export interface MapOptions {
     id?: string;
@@ -7,6 +8,6 @@ export interface MapOptions {
     description: string;
     game: Game;
     views: Array<View>;
-    cover: string;
+    cover: Image;
     [key: string]: any;
 }

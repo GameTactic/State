@@ -15,7 +15,7 @@ export default class ProviderAuthApiResponse extends AuthApiResponse {
      */
     public readonly disabled: Array<ProviderAuthApiEntity>;
 
-    constructor(options: {enabled: Array<ProviderAuthApiEntity>, disabled: Array<ProviderAuthApiEntity>}) {
+    constructor(options: { enabled: Array<ProviderAuthApiEntity>, disabled: Array<ProviderAuthApiEntity> }) {
         super();
         this.enabled = options.enabled;
         this.disabled = options.disabled;

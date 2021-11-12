@@ -15,9 +15,16 @@ export default class GameData {
     private readonly _name: string
 
     /**
+     * Acronym name of the game
+     * Example: World of Warships => WOWS
+     * @private
+     */
+    private readonly _acronym: string
+
+    /**
      * An URL to a cover that will be used as a default cover of a room
      * Should be a transparent background with the game logo centered both horizontally and vertically
-     * Image should preferably be 16:9 ratio
+     * image should preferably be 16:9 ratio
      * @private
      */
     private readonly _cover: string
@@ -34,16 +41,26 @@ export default class GameData {
      */
     public constructor(options: GameDataOptions) {
         this._name = options.name;
+        this._acronym = options.acronym;
         this._cover = options.cover;
         this._game = options.game;
     }
 
     /**
      * Returns the name
-     * @returns {string} name: the pretty name for the GameAssets
+     * @returns {string} name: the pretty name for the game
      */
     public get name (): string {
         return this._name;
+    }
+
+
+    /**
+     * Returns the acronym
+     * @returns {string} acronym: the acronym name for the game
+     */
+    public get acronym (): string {
+        return this._acronym;
     }
 
     /**

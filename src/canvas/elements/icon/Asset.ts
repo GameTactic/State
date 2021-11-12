@@ -2,6 +2,7 @@ import { AssetOptions, AssetType } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
 import { defaultCanvasElementOptions, TransformPermissions } from '../abstract';
 import { Dimensions } from '../../../util';
+import Image from '../../../misc/image/Image';
 
 /**
  * An asset includes data to construct multiple icons
@@ -15,11 +16,10 @@ export default class Asset {
     public label: string;
 
     /**
-     * The URL to the image of the map
-     * Defined as object because of socket issues
+     * The image of the asset to be used on the canvas
      * @public
      */
-    public url: string;
+    public icon: Image;
 
     /**
      * Determines which transforms are allowed to be preformed
@@ -50,12 +50,12 @@ export default class Asset {
     public caption: string
 
     /**
-     * The picture used for the entity inside the teams list of entities
+     * The picture to be used for this icon in non canvas situations
      */
-    public picture: string
+    public picture: Image
 
     /**
-     * The dimensions of the asset
+     * The dimensions of the asset in the games units to be used on the canvas
      */
     public dimensions: Dimensions
 
@@ -78,7 +78,7 @@ export default class Asset {
      */
     constructor (options: AssetOptions) {
         this.label = options.label;
-        this.url = options.url;
+        this.icon = options.icon;
         this.dimensions = options.dimensions;
         this.permissions = options.permissions || defaultCanvasElementOptions.permissions;
         this.temporary = options.temporary;
@@ -86,7 +86,7 @@ export default class Asset {
         this.plugins = options.plugins;
         this.caption = options.caption;
         this.picture = options.picture;
-        this.isDefault = options.isDefault || false;
+        this.isDefault = options.isDefault ?? false;
         this.categories = options.categories || [];
     }
 }

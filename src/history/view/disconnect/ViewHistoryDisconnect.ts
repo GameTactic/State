@@ -5,8 +5,8 @@
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
-import {ViewHistoryDisconnectOptions} from "./types";
-import {HistoryEventView} from "../types";
+import { ViewHistoryDisconnectOptions } from './types';
+import { HistoryEventView } from '../types';
 
 export default class ViewHistoryDisconnect extends History {
     /**

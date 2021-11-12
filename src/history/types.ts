@@ -7,7 +7,7 @@ import { HistoryEventLifecycle } from './lifecycle';
 import { HistoryEventTeam } from './team';
 import { HistoryEventChat } from './chat';
 import { HistoryEventView } from './view';
-import {HistoryEventHub} from "./hub";
+import { HistoryEventHub } from './hub';
 
 export interface HistoryOptions extends AbstractHistoryOptions {
   event: HistoryEvent;
@@ -15,7 +15,7 @@ export interface HistoryOptions extends AbstractHistoryOptions {
 
 export interface AbstractHistoryOptions {
   id?: string;
-  timestamp?: number;
+  timestamp?: Date;
   creatorId: string;
   [key: string]: any;
 }

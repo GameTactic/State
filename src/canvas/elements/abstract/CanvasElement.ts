@@ -12,7 +12,7 @@ import { Dimensions } from '../../../util';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
   /**
-   * The ID of the element as a UUID
+   * The ID of the element as a UUIDv4
    * @public
    */
   public readonly id: string
@@ -68,20 +68,27 @@ export default abstract class CanvasElement implements CanvasElementInterface {
   public plugins: Array<CanvasElementPlugin>
 
   /**
+   * Timestamp the canvas element was created
+   * @public
+   */
+  public readonly timestamp: Date
+
+  /**
    * Construct the canvas element
    * @param options
    * @protected
    */
   protected constructor (options: CanvasElementOptions) {
-    const finalOptions = Object.assign({}, defaultCanvasElementOptions, options);
-    this.id = options.id || v4();
-    this.temporary = options.temporary;
-    this.creatorId = options.creatorId;
-    this.viewId = options.viewId;
-    this.plugins = options.plugins || [];
-    this.rotation = options.rotation || 0;
-    this.dimensions = options.dimensions;
-    this.transform = finalOptions.transform;
-    this.permissions = finalOptions.permissions;
+    const opt = Object.assign({}, defaultCanvasElementOptions, options);
+    this.id = opt.id || v4();
+    this.temporary = opt.temporary;
+    this.creatorId = opt.creatorId;
+    this.viewId = opt.viewId;
+    this.plugins = opt.plugins;
+    this.rotation = opt.rotation;
+    this.dimensions = opt.dimensions;
+    this.transform = opt.transform;
+    this.permissions = opt.permissions;
+    this.timestamp = new Date() || opt.timestamp;
   }
 }

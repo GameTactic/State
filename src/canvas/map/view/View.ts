@@ -2,6 +2,7 @@ import { Dimensions } from '../../../util';
 import GridGroup from '../grid/GridGroup';
 import { ViewOptions } from './types';
 import { v4 } from 'uuid';
+import Image from '../../../misc/image/Image';
 
 export default class View {
     /**
@@ -15,11 +16,10 @@ export default class View {
     public name: string
 
     /**
-     * The URL to the image of the map
-     * Defined as object because of socket issues
+     * The image of the map
      * @public
      */
-    public url: string
+    public image: Image
 
     /**
      * The view dimensions in the game units
@@ -39,7 +39,7 @@ export default class View {
     public constructor(options: ViewOptions) {
         this.id = options.id || v4();
         this.name = options.name;
-        this.url = options.url;
+        this.image = options.image;
         this.dimensions = options.dimensions;
         this.gridGroups = options.gridGroups;
     }

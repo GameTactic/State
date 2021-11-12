@@ -1,7 +1,6 @@
 import { v4 } from 'uuid';
 import HistoryEvent from './HistoryEvent';
 import { HistoryOptions } from './types';
-import { ISO } from '../util';
 
 /**
  * Base class for a canvas history.
@@ -15,10 +14,9 @@ export default abstract class History {
 
   /**
    * The timestamp when the history was created.
-   * Represented in ISO format
    * @public
    */
-  public readonly timestamp: number
+  public readonly timestamp: Date
 
   /**
    * The ID of the user who created the history
@@ -34,7 +32,7 @@ export default abstract class History {
 
   protected constructor (options: HistoryOptions) {
     this.id = options.id || v4();
-    this.timestamp = options.timestamp || ISO.timestamp();
+    this.timestamp = options.timestamp || new Date();
     this.creatorId = options.creatorId;
     this.event = options.event;
   }

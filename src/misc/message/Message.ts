@@ -1,6 +1,5 @@
 import { v4 } from 'uuid';
 import { MessageOptions } from './types';
-import { ISO } from '../../util';
 
 /**
  * Class for a message in the chat
@@ -20,7 +19,7 @@ export default class Message {
     /**
      * The timestamp the message was sent
      */
-    public timestamp: number;
+    public timestamp: Date;
 
     /**
      * The message itself
@@ -34,7 +33,7 @@ export default class Message {
     public constructor (options: MessageOptions) {
         this.id = options.id || v4();
         this.userId = options.userId;
-        this.timestamp = options.timestamp || ISO.timestamp();
+        this.timestamp = options.timestamp || new Date();
         this.message = options.message;
     }
 }

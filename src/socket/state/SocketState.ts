@@ -9,7 +9,7 @@ export default class SocketState {
     public users: { [jti: string]: User };
     public tactics: { [tacticId: string]: TacticData };
     public room: Room;
-    public chat: Array<Message>
+    public chat: Array<Message>;
 
     constructor(options: SocketStateOptions) {
         this.collection = options.collection;

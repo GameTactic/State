@@ -1,6 +1,7 @@
 import { MapOptions } from './types';
 import { Game } from '../../games';
 import View from './view/View';
+import Image from '../../misc/image/Image';
 
 export default class Map {
     /**
@@ -19,7 +20,7 @@ export default class Map {
      * The URL to the cover image of the map
      * @public
      */
-    public cover: string
+    public cover: Image
 
     /**
      * The views of the map

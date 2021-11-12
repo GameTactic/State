@@ -1,6 +1,7 @@
 import { Game } from '../games';
 import { RoomOptions } from './types';
 import { v4 } from 'uuid';
+import Image from '../misc/image/Image';
 
 /**
  * The room object. Data including general room details
@@ -31,7 +32,7 @@ export default class Room {
     /**
      * Cover image for the room. Will use games default cover if null
      */
-    public cover: string | null
+    public cover: Image | null
 
     /**
      * Determines weather the room is private or public

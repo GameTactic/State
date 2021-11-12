@@ -1,6 +1,7 @@
 import { IconOptions } from './types';
 import { CanvasElementName } from '../abstract';
 import CanvasElement from '../abstract/CanvasElement';
+import Image from '../../../misc/image/Image';
 
 /**
  * The icon class
@@ -13,11 +14,10 @@ export default class Icon extends CanvasElement {
     public label: string
 
     /**
-     * The URL to the image of the icon
-     * Defined as string because of socket issues
+     * The image to be used on the canvas
      * @public
      */
-    public url: string
+    public icon: Image
 
     /**
      * Return the name of the canvas element
@@ -31,9 +31,14 @@ export default class Icon extends CanvasElement {
     public caption: string
 
     /**
-     * The picture used for the entity inside the teams list of entities
+     * The picture to be used for this icon in non canvas situations
      */
-    public picture: string
+    public picture: Image
+
+    /**
+     * Determines weather or not this icon should be displayed in the defaults bar
+     */
+    public isDefault: boolean
 
     /**
      * Construct the instance
@@ -43,8 +48,9 @@ export default class Icon extends CanvasElement {
     constructor (options: IconOptions) {
         super(options);
         this.label = options.label;
-        this.url = options.url;
+        this.icon = options.icon;
         this.caption = options.caption;
         this.picture = options.picture;
+        this.isDefault = options.isDefault;
     }
 }

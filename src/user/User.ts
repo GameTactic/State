@@ -1,14 +1,13 @@
+import { UserOptions } from './types';
+import Role from './Role';
+
 /**
  * The user class
  * @author Eirik Måseidvåg
  */
-import { UserOptions } from './types';
-import Role from './Role';
-
 export default class User {
   /**
-   * The users unique ID from the JWT token
-   * Represented as an ULID string
+   * The users unique ID
    * @public
    */
   public id: string
@@ -46,7 +45,7 @@ export default class User {
    * A timestamp of when the last time the user was online
    * @public
    */
-  public lastOnline: number
+  public lastOnline: Date
 
   /**
    * The users role

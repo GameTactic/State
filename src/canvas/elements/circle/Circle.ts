@@ -68,14 +68,14 @@ export default class Circle extends CanvasElement {
    */
   constructor (options: CircleOptions) {
     super(options);
-    const completedOptions = Object.assign({}, defaultCircleOptions, options);
-    this.fill = completedOptions.fill;
-    this.borderFill = completedOptions.borderFill;
-    this.size = completedOptions.size;
-    this.strokeStyle = completedOptions.strokeStyle;
-    this.showRadius = completedOptions.showRadius;
-    this.fillOpacity = completedOptions.fillOpacity;
-    this.borderOpacity = completedOptions.borderOpacity;
-    this.radiusRotation = completedOptions.radiusRotation;
+    const opt = Object.assign({}, defaultCircleOptions, options);
+    this.fill = opt.fill;
+    this.borderFill = opt.borderFill;
+    this.size = opt.size;
+    this.strokeStyle = opt.strokeStyle;
+    this.showRadius = opt.showRadius;
+    this.fillOpacity = opt.fillOpacity;
+    this.borderOpacity = opt.borderOpacity;
+    this.radiusRotation = opt.radiusRotation;
   }
 }

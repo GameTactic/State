@@ -6,8 +6,9 @@ export enum RoleType {
   MODERATOR = 0x2,
   OWNER = 0x3,
   ADMINISTRATOR = 0x4,
-  MEMBER = 0x5,
-  GUEST = 0x6
+  PRESENTER = 0x5,
+  USER = 0x6,
+  OBSERVER = 0x7
 }
 
 export interface UserOptions {
@@ -17,13 +18,11 @@ export interface UserOptions {
   onViewId?: string;
   onTeamId?: string;
   isOnline: boolean;
-  lastOnline: number;
+  lastOnline: Date;
   role: Role;
-  [key: string]: any;
 }
 
 export interface RoleOptions {
   roleType: RoleType;
   assigneeId: string;
-  [key: string]: any;
 }

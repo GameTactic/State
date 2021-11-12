@@ -1,6 +1,6 @@
 export interface MessageOptions {
     id?: string;
-    timestamp?: number;
+    timestamp?: Date;
     userId: string;
     message: string;
 }
