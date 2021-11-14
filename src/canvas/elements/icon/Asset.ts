@@ -86,7 +86,7 @@ export default class Asset {
         this.plugins = options.plugins;
         this.caption = options.caption;
         this.picture = options.picture;
-        this.isDefault = options.isDefault ?? false;
+        this.isDefault = options.isDefault !== undefined ? options.isDefault : false;
         this.categories = options.categories || [];
     }
 }
