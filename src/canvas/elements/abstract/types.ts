@@ -6,7 +6,8 @@ export enum CanvasElementName {
   BASE = 'base',
   CIRCLE = 'circle',
   ICON = 'icon',
-  ENTITY = 'entity'
+  ENTITY = 'entity',
+  PING = 'ping'
 }
 
 export interface CanvasElementInterface {
