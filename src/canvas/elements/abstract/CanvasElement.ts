@@ -73,7 +73,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
     this.creatorId = opt.creatorId;
     this.viewId = opt.viewId;
     this.plugins = opt.plugins;
-    this.transform = opt.transform || [1, 0, 0, 1, 0, 0];
+    this.transform = opt.transform || [1, 0, 0, 0, 1, 0];
     this.permissions = opt.permissions;
     this.timestamp = opt.timestamp || Date.now();
   }
