@@ -24,10 +24,18 @@ export default class StaticGame {
     /**
      * An URL to a cover that will be used as a default cover of a room
      * Should be a transparent background with the game logo centered both horizontally and vertically
-     * image should preferably be 16:9 ratio
      * @private
      */
     private readonly _cover: string
+
+
+    /**
+     * SVG Cover
+     * An URL to a cover that will be used as a default cover of a room
+     * Should be a transparent background with the game logo centered both horizontally and vertically
+     * @private
+     */
+    private readonly _coverSVG: string
 
     /**
      * The game the data is related to
@@ -43,6 +51,7 @@ export default class StaticGame {
         this._name = options.name;
         this._acronym = options.acronym;
         this._cover = options.cover;
+        this._coverSVG = options.coverSVG;
         this._game = options.game;
     }
 
@@ -69,6 +78,14 @@ export default class StaticGame {
      */
     get cover (): string {
         return this._cover;
+    }
+
+    /**
+     * Returns the SVG cover URL
+     * @returns {string} cover: URL to SVG cover
+     */
+    get coverSVG (): string {
+        return this._coverSVG;
     }
 
     /**
