@@ -1,6 +1,6 @@
 {
   "name": "@gametactic/state",
-  "version": "0.1.97",
+  "version": "0.1.98",
   "description": "State Object",
   "author": "Niko Granö <niko@gametactic.eu>",
   "license": "GPL-3.0-only",
@@ -13,11 +13,11 @@
     "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "devDependencies": {
+    "@pixi/math": "^6.2.0",
     "@typescript-eslint/eslint-plugin": "^4",
     "@typescript-eslint/parser": "^4",
     "create-ts-index": "^1.13.3",
     "eslint": "^7.22.0",
-    "@pixi/math": "^6.2.0",
     "typescript": "^3.9.6"
   },
   "files": [
