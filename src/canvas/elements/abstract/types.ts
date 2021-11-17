@@ -1,5 +1,5 @@
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import * as PIXI from 'pixi.js';
+import { Matrix } from '@pixi/math';
 
 export enum CanvasElementName {
   CIRCLE = 'circle',
@@ -23,7 +23,7 @@ export interface CanvasElementOptions {
   temporary: boolean;
   creatorId: string;
   viewId: string;
-  transform?: PIXI.Matrix;
+  transform?: Matrix;
   permissions?: TransformPermissions;
   plugins?: Array<CanvasElementPlugin>;
   timestamp?: number;
