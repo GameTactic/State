@@ -1,5 +1,4 @@
 import { AbstractHistoryOptions } from '../../types';
-import { Matrix } from '@pixi/math';
 
 export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptions {
   changes: Array<TransformationChange>;
@@ -12,9 +11,9 @@ export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptio
 export interface TransformationChange {
   elementId: string;
   from: {
-    transform: Matrix;
+    transform: Array<number>;
   };
   to: {
-    transform: Matrix;
+    transform: Array<number>;
   };
 }

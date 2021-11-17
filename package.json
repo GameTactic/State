@@ -13,7 +13,6 @@
     "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "devDependencies": {
-    "@pixi/math": "^6.2.0",
     "@typescript-eslint/eslint-plugin": "^4",
     "@typescript-eslint/parser": "^4",
     "create-ts-index": "^1.13.3",

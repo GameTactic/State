@@ -7,7 +7,6 @@ import {
   defaultCanvasElementOptions
 } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { Matrix } from '@pixi/math';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
   /**
@@ -43,7 +42,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * The transformation data. Includes skew, scale and rotation
    * @public
    */
-  public transform: Matrix
+  public transform: Array<number>
 
   /**
    * Determines which transforms are allowed to be preformed
@@ -74,7 +73,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
     this.creatorId = opt.creatorId;
     this.viewId = opt.viewId;
     this.plugins = opt.plugins;
-    this.transform = opt.transform || Matrix.IDENTITY;
+    this.transform = opt.transform || [1, 0, 0, 1, 0, 0];
     this.permissions = opt.permissions;
     this.timestamp = opt.timestamp || Date.now();
   }
