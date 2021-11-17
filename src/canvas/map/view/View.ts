@@ -1,5 +1,3 @@
-import { Dimensions } from '../../../util';
-import GridGroup from '../grid/GridGroup';
 import { ViewOptions } from './types';
 import { v4 } from 'uuid';
 import Image from '../../../misc/image/Image';
@@ -22,15 +20,16 @@ export default class View {
     public image: Image
 
     /**
-     * The view dimensions in the game units
+     * The view width in the game units
      * @public
      */
-    public dimensions: Dimensions
+    public width: number
 
     /**
-     * The grids for the view
+     * The view height in the game units
+     * @public
      */
-    public gridGroups: Array<GridGroup>
+    public height: number
 
     /**
      * Construct the view
@@ -40,7 +39,7 @@ export default class View {
         this.id = options.id || v4();
         this.name = options.name;
         this.image = options.image;
-        this.dimensions = options.dimensions;
-        this.gridGroups = options.gridGroups;
+        this.width = options.width;
+        this.height = options.height;
     }
 }

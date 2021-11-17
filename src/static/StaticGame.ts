@@ -1,11 +1,11 @@
-import { Game } from '../games';
-import { GameDataOptions } from './types';
+import { StaticGameOptions } from './types';
+import { Game } from '../misc/games';
 
 /**
  * This class contains all game specific data
  * @author Eirik Måseidvåg
  */
-export default class GameData {
+export default class StaticGame {
     /**
      * Pretty name of the game
      * Example: World of Warships
@@ -39,7 +39,7 @@ export default class GameData {
      * Construct the instance
      * @param options
      */
-    public constructor(options: GameDataOptions) {
+    public constructor(options: StaticGameOptions) {
         this._name = options.name;
         this._acronym = options.acronym;
         this._cover = options.cover;
@@ -72,7 +72,7 @@ export default class GameData {
     }
 
     /**
-     * Returns the game the GameAssets is related to
+     * Returns the game the StaticGameExtended is related to
      * @returns {Game} game: the game
      */
     get game (): Game {

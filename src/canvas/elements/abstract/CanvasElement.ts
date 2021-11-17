@@ -7,8 +7,7 @@ import {
   defaultCanvasElementOptions
 } from './types';
 import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
-import { Matrix } from '../transform';
-import { Dimensions } from '../../../util';
+import * as PIXI from 'pixi.js';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
   /**
@@ -44,17 +43,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * The transformation data. Includes skew, scale and rotation
    * @public
    */
-  public transform: Matrix
-
-  /**
-   * The dimensions of the element
-   */
-  public dimensions: Dimensions
-
-  /**
-   * The rotation of the element
-   */
-  public rotation: number;
+  public transform: PIXI.Matrix
 
   /**
    * Determines which transforms are allowed to be preformed
@@ -71,7 +60,7 @@ export default abstract class CanvasElement implements CanvasElementInterface {
    * Timestamp the canvas element was created
    * @public
    */
-  public readonly timestamp: Date
+  public readonly timestamp: number
 
   /**
    * Construct the canvas element
@@ -85,10 +74,8 @@ export default abstract class CanvasElement implements CanvasElementInterface {
     this.creatorId = opt.creatorId;
     this.viewId = opt.viewId;
     this.plugins = opt.plugins;
-    this.rotation = opt.rotation;
-    this.dimensions = opt.dimensions;
-    this.transform = opt.transform;
+    this.transform = opt.transform || PIXI.Matrix.IDENTITY;
     this.permissions = opt.permissions;
-    this.timestamp = new Date() || opt.timestamp;
+    this.timestamp = opt.timestamp || Date.now();
   }
 }

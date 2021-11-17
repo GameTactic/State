@@ -1,5 +1,5 @@
 import { AbstractHistoryOptions } from '../../types';
-import { Matrix } from '../../../canvas/elements/transform';
+import * as PIXI from 'pixi.js';
 
 export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptions {
   changes: Array<TransformationChange>;
@@ -12,11 +12,9 @@ export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptio
 export interface TransformationChange {
   elementId: string;
   from: {
-    rotation: number;
-    transform: Matrix;
+    transform: PIXI.Matrix;
   };
   to: {
-    rotation: number;
-    transform: Matrix;
+    transform: PIXI.Matrix;
   };
 }

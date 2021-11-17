@@ -4,4 +4,3 @@ export * from './entity';
 export * from './icon';
 export * from './ping';
 export * from './plugin';
-export * from './transform';

@@ -12,6 +12,7 @@ export interface CircleOptions extends CanvasElementOptions {
   strokeStyle?: CircleStrokeStyle;
   showRadius?: boolean;
   radiusRotation?: number;
+  radius: number;
   fillOpacity?: number;
   borderOpacity?: number;
 }

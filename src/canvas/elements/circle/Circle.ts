@@ -57,6 +57,11 @@ export default class Circle extends CanvasElement {
   public radiusRotation: number
 
   /**
+   * Radius of the circle
+   */
+  public radius: number
+
+  /**
    * Returns the type of this canvas element
    * @returns CanvasElementName.CIRCLE
    */
@@ -77,5 +82,6 @@ export default class Circle extends CanvasElement {
     this.fillOpacity = opt.fillOpacity;
     this.borderOpacity = opt.borderOpacity;
     this.radiusRotation = opt.radiusRotation;
+    this.radius = opt.radius;
   }
 }

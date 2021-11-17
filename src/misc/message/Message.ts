@@ -19,7 +19,7 @@ export default class Message {
     /**
      * The timestamp the message was sent
      */
-    public timestamp: Date;
+    public timestamp: number;
 
     /**
      * The message itself
@@ -33,7 +33,7 @@ export default class Message {
     public constructor (options: MessageOptions) {
         this.id = options.id || v4();
         this.userId = options.userId;
-        this.timestamp = options.timestamp || new Date();
+        this.timestamp = options.timestamp || Date.now();
         this.message = options.message;
     }
 }

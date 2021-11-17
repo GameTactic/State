@@ -1,4 +1,4 @@
-import { Game } from '../games';
+import { Game } from '../misc/games';
 import Image from '../misc/image/Image';
 
 export interface RoomOptions {
@@ -8,9 +8,7 @@ export interface RoomOptions {
     description: string;
     isPrivate?: boolean;
     cover?: Image;
-    created?: Date;
-    updated?: Date;
+    created?: number;
+    updated?: number;
     creatorId: string;
-    path?: string;
-    version?: number;
 }

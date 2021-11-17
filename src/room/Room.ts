@@ -1,7 +1,7 @@
-import { Game } from '../games';
 import { RoomOptions } from './types';
 import { v4 } from 'uuid';
 import Image from '../misc/image/Image';
+import { Game } from '../misc/games';
 
 /**
  * The room object. Data including general room details
@@ -42,40 +42,27 @@ export default class Room {
     /**
      * The timestamp the room was created
      */
-    public readonly created: Date
+    public readonly created: number
 
     /**
      * The timestamp the room was last update
      */
-    public updated: Date
+    public updated: number
 
     /**
      * ID of the user who created the room
      */
     public creatorId: string
 
-    /**
-     * The path used in URL to find this room. Must be unique for all rooms
-     */
-    public path: string
-
-    /**
-     * Version control variable
-     */
-    public version: number
-
     public constructor(options: RoomOptions) {
-        const id = options.id || v4();
-        this.id = id;
+        this.id = options.id || v4();
         this.name = options.name;
         this.description = options.description;
         this.game = options.game;
         this.cover = options.cover || null;
         this.isPrivate = options.isPrivate || false;
-        this.created = options.created || new Date();
-        this.updated = options.updated || new Date();
+        this.created = options.created || Date.now();
+        this.updated = options.updated || Date.now();
         this.creatorId = options.creatorId;
-        this.path = options.path || id;
-        this.version = options.version || 1;
     }
 }

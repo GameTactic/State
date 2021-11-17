@@ -1,5 +1,5 @@
 import View from './view/View';
-import { Game } from '../../games';
+import { Game } from '../../misc/games';
 import Image from '../../misc/image/Image';
 
 export interface MapOptions {

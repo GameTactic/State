@@ -18,7 +18,7 @@ export interface UserOptions {
   onViewId?: string;
   onTeamId?: string;
   isOnline: boolean;
-  lastOnline: Date;
+  lastOnline: number;
   role: Role;
 }
 

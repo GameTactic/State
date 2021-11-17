@@ -45,7 +45,7 @@ export default class User {
    * A timestamp of when the last time the user was online
    * @public
    */
-  public lastOnline: Date
+  public lastOnline: number
 
   /**
    * The users role

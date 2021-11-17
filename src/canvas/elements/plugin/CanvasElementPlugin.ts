@@ -1,4 +1,4 @@
-import { CanvasElementPluginOptions, CanvasElementPluginType } from './types';
+import { CanvasElementPluginOptions } from './types';
 import { v4 } from 'uuid';
 
 /**
@@ -37,9 +37,9 @@ export default abstract class CanvasElementPlugin {
 
     /**
      * The type of canvas element plugin
-     * Used to determine which class the plugin shall be rendered with in PIXI
+     * Used to determine which class the plugin shall be rendered with
      */
-    public abstract name: CanvasElementPluginType
+    public abstract name: string
 
     /**
      * Construct the plugin

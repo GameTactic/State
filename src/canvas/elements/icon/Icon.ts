@@ -20,6 +20,18 @@ export default class Icon extends CanvasElement {
     public icon: Image
 
     /**
+     * The width of the icon on the canvas
+     * @public
+     */
+    public width: number
+
+    /**
+     * The height of the icon on the canvas
+     * @public
+     */
+    public height: number
+
+    /**
      * Return the name of the canvas element
      * @returns CanvasElementName
      */
@@ -52,5 +64,7 @@ export default class Icon extends CanvasElement {
         this.caption = options.caption;
         this.picture = options.picture;
         this.isDefault = options.isDefault;
+        this.width = options.width;
+        this.height = options.height;
     }
 }

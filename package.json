@@ -17,6 +17,7 @@
     "@typescript-eslint/parser": "^4",
     "create-ts-index": "^1.13.3",
     "eslint": "^7.22.0",
+    "pixi.js": "^6.2.0",
     "typescript": "^3.9.6"
   },
   "files": [

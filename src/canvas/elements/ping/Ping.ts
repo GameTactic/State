@@ -3,7 +3,7 @@
  * @author Eirik Måseidvåg
  */
 import { CanvasElementName } from '..';
-import { defaultPingOptions, PingOptions } from './types';
+import { PingOptions } from './types';
 import CanvasElement from '../abstract/CanvasElement';
 
 export default class Ping extends CanvasElement {
@@ -13,6 +13,11 @@ export default class Ping extends CanvasElement {
      * @public
      */
     public color: number
+
+    /**
+     * The size of the ping
+     */
+    public size: number
 
     /**
      * Returns the type of this canvas element
@@ -25,8 +30,8 @@ export default class Ping extends CanvasElement {
      * @param options: CircleOptions
      */
     constructor (options: PingOptions) {
-        super(options);
-        const opt = Object.assign({}, defaultPingOptions, options);
-        this.color = opt.color;
+        super(Object.assign({}, options, { temporary: true }));
+        this.color = options.color;
+        this.size = options.size;
     }
 }

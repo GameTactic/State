@@ -16,7 +16,7 @@ export default abstract class History {
    * The timestamp when the history was created.
    * @public
    */
-  public readonly timestamp: Date
+  public readonly timestamp: number
 
   /**
    * The ID of the user who created the history
@@ -32,7 +32,7 @@ export default abstract class History {
 
   protected constructor (options: HistoryOptions) {
     this.id = options.id || v4();
-    this.timestamp = options.timestamp || new Date();
+    this.timestamp = options.timestamp || Date.now();
     this.creatorId = options.creatorId;
     this.event = options.event;
   }
