@@ -1,4 +1,4 @@
-import { CanvasHistoryTransformationOptions, TransformationChange } from './types';
+import { CanvasHistoryTransformationOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
@@ -13,7 +13,7 @@ export default class CanvasHistoryTransformation extends History {
    * The changes made in the transformation
    * @public
    */
-  public readonly changes: Array<TransformationChange>
+  public readonly changes: Array<number>
 
   /**
    * Construct the history object
