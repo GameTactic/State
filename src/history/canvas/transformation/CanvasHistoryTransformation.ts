@@ -13,7 +13,12 @@ export default class CanvasHistoryTransformation extends History {
    * The changes made in the transformation
    * @public
    */
-  public readonly changes: Array<number>
+  public readonly delta: Array<number>
+
+  /**
+   * The ids of the canvas elements transformed
+   */
+  public readonly ids: Array<string>
 
   /**
    * Construct the history object
@@ -27,6 +32,7 @@ export default class CanvasHistoryTransformation extends History {
         event: HistoryEventCanvas.TRANSFORMATION,
       })
     });
-    this.changes = options.changes;
+    this.delta = options.delta;
+    this.ids = options.ids;
   }
 }
