@@ -1,6 +1,8 @@
 import { AbstractHistoryOptions } from '../../types';
 
 export interface CanvasHistoryTransformationOptions extends AbstractHistoryOptions {
-  delta: Array<number>;
-  ids: Array<string>;
+  changes: Array<{
+    id: string;
+    delta: Array<number>;
+  }>;
 }
