@@ -1,12 +1,8 @@
 import { CanvasElementOptions } from '../abstract';
-import Image from '../../../misc/image/Image';
+import Resource from '../../resource/Resource';
+
+export type IconResource = Omit<Resource, 'temporary' | 'permissions' | 'type' | 'plugins'>
 
 export interface IconOptions extends CanvasElementOptions {
-    label: string;
-    icon: Image;
-    caption: string;
-    picture: Image;
-    isDefault: boolean;
-    width: number;
-    height: number;
+    resource: Resource;
 }

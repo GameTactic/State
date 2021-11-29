@@ -14,4 +14,8 @@ export interface StaticGameExtendedOptions extends StaticGameOptions {
     entities: Array<Resource>;
     icons: Array<Resource>;
     maps: Array<Map>;
+    categories?: {
+        entity: Array<string>;
+        icon: Array<string>;
+    };
 }

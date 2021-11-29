@@ -27,6 +27,12 @@ export default class StaticGameExtended extends StaticGame {
     private readonly _maps: Array<Map>
 
     /**
+     * The categories
+     * @private
+     */
+    private readonly _categories: Required<StaticGameExtendedOptions['categories']>
+
+    /**
      * Construct the instance
      * @param options
      */
@@ -35,6 +41,18 @@ export default class StaticGameExtended extends StaticGame {
         this._entities = options.entities;
         this._icons = options.icons;
         this._maps = options.maps;
+        this._categories = options.categories || {
+            entity: [],
+            icon: []
+        };
+    }
+
+    /**
+     * Returns all entities
+     * @returns {Array<Resource>} resource: the entities
+     */
+    get categories(): Required<StaticGameExtendedOptions['categories']> {
+        return this._categories;
     }
 
     /**
