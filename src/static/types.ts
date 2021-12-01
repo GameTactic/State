@@ -8,14 +8,15 @@ export interface StaticGameOptions {
     coverSVG: string;
     game: Game;
     acronym: string;
+    categories?: {
+        entity: Array<string>;
+        icon: Array<string>;
+        map: Array<string>;
+    };
 }
 
 export interface StaticGameExtendedOptions extends StaticGameOptions {
     entities: Array<Resource>;
     icons: Array<Resource>;
     maps: Array<Map>;
-    categories?: {
-        entity: Array<string>;
-        icon: Array<string>;
-    };
 }

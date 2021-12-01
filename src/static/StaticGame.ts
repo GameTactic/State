@@ -44,6 +44,12 @@ export default class StaticGame {
     private readonly _game: Game
 
     /**
+     * The categories
+     * @private
+     */
+    private readonly _categories: Required<StaticGameOptions['categories']>
+
+    /**
      * Construct the instance
      * @param options
      */
@@ -53,6 +59,19 @@ export default class StaticGame {
         this._cover = options.cover;
         this._coverSVG = options.coverSVG;
         this._game = options.game;
+        this._categories = options.categories || {
+            entity: [],
+            icon: [],
+            map: []
+        };
+    }
+
+    /**
+     * Returns all entities
+     * @returns {Array<Resource>} resource: the entities
+     */
+    get categories(): Required<StaticGameOptions['categories']> {
+        return this._categories;
     }
 
     /**
