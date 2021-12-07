@@ -1,8 +1,8 @@
-import SocketDoc from '../../SocketDoc';
+import HubSocketDoc from '../../HubSocketDoc';
 import { HistoryEventModules, HistoryEventHub } from '../../../../history';
 import { SubscriberLevel } from '../../types';
 
-export default class HubDisconnectDoc extends SocketDoc {
+export default class HubDisconnectDoc extends HubSocketDoc {
     public constructor() {
         super({
             title: 'Disconnect hub',

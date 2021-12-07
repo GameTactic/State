@@ -1,4 +1,9 @@
 import { HistoryEventEnums, HistoryEventModules } from '../../history';
+import {UserPermission} from "../../user";
+
+export interface RoomSocketDocOptions extends SocketDocOptions {
+    permissionScope?: UserPermission;
+}
 
 export interface SocketDocOptions {
     title: string;
@@ -7,6 +12,7 @@ export interface SocketDocOptions {
     event: HistoryEventEnums[HistoryEventModules];
     level: SubscriberLevel;
     overrideEvent?: string;
+    requireAuth?: boolean;
 }
 
 /**

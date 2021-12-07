@@ -1,16 +1,17 @@
-import SocketDoc from '../../SocketDoc';
+import RoomSocketDoc from '../../RoomSocketDoc';
 import { HistoryEventModules, HistoryEventView } from '../../../../history';
 import { SubscriberLevel } from '../../types';
 import ViewHistoryDisconnect from '../../../../history/view/disconnect/ViewHistoryDisconnect';
 
-export default class ViewDisconnectDoc extends SocketDoc {
+export default class ViewDisconnectDoc extends RoomSocketDoc {
     public constructor() {
         super({
             title: 'Disconnect view',
             description: 'Disconnect from a view',
             module: HistoryEventModules.VIEW,
             event: HistoryEventView.DISCONNECT,
-            level: SubscriberLevel.VIEW
+            level: SubscriberLevel.VIEW,
+            requireAuth: false
         });
     }
 }

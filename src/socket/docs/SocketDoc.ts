@@ -22,8 +22,13 @@ export default abstract class SocketDoc {
     public level: SubscriberLevel;
 
     /**
+     * Determines weather or not the socket action requires user to be authenticated
+     */
+    public requireAuth: boolean;
+
+    /**
      * Construct the SocketDoc.
-     * @param {SocketDocOptions} options - The options to roomAddition the SocketDoc.
+     * @param {SocketDocOptions} options - The options to the SocketDoc.
      * @protected
      */
     protected constructor(options: SocketDocOptions) {
@@ -35,5 +40,6 @@ export default abstract class SocketDoc {
             this.event = `${options.module}/${options.event}`;
         }
         this.level = options.level;
+        this.requireAuth = options.requireAuth !== undefined ? options.requireAuth : true;
     }
 }

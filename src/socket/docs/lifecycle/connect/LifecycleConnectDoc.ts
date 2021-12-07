@@ -10,7 +10,8 @@ export default class LifecycleConnectDoc extends SocketDoc {
             module: HistoryEventModules.LIFECYCLE,
             event: HistoryEventLifecycle.CONNECT,
             overrideEvent: 'connection',
-            level: SubscriberLevel.NONE
+            level: SubscriberLevel.NONE,
+            requireAuth: false
         });
     }
 }

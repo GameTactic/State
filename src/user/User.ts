@@ -1,5 +1,4 @@
-import { UserOptions } from './types';
-import Role from './Role';
+import { UserPermission, UserOptions } from './types';
 
 /**
  * The user class
@@ -48,10 +47,10 @@ export default class User {
   public lastOnline: number
 
   /**
-   * The users role
+   * The user's permission
    * @public
    */
-  public role: Role
+  public permissions: Array<UserPermission>
 
   /**
    * Construct the object
@@ -65,6 +64,6 @@ export default class User {
     this.onTeamId = options.onTeamId;
     this.isOnline = options.isOnline;
     this.lastOnline = options.lastOnline;
-    this.role = options.role;
+    this.permissions = options.permissions;
   }
 }

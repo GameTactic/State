@@ -1,9 +1,9 @@
-import SocketDoc from '../../SocketDoc';
+import HubSocketDoc from '../../HubSocketDoc';
 import { HistoryEventModules, HistoryEventHub } from '../../../../history';
 import { SubscriberLevel } from '../../types';
 import Room from '../../../../room/Room';
 
-export default class HubConnectDoc extends SocketDoc {
+export default class HubConnectDoc extends HubSocketDoc {
     public constructor() {
         super({
             title: 'Connect hub',

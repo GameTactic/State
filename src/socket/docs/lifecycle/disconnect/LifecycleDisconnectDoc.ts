@@ -10,7 +10,8 @@ export default class LifecycleDisconnectDoc extends SocketDoc {
             module: HistoryEventModules.LIFECYCLE,
             event: HistoryEventLifecycle.DISCONNECT,
             overrideEvent: 'disconnecting',
-            level: SubscriberLevel.NONE
+            level: SubscriberLevel.NONE,
+            requireAuth: false
         });
     }
 }
