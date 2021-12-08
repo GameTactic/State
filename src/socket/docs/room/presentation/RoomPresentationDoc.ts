@@ -15,6 +15,6 @@ export default class RoomPresentationDoc extends RoomSocketDoc {
         });
     }
 }
-export type RoomDisconnectDocPayload = {
+export type RoomPresentationDocPayload = {
     history: RoomHistoryPresentation;
 };
