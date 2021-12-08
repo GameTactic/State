@@ -54,6 +54,11 @@ export default class Room {
      */
     public creatorId: string
 
+    /**
+     * The user ID of the user presenting, undefined if no one is presenting
+     */
+    public presenter: string | undefined
+
     public constructor(options: RoomOptions) {
         this.id = options.id || v4();
         this.name = options.name;
@@ -64,5 +69,6 @@ export default class Room {
         this.created = options.created || Date.now();
         this.updated = options.updated || Date.now();
         this.creatorId = options.creatorId;
+        this.presenter = options.presenter || undefined;
     }
 }

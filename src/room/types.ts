@@ -11,4 +11,5 @@ export interface RoomOptions {
     created?: number;
     updated?: number;
     creatorId: string;
+    presenter?: string;
 }

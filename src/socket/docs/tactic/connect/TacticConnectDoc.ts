@@ -23,5 +23,5 @@ export type TacticConnectInDocPayload = {
 
 export type TacticConnectOutDocPayload = {
     history: TacticHistoryConnect;
-    data: TacticData;
+    data?: TacticData;
 };

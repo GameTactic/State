@@ -1,4 +1,5 @@
 export enum HistoryEventRoom {
     CONNECT = 'CONNECT',
-    DISCONNECT = 'DISCONNECT'
+    DISCONNECT = 'DISCONNECT',
+    PRESENTATION = 'PRESENTATION'
 }
