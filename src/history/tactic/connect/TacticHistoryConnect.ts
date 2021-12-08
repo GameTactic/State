@@ -21,6 +21,18 @@ export default class TacticHistoryConnect extends History {
      */
     public readonly tacticId: string
 
+    /**
+     * The team to auto connect to if defined
+     * @public
+     */
+    public readonly teamId: string | undefined
+
+    /**
+     * The view to auto connect to if defined
+     * @public
+     */
+    public readonly viewId: string | undefined
+
     constructor (options: TacticHistoryConnectOptions) {
         super({
             ...options,
@@ -31,5 +43,7 @@ export default class TacticHistoryConnect extends History {
         });
         this.userId = options.userId;
         this.tacticId = options.tacticId;
+        this.teamId = options.teamId;
+        this.viewId = options.viewId;
     }
 }
