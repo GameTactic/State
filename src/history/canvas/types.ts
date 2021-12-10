@@ -1,5 +1,6 @@
 export enum HistoryEventCanvas {
   ADDITION = 'ADDITION',
   REMOVAL = 'REMOVAL',
+  TEMPORARY = 'TEMPORARY',
   TRANSFORMATION = 'TRANSFORMATION'
 }
