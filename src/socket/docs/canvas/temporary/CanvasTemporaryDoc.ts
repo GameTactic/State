@@ -10,7 +10,7 @@ export default class CanvasTemporaryDoc extends RoomSocketDoc {
             title: 'Draw Temporary Canvas Element',
             description: 'Draw a temporary element to the canvas.',
             module: HistoryEventModules.CANVAS,
-            event: HistoryEventCanvas.ADDITION,
+            event: HistoryEventCanvas.TEMPORARY,
             level: SubscriberLevel.VIEW,
             permissionScope: 'user'
         });
