@@ -33,6 +33,12 @@ export default class Pencil extends CanvasElement {
   public opacity: number
 
   /**
+   * The points to draw the lines in order
+   * @public
+   */
+  public points: Array<{ x: number; y: number }>
+
+  /**
    * Returns the type of this canvas element
    * @returns CanvasElementName.PENCIL
    */
@@ -49,5 +55,6 @@ export default class Pencil extends CanvasElement {
     this.opacity = opt.opacity;
     this.strokeWidth = opt.strokeWidth;
     this.color = opt.color;
+    this.points = opt.points;
   }
 }

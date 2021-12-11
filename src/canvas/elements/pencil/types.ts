@@ -10,6 +10,7 @@ export interface PencilOptions extends CanvasElementOptions {
   opacity?: number;
   strokeWidth: number;
   color: number;
+  points: Array<{ x: number; y: number }>;
 }
 
 export const defaultPencilOptions = {
