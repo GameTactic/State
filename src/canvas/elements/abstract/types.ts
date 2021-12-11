@@ -4,6 +4,7 @@ export enum CanvasElementName {
   CIRCLE = 'circle',
   ICON = 'icon',
   ENTITY = 'entity',
+  PENCIL = 'pencil',
   PING = 'ping'
 }
 
