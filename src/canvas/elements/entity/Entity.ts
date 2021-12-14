@@ -16,6 +16,12 @@ export default class Entity extends Icon {
   public teamId: string
 
   /**
+   * Determines weather or not the color of the team the entity belongs to should be tinted on the icon on the canvas
+   * @public
+   */
+  public useTeamTint: boolean
+
+  /**
    * Return the name of the canvas element
    * @returns CanvasElementName
    */
@@ -29,5 +35,6 @@ export default class Entity extends Icon {
   constructor (options: EntityOptions) {
     super(options);
     this.teamId = options.teamId;
+    this.useTeamTint = options.useTeamTint !== undefined ? options.useTeamTint : false;
   }
 }
