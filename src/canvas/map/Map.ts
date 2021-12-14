@@ -2,6 +2,7 @@ import { MapOptions } from './types';
 import View from './view/View';
 import Image from '../../misc/image/Image';
 import { Game } from '../../misc/games';
+import {TeamOptions} from "../../team";
 
 export default class Map {
     /**
@@ -34,6 +35,8 @@ export default class Map {
      */
     public game: Game
 
+    public teamConstructors: Array<Omit<TeamOptions, 'id' | 'tacticId'>>
+
     /**
      * Construct the map
      * @param options: MapOptions
@@ -44,5 +47,6 @@ export default class Map {
         this.cover = options.cover;
         this.views = options.views;
         this.game = options.game;
+        this.teamConstructors = options.teamConstructors;
     }
 }
