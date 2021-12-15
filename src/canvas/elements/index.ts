@@ -3,6 +3,7 @@ export * from './circle';
 export * from './entity';
 export * from './icon';
 export * from './pencil';
+export * from './line';
 export * from './ping';
 export * from './plugin';
 export * from './sector';
