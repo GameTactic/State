@@ -8,6 +8,11 @@ import CanvasElement from '../abstract/CanvasElement';
 
 export default class Text extends CanvasElement {
   /**
+   * The text to write
+   */
+  public text: string
+
+  /**
    * The text color. Represented as a hexadecimal number
    * E.g. 0xffffff (white)
    * @public
@@ -47,6 +52,7 @@ export default class Text extends CanvasElement {
   constructor (options: TextOptions) {
     super(options);
     const opt = Object.assign({}, defaultTextOptions, options);
+    this.text = opt.text;
     this.color = opt.color;
     this.backgroundColor = opt.backgroundColor;
     this.size = opt.size;
