@@ -5,3 +5,4 @@ export * from './icon';
 export * from './pencil';
 export * from './ping';
 export * from './plugin';
+export * from './sector';
