@@ -6,3 +6,4 @@ export * from './pencil';
 export * from './ping';
 export * from './plugin';
 export * from './sector';
+export * from './text';
