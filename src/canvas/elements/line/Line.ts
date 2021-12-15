@@ -40,10 +40,16 @@ export default class Line extends CanvasElement {
   public opacity: number
 
   /**
-   * The points to draw the lines in order
+   * The point to draw the line from
    * @public
    */
-  public points: Array<{ x: number; y: number }>
+  public from: { x: number; y: number }
+
+  /**
+   * The point to draw the line to
+   * @public
+   */
+  public to: { x: number; y: number }
 
   /**
    * Returns the type of this canvas element
@@ -63,6 +69,7 @@ export default class Line extends CanvasElement {
     this.opacity = opt.opacity;
     this.strokeWidth = opt.strokeWidth;
     this.color = opt.color;
-    this.points = opt.points;
+    this.from = opt.from;
+    this.to = opt.to;
   }
 }

@@ -17,7 +17,8 @@ export interface LineOptions extends CanvasElementOptions {
   opacity?: number;
   strokeWidth: number;
   color: number;
-  points: Array<{ x: number; y: number }>;
+  from: { x: number; y: number };
+  to: { x: number; y: number };
 }
 
 export const defaultLineOptions = {
