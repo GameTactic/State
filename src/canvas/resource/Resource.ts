@@ -1,5 +1,5 @@
 import { ResourceOptions, ResourceType } from './types';
-import CanvasElementPlugin from '../elements/plugin/CanvasElementPlugin';
+import CanvasElementPlugin from '../elements/plugin/abstract/CanvasElementPlugin';
 import { defaultCanvasElementOptions, TransformPermissions } from '../elements/abstract';
 import Image from '../../misc/image/Image';
 

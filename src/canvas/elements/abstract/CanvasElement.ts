@@ -6,7 +6,7 @@ import {
   TransformPermissions,
   defaultCanvasElementOptions
 } from './types';
-import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
+import CanvasElementPlugin from '../plugin/abstract/CanvasElementPlugin';
 
 export default abstract class CanvasElement implements CanvasElementInterface {
   /**

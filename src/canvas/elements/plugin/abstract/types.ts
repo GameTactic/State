@@ -5,3 +5,9 @@ export interface CanvasElementPluginOptions {
     visible?: boolean;
     toggleable?: boolean;
 }
+
+export enum CanvasElementPluginType {
+    RANGE = 'range',
+    HIGHLIGHT = 'highlight',
+    SHADOW = 'shadow'
+}

@@ -1,6 +1,6 @@
 import Image from '../../misc/image/Image';
 import { TransformPermissions } from '../elements/abstract';
-import CanvasElementPlugin from '../elements/plugin/CanvasElementPlugin';
+import CanvasElementPlugin from '../elements/plugin/abstract/CanvasElementPlugin';
 
 export interface ResourceOptions {
     label: string;

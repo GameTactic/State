@@ -1,4 +1,4 @@
-import CanvasElementPlugin from '../plugin/CanvasElementPlugin';
+import CanvasElementPlugin from '../plugin/abstract/CanvasElementPlugin';
 
 export enum CanvasElementName {
   CIRCLE = 'circle',
