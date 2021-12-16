@@ -8,6 +8,12 @@ import {CanvasElementPluginType} from "../abstract";
 
 export default class RangePlugin extends CanvasElementPlugin {
     /**
+     * The event listener name to listen for events to update state
+     * The function bound expects 1 parameters, enabled (boolean)
+     */
+    public listener: string | undefined
+
+    /**
      * The range of the circle to be drawn as the radius in the games units
      */
     public radius: number
@@ -23,6 +29,11 @@ export default class RangePlugin extends CanvasElementPlugin {
      * E.g. 0xffffff (white)
      */
     public fill: number
+
+    /**
+     * Weather or not it should be enabled from the start
+     */
+    public enabled: boolean
 
     /**
      * The opacity of the border
@@ -50,5 +61,7 @@ export default class RangePlugin extends CanvasElementPlugin {
         this.borderOpacity = options.borderOpacity;
         this.fill = options.fill;
         this.fillOpacity = options.fillOpacity;
+        this.enabled = options.enabled;
+        this.listener = options.listener;
     }
 }

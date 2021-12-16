@@ -4,4 +4,6 @@ export interface RangePluginOptions {
     fill: number;
     borderOpacity: number;
     fillOpacity: number;
+    enabled: boolean;
+    listener?: string;
 }
