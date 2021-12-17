@@ -55,6 +55,11 @@ export default class Room {
     public creatorId: string
 
     /**
+     * Name of the user who created the room
+     */
+    public creatorName: string
+
+    /**
      * The user ID of the user presenting, undefined if no one is presenting
      */
     public presenter: string | undefined
@@ -69,6 +74,7 @@ export default class Room {
         this.created = options.created || Date.now();
         this.updated = options.updated || Date.now();
         this.creatorId = options.creatorId;
+        this.creatorName = options.creatorName;
         this.presenter = options.presenter || undefined;
     }
 }

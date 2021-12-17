@@ -14,7 +14,5 @@ export interface UserOptions {
   onTacticId?: string;
   onViewId?: string;
   onTeamId?: string;
-  isOnline: boolean;
-  lastOnline: number;
   permissions: Array<UserPermission>;
 }

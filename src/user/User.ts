@@ -12,6 +12,12 @@ export default class User {
   public id: string
 
   /**
+   * The user's permission
+   * @public
+   */
+  public permissions: Array<UserPermission>
+
+  /**
    * The users name
    * @public
    */
@@ -35,24 +41,6 @@ export default class User {
   public onTeamId: string | undefined
 
   /**
-   * A boolean telling if the user is online or not
-   * @public
-   */
-  public isOnline: boolean
-
-  /**
-   * A timestamp of when the last time the user was online
-   * @public
-   */
-  public lastOnline: number
-
-  /**
-   * The user's permission
-   * @public
-   */
-  public permissions: Array<UserPermission>
-
-  /**
    * Construct the object
    * @param options: UserOptions
    */
@@ -62,8 +50,6 @@ export default class User {
     this.onTacticId = options.onTacticId;
     this.onViewId = options.onViewId;
     this.onTeamId = options.onTeamId;
-    this.isOnline = options.isOnline;
-    this.lastOnline = options.lastOnline;
     this.permissions = options.permissions;
   }
 }
