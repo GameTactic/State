@@ -9,8 +9,8 @@ import Message from '../../misc/message/Message';
 
 export interface SocketStateOptions {
     collection: RootCollection;
-    users: { [jti: string]: User };
-    tactics: { [id: string]: TacticData };
+    users: Record<string, Pick<User, 'id' | 'permissions'>>;
+    tactics: Record<string, TacticData>;
     room: Room;
     chat: Array<Message>
     [key: string]: any;
@@ -18,18 +18,17 @@ export interface SocketStateOptions {
 
 export interface TacticData {
     tactic: Tactic;
-    teams: { [id: string]: Team };
-    elements: { [id: string]: CanvasElement };
+    teams: Record<string, Team>;
+    elements: Record<string, CanvasElement>;
     map: Map;
 }
 
 export interface PartialState {
     room: Room;
     collection: RootCollection;
-    users: { [jti: string]: User };
-    tactics: { [id: string]: Tactic };
+    tactics: Record<string, TacticData>;
     chat: Array<Message>;
     map?: Map;
-    elements?: { [id: string]: CanvasElement };
-    teams?: { [id: string]: Team };
+    elements?: Record<string, CanvasElement>;
+    teams?: Record<string, Team>;
 }
