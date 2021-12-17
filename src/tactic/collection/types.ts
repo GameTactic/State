@@ -3,6 +3,7 @@ import Collection from './Collection';
 export interface CollectionOptions extends RootCollectionOptions {
     name: string;
     parentId: string;
+    creatorId: string;
 }
 
 export interface RootCollectionOptions {

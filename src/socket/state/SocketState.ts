@@ -6,7 +6,7 @@ import Message from '../../misc/message/Message';
 
 export default class SocketState {
     public collection: RootCollection;
-    public users: { [jti: string]: User };
+    public users: { [jti: string]: Pick<User, 'id' | 'permissions'> };
     public tactics: { [tacticId: string]: TacticData };
     public room: Room;
     public chat: Array<Message>;

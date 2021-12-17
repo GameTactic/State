@@ -14,5 +14,6 @@ export interface UserOptions {
   onTacticId?: string;
   onViewId?: string;
   onTeamId?: string;
+  isPresenting?: boolean;
   permissions: Array<UserPermission>;
 }

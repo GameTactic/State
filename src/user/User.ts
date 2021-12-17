@@ -18,6 +18,11 @@ export default class User {
   public permissions: Array<UserPermission>
 
   /**
+   * Determines weather or not the user is presenting
+   */
+  public isPresenting: boolean
+
+  /**
    * The users name
    * @public
    */
@@ -50,6 +55,7 @@ export default class User {
     this.onTacticId = options.onTacticId;
     this.onViewId = options.onViewId;
     this.onTeamId = options.onTeamId;
+    this.isPresenting = options.isPresenting !== undefined ? options.isPresenting : false;
     this.permissions = options.permissions;
   }
 }

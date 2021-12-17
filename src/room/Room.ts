@@ -32,7 +32,7 @@ export default class Room {
     /**
      * Cover image for the room. Will use games default cover if null
      */
-    public cover: Image | null
+    public cover: string | null
 
     /**
      * Determines weather the room is private or public
@@ -59,11 +59,6 @@ export default class Room {
      */
     public creatorName: string
 
-    /**
-     * The user ID of the user presenting, undefined if no one is presenting
-     */
-    public presenter: string | undefined
-
     public constructor(options: RoomOptions) {
         this.id = options.id || v4();
         this.name = options.name;
@@ -75,6 +70,5 @@ export default class Room {
         this.updated = options.updated || Date.now();
         this.creatorId = options.creatorId;
         this.creatorName = options.creatorName;
-        this.presenter = options.presenter || undefined;
     }
 }

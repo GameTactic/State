@@ -6,7 +6,6 @@ export default class RootCollection {
   public id: string
   public name: string
   public children: Collection[]
-  public creatorId: string
 
   constructor (options: RootCollectionOptions) {
     const finalObject = Object.assign({}, {
@@ -17,6 +16,5 @@ export default class RootCollection {
     this.id = finalObject.id;
     this.name = finalObject.name;
     this.children = finalObject.children;
-    this.creatorId = options.creatorId;
   }
 }

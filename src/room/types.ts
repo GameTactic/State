@@ -7,10 +7,9 @@ export interface RoomOptions {
     name: string;
     description: string;
     isPrivate?: boolean;
-    cover?: Image;
+    cover?: string;
     created?: number;
     updated?: number;
     creatorId: string;
     creatorName: string;
-    presenter?: string;
 }
