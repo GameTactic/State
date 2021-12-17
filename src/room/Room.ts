@@ -54,11 +54,6 @@ export default class Room {
      */
     public creatorId: string
 
-    /**
-     * Name of the user who created the room
-     */
-    public creatorName: string
-
     public constructor(options: RoomOptions) {
         this.id = options.id || v4();
         this.name = options.name;
@@ -69,6 +64,5 @@ export default class Room {
         this.created = options.created || Date.now();
         this.updated = options.updated || Date.now();
         this.creatorId = options.creatorId;
-        this.creatorName = options.creatorName;
     }
 }
