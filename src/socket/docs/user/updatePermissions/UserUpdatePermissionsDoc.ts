@@ -12,7 +12,7 @@ export default class UserUpdatePermissionsDoc extends RoomSocketDoc {
             event: HistoryEventUser.UPDATE_PERMISSIONS,
             level: SubscriberLevel.ROOM,
             requireAuth: true,
-            permissionScope: 'owner'
+            permissionScope: 'moderator'
         });
     }
 }

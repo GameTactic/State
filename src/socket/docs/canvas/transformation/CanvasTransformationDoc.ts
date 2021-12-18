@@ -11,7 +11,7 @@ export default class CanvasTransformationDoc extends RoomSocketDoc {
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.TRANSFORMATION,
             level: SubscriberLevel.VIEW,
-            permissionScope: 'user'
+            permissionScope: 'editor'
         });
     }
 }

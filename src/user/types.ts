@@ -1,11 +1,11 @@
 export type UserPermission = typeof USER_PERMISSION_OPTIONS[number];
 
 export const USER_PERMISSION_OPTIONS = [
-  'owner',
-  'editor',
-  'presenter',
-  'user',
   'creator',
+  'moderator',
+  'presenter',
+  'editor',
+  'user',
 ] as const;
 
 export interface UserOptions {

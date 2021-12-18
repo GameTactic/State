@@ -12,7 +12,7 @@ export default class TacticAdditionDoc extends RoomSocketDoc {
             module: HistoryEventModules.TACTIC,
             event: HistoryEventTactic.ADDITION,
             level: SubscriberLevel.ROOM,
-            permissionScope: 'user'
+            permissionScope: 'editor'
         });
     }
 }

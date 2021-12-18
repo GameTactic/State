@@ -12,7 +12,7 @@ export default class CanvasTemporaryDoc extends RoomSocketDoc {
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.TEMPORARY,
             level: SubscriberLevel.VIEW,
-            permissionScope: 'user'
+            permissionScope: 'editor'
         });
     }
 }

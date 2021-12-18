@@ -12,7 +12,7 @@ export default class CanvasAdditionDoc extends RoomSocketDoc {
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.ADDITION,
             level: SubscriberLevel.VIEW,
-            permissionScope: 'user'
+            permissionScope: 'editor'
         });
     }
 }

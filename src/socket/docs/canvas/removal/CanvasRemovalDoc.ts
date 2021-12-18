@@ -11,7 +11,7 @@ export default class CanvasRemovalDoc extends RoomSocketDoc {
             module: HistoryEventModules.CANVAS,
             event: HistoryEventCanvas.REMOVAL,
             level: SubscriberLevel.VIEW,
-            permissionScope: 'user'
+            permissionScope: 'editor'
         });
     }
 }
