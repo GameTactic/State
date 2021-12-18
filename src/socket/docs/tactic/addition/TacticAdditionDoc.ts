@@ -19,11 +19,9 @@ export default class TacticAdditionDoc extends RoomSocketDoc {
 }
 
 export type TacticAdditionInDocPayload = {
-    history: TacticHistoryAddition;
     data: TacticData;
 };
 
 export type TacticAdditionOutDocPayload = {
     history: TacticHistoryAddition;
-    data: Tactic;
 };

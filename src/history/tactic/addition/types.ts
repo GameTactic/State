@@ -1,5 +1,6 @@
 import { AbstractHistoryOptions } from '../../types';
+import Tactic from "../../../tactic/Tactic";
 
 export interface TacticHistoryAdditionOptions extends AbstractHistoryOptions {
-    tacticId: string;
+    tactic: Tactic;
 }

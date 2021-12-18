@@ -25,6 +25,12 @@ export interface TacticData {
     map: Map;
 }
 
+export interface CreateTacticData {
+    tactic: Omit<Tactic, 'id' | 'creatorId'>;
+    teams: Record<string, Team>;
+    map: Map;
+}
+
 export interface PartialState {
     room: Room;
     collection: RootCollection;

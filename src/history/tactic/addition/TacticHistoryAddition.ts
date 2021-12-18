@@ -7,13 +7,14 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventTactic } from '../types';
 import { TacticHistoryAdditionOptions } from './types';
+import Tactic from "../../../tactic/Tactic";
 
 export default class TacticHistoryAddition extends History {
     /**
      * The ID of the tactic added
      * @public
      */
-    public readonly tacticId: string
+    public readonly tactic: Tactic
 
     constructor (options: TacticHistoryAdditionOptions) {
         super({
@@ -23,6 +24,6 @@ export default class TacticHistoryAddition extends History {
                 event: HistoryEventTactic.ADDITION
             })
         });
-        this.tacticId = options.tacticId;
+        this.tactic = options.tactic;
     }
 }
