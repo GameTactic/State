@@ -1,15 +1,15 @@
 /**
- * This class contains data of an user update event
+ * This class contains data of an user update permissions event
  * @author Eirik Måseidvåg
  */
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
-import { UserHistoryUpdateOptions } from './types';
+import { UserHistoryUpdatePermissionsOptions } from './types';
 import { HistoryEventUser } from '../types';
-import User from "../../../user/User";
+import {UserPermission} from "../../../user";
 
-export default class UserHistoryUpdate extends History {
+export default class UserHistoryUpdatePermissions extends History {
     /**
      * The ID of the user who was updated
      * @public
@@ -17,19 +17,20 @@ export default class UserHistoryUpdate extends History {
     public readonly userId: string
 
     /**
-     * The user changes
+     * The new user permissions
+     * @public
      */
-    public readonly changes: Partial<Pick<User, 'name'>>;
+    public readonly permissions: Array<UserPermission>
 
-    constructor (options: UserHistoryUpdateOptions) {
+    constructor (options: UserHistoryUpdatePermissionsOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.USER,
-                event: HistoryEventUser.UPDATE
+                event: HistoryEventUser.UPDATE_PERMISSIONS
             })
         });
         this.userId = options.userId;
-        this.changes = options.changes;
+        this.permissions = options.permissions;
     }
 }

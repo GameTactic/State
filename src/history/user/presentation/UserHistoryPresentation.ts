@@ -1,15 +1,14 @@
 /**
- * This class contains data of an user update event
+ * This class contains data of an user presentation event
  * @author Eirik Måseidvåg
  */
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
-import { UserHistoryUpdateOptions } from './types';
+import { UserHistoryPresentationOptions } from './types';
 import { HistoryEventUser } from '../types';
-import User from "../../../user/User";
 
-export default class UserHistoryUpdate extends History {
+export default class UserHistoryPresentation extends History {
     /**
      * The ID of the user who was updated
      * @public
@@ -17,19 +16,19 @@ export default class UserHistoryUpdate extends History {
     public readonly userId: string
 
     /**
-     * The user changes
+     * Determines weather or not the user is presenting
      */
-    public readonly changes: Partial<Pick<User, 'name'>>;
+    public readonly isPresenting: boolean;
 
-    constructor (options: UserHistoryUpdateOptions) {
+    constructor (options: UserHistoryPresentationOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.USER,
-                event: HistoryEventUser.UPDATE
+                event: HistoryEventUser.SET_PRESENTATION
             })
         });
         this.userId = options.userId;
-        this.changes = options.changes;
+        this.isPresenting = options.isPresenting;
     }
 }
