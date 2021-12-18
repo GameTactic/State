@@ -27,7 +27,6 @@ export interface TacticData {
 
 export interface CreateTacticData {
     tactic: Omit<Tactic, 'id' | 'creatorId'>;
-    teams: Record<string, Team>;
     map: Map;
 }
 
