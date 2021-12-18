@@ -2,8 +2,8 @@ import { HubHistoryRoomAdditionOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
-import Room from '../../../room/Room';
 import { HistoryEventHub } from '../types';
+import {Game} from "../../../misc/games";
 
 /**
  * This class contains data of a room creation event
@@ -11,10 +11,34 @@ import { HistoryEventHub } from '../types';
  */
 export default class HubHistoryRoomAddition extends History {
     /**
-     * The room to be created
+     * The room name
      * @public
      */
-    public readonly room: Room
+    public readonly name: string
+
+    /**
+     * The room description
+     * @public
+     */
+    public readonly description: string
+
+    /**
+     * The room game
+     * @public
+     */
+    public readonly game: Game
+
+    /**
+     * The room cover
+     * @public
+     */
+    public readonly cover: string | null
+
+    /**
+     * Determines weather or not the room is private
+     * @public
+     */
+    public readonly isPrivate: boolean
 
     constructor (options: HubHistoryRoomAdditionOptions) {
         super({
@@ -24,6 +48,10 @@ export default class HubHistoryRoomAddition extends History {
                 event: HistoryEventHub.ADDITION
             })
         });
-        this.room = options.room;
+        this.name = options.name;
+        this.description = options.description;
+        this.game = options.game;
+        this.cover = options.cover;
+        this.isPrivate = options.isPrivate;
     }
 }

@@ -28,7 +28,7 @@ export interface TacticData {
 export interface PartialState {
     room: Room;
     collection: RootCollection;
-    tactics: Record<string, TacticData>;
+    tactics: Record<string, Tactic>;
     chat: Array<Message>;
     map?: Map;
     elements?: Record<string, CanvasElement>;

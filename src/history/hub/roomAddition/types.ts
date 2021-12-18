@@ -1,6 +1,10 @@
 import { AbstractHistoryOptions } from '../../types';
-import Room from '../../../room/Room';
+import {Game} from "../../../misc/games";
 
 export interface HubHistoryRoomAdditionOptions extends AbstractHistoryOptions {
-    room: Room;
+    name: string;
+    description: string;
+    game: Game;
+    cover: string | null;
+    isPrivate: boolean;
 }

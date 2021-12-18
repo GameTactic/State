@@ -18,5 +18,6 @@ export default class HubConnectDoc extends HubSocketDoc {
 export type HubConnectInDocPayload = void
 
 export type HubConnectOutDocPayload = {
+    bookmark: string | null | undefined;
     rooms: Array<Room>;
 };

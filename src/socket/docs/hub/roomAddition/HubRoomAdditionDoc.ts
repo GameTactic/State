@@ -2,6 +2,7 @@ import HubSocketDoc from '../../HubSocketDoc';
 import { HistoryEventHub, HistoryEventModules } from '../../../../history';
 import HubHistoryRoomAddition from '../../../../history/hub/roomAddition/HubHistoryRoomAddition';
 import { SubscriberLevel } from '../../types';
+import Room from "../../../../room/Room";
 
 export default class HubRoomAdditionDoc extends HubSocketDoc {
     public constructor() {
@@ -15,6 +16,10 @@ export default class HubRoomAdditionDoc extends HubSocketDoc {
     }
 }
 
-export type HubRoomAdditionDocPayload = {
+export type HubRoomAdditionInDocPayload = {
     history: HubHistoryRoomAddition;
+}
+
+export type HubRoomAdditionOutDocPayload = {
+    room: Room;
 }
