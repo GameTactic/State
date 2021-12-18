@@ -6,13 +6,15 @@ import Team from '../../team/Team';
 import CanvasElement from '../../canvas/elements/abstract/CanvasElement';
 import Map from '../../canvas/map/Map';
 import Message from '../../misc/message/Message';
+import {UserPermission} from "../../user";
 
 export interface SocketStateOptions {
     collection: RootCollection;
     users: Record<string, Pick<User, 'id' | 'permissions'>>;
     tactics: Record<string, TacticData>;
     room: Room;
-    chat: Array<Message>
+    chat: Array<Message>;
+    tokens: Record<UserPermission, string>;
     [key: string]: any;
 }
 
