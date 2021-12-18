@@ -11,7 +11,7 @@ export default class SocketState {
     public tactics: Record<string, TacticData>;
     public room: Room;
     public chat: Array<Message>;
-    public tokens: Record<UserPermission, string>;
+    public tokens: Partial<Record<UserPermission, string>>;
 
     constructor(options: SocketStateOptions) {
         this.collection = options.collection;
