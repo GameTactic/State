@@ -14,7 +14,7 @@ export interface SocketStateOptions {
     tactics: Record<string, TacticData>;
     room: Room;
     chat: Array<Message>;
-    tokens: Record<UserPermission, string>;
+    tokens: Partial<Record<UserPermission, string>>;
     [key: string]: any;
 }
 
