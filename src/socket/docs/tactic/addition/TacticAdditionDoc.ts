@@ -1,8 +1,7 @@
 import RoomSocketDoc from '../../RoomSocketDoc';
 import TacticHistoryAddition from '../../../../history/tactic/addition/TacticHistoryAddition';
-import { TacticData } from '../../../state';
+import { CreateTacticData } from '../../../state';
 import { HistoryEventModules, HistoryEventTactic } from '../../../../history';
-import Tactic from '../../../../tactic/Tactic';
 import { SubscriberLevel } from '../../types';
 
 export default class TacticAdditionDoc extends RoomSocketDoc {
@@ -19,7 +18,7 @@ export default class TacticAdditionDoc extends RoomSocketDoc {
 }
 
 export type TacticAdditionInDocPayload = {
-    data: TacticData;
+    data: CreateTacticData;
 };
 
 export type TacticAdditionOutDocPayload = {
