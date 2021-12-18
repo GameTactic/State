@@ -9,7 +9,7 @@ export default class UserShareDoc extends RoomSocketDoc {
             title: 'Share User',
             description: 'Shares user with others',
             module: HistoryEventModules.USER,
-            event: HistoryEventUser.UPDATE,
+            event: HistoryEventUser.SHARE,
             level: SubscriberLevel.ROOM,
             requireAuth: false
         });
