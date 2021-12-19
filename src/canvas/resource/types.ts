@@ -15,6 +15,7 @@ export interface ResourceOptions {
     categories?: Array<string>;
     width: number;
     height: number;
+    useTeamTint?: boolean;
 }
 
 export enum ResourceType {

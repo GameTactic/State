@@ -33,6 +33,13 @@ export default class Resource {
     public height: number
 
     /**
+     * Determines weather or not the color of the team the entity belongs to should be tinted on the icon on the canvas
+     * Only if resource is an entity
+     * @public
+     */
+    public useTeamTint: boolean
+
+    /**
      * Determines which transforms are allowed to be preformed
      */
     public permissions: TransformPermissions
@@ -95,5 +102,6 @@ export default class Resource {
         this.categories = options.categories || [];
         this.width = options.width;
         this.height = options.height;
+        this.useTeamTint = options.useTeamTint !== undefined ? options.useTeamTint : false;
     }
 }
