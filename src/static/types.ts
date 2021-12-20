@@ -5,7 +5,7 @@ import { Game } from '../misc/games';
 export interface StaticGameOptions {
     name: string;
     cover: string;
-    coverSVG: string;
+    logo: string;
     game: Game;
     acronym: string;
     categories?: {
