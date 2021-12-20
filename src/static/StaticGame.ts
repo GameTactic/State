@@ -103,7 +103,7 @@ export default class StaticGame {
      * @returns {string} cover: URL to SVG cover
      */
     get logo (): string {
-        return this.logo;
+        return this._logo;
     }
 
     /**
