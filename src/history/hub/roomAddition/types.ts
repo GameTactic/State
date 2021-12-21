@@ -1,5 +1,5 @@
 import { AbstractHistoryOptions } from '../../types';
-import {Game} from "../../../misc/games";
+import { Game } from '../../../misc/games';
 
 export interface HubHistoryRoomAdditionOptions extends AbstractHistoryOptions {
     name: string;

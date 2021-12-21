@@ -7,7 +7,7 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { UserHistoryUpdateOptions } from './types';
 import { HistoryEventUser } from '../types';
-import User from "../../../user/User";
+import User from '../../../user/User';
 
 export default class UserHistoryUpdate extends History {
     /**

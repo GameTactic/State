@@ -7,7 +7,7 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { UserHistoryUpdatePermissionsOptions } from './types';
 import { HistoryEventUser } from '../types';
-import {UserPermission} from "../../../user";
+import { UserPermission } from '../../../user';
 
 export default class UserHistoryUpdatePermissions extends History {
     /**

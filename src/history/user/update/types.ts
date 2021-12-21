@@ -1,5 +1,5 @@
 import { AbstractHistoryOptions } from '../../types';
-import User from "../../../user/User";
+import User from '../../../user/User';
 
 export interface UserHistoryUpdateOptions extends AbstractHistoryOptions {
     userId: string;

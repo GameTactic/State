@@ -2,9 +2,9 @@
  * The shadow plugin draws a shadow around the canvas element
  * @author Eirik Måseidvåg
  */
-import {CanvasElementPluginType} from "../abstract";
-import {ShadowPluginOptions} from "./types";
-import CanvasElementPlugin from "../abstract/CanvasElementPlugin";
+import { CanvasElementPluginType } from '../abstract';
+import { ShadowPluginOptions } from './types';
+import CanvasElementPlugin from '../abstract/CanvasElementPlugin';
 
 export default class ShadowPlugin extends CanvasElementPlugin {
     /**

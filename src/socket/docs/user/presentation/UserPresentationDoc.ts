@@ -1,7 +1,7 @@
 import { HistoryEventModules, HistoryEventUser } from '../../../../history';
 import RoomSocketDoc from '../../RoomSocketDoc';
 import { SubscriberLevel } from '../../types';
-import UserHistoryPresentation from "../../../../history/user/presentation/UserHistoryPresentation";
+import UserHistoryPresentation from '../../../../history/user/presentation/UserHistoryPresentation';
 
 export default class UserPresentationDoc extends RoomSocketDoc {
     public constructor() {

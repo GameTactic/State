@@ -6,7 +6,7 @@ import Team from '../../team/Team';
 import CanvasElement from '../../canvas/elements/abstract/CanvasElement';
 import Map from '../../canvas/map/Map';
 import Message from '../../misc/message/Message';
-import {UserPermission} from "../../user";
+import { UserPermission } from '../../user';
 
 export interface SocketStateOptions {
     collection: RootCollection;

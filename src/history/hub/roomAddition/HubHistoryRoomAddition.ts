@@ -3,7 +3,7 @@ import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventHub } from '../types';
-import {Game} from "../../../misc/games";
+import { Game } from '../../../misc/games';
 
 /**
  * This class contains data of a room creation event

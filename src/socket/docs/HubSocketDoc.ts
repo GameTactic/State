@@ -1,4 +1,4 @@
-import {HubSocketDocOptions, SocketDocOptions} from './types';
+import { HubSocketDocOptions, SocketDocOptions } from './types';
 import SocketDoc from './SocketDoc';
 
 export default abstract class HubSocketDoc extends SocketDoc {

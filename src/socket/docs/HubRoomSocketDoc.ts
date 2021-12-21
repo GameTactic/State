@@ -1,6 +1,6 @@
-import HubSocketDoc from "./HubSocketDoc";
-import {UserPermission} from "../../user";
-import { HubRoomSocketDocOptions } from "./types";
+import HubSocketDoc from './HubSocketDoc';
+import { UserPermission } from '../../user';
+import { HubRoomSocketDocOptions } from './types';
 
 export default class HubRoomSocketDoc extends HubSocketDoc {
     /**

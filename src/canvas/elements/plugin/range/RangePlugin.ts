@@ -2,9 +2,9 @@
  * The range plugin displays a circle around the canvas element
  * @author Eirik Måseidvåg
  */
-import CanvasElementPlugin from "../abstract/CanvasElementPlugin";
-import {RangePluginOptions} from "./types";
-import {CanvasElementPluginType} from "../abstract";
+import CanvasElementPlugin from '../abstract/CanvasElementPlugin';
+import { RangePluginOptions } from './types';
+import { CanvasElementPluginType } from '../abstract';
 
 export default class RangePlugin extends CanvasElementPlugin {
     /**

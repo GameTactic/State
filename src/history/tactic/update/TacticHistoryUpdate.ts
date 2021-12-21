@@ -7,7 +7,7 @@ import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventTactic } from '../types';
 import { TacticHistoryUpdateOptions } from './types';
-import Tactic from "../../../tactic/Tactic";
+import Tactic from '../../../tactic/Tactic';
 
 export default class TacticHistoryUpdate extends History {
     /**

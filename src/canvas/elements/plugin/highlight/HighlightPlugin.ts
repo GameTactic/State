@@ -2,9 +2,9 @@
  * The highlight plugin displays a box around the canvas element to highlight it
  * @author Eirik Måseidvåg
  */
-import {CanvasElementPluginType} from '../abstract';
+import { CanvasElementPluginType } from '../abstract';
 import CanvasElementPlugin from '../abstract/CanvasElementPlugin';
-import {HighlightPluginOptions} from './types';
+import { HighlightPluginOptions } from './types';
 
 export default class HighlightPlugin extends CanvasElementPlugin {
     /**

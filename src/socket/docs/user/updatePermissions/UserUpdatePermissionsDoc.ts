@@ -1,7 +1,7 @@
 import { HistoryEventModules, HistoryEventUser } from '../../../../history';
 import RoomSocketDoc from '../../RoomSocketDoc';
 import { SubscriberLevel } from '../../types';
-import UserHistoryUpdatePermissions from "../../../../history/user/updatePermissions/UserHistoryUpdatePermissions";
+import UserHistoryUpdatePermissions from '../../../../history/user/updatePermissions/UserHistoryUpdatePermissions';
 
 export default class UserUpdatePermissionsDoc extends RoomSocketDoc {
     public constructor() {

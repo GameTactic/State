@@ -2,7 +2,7 @@ import { MapOptions } from './types';
 import View from './view/View';
 import Image from '../../misc/image/Image';
 import { Game } from '../../misc/games';
-import {TeamOptions} from "../../team";
+import { TeamOptions } from '../../team';
 
 export default class Map {
     /**
