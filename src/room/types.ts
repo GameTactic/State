@@ -15,5 +15,5 @@ export interface RoomOptions {
 
 export type RoomMember = {
     id: string;
-    permissions: UserPermission;
+    permissions: Array<UserPermission>;
 }
