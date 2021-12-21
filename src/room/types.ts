@@ -10,5 +10,4 @@ export interface RoomOptions {
     cover?: string;
     created?: number;
     updated?: number;
-    creatorId: string;
 }
