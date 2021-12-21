@@ -2,6 +2,7 @@ import RoomSocketDoc from '../../RoomSocketDoc';
 import TacticHistoryUpdate from '../../../../history/tactic/update/TacticHistoryUpdate';
 import { HistoryEventModules, HistoryEventTactic } from '../../../../history';
 import { SubscriberLevel } from '../../types';
+import Tactic from "../../../../tactic/Tactic";
 
 export default class TacticUpdateDoc extends RoomSocketDoc {
     public constructor() {
@@ -16,6 +17,11 @@ export default class TacticUpdateDoc extends RoomSocketDoc {
     }
 }
 
-export type TacticUpdateDocPayload = {
+export type TacticUpdateInDocPayload = {
     history: TacticHistoryUpdate;
+};
+
+export type TacticUpdateOutDocPayload = {
+    history: TacticHistoryUpdate;
+    tactic: Tactic;
 };
