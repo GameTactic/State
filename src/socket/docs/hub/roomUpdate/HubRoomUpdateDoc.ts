@@ -2,7 +2,7 @@ import { HistoryEventHub, HistoryEventModules } from '../../../../history';
 import HubHistoryRoomUpdate from '../../../../history/hub/roomUpdate/HubHistoryRoomUpdate';
 import { SubscriberLevel } from '../../types';
 import HubRoomSocketDoc from '../../HubRoomSocketDoc';
-import Room from "../../../../room/Room";
+import Room from '../../../../room/Room';
 
 export default class HubRoomUpdateDoc extends HubRoomSocketDoc {
     public constructor() {

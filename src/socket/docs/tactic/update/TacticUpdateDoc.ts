@@ -2,7 +2,7 @@ import RoomSocketDoc from '../../RoomSocketDoc';
 import TacticHistoryUpdate from '../../../../history/tactic/update/TacticHistoryUpdate';
 import { HistoryEventModules, HistoryEventTactic } from '../../../../history';
 import { SubscriberLevel } from '../../types';
-import Tactic from "../../../../tactic/Tactic";
+import Tactic from '../../../../tactic/Tactic';
 
 export default class TacticUpdateDoc extends RoomSocketDoc {
     public constructor() {

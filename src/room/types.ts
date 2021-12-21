@@ -1,5 +1,5 @@
 import { Game } from '../misc/games';
-import { UserPermission } from "../user";
+import { UserPermission } from '../user';
 
 export interface RoomOptions {
     id?: string;

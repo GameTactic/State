@@ -1,4 +1,4 @@
-import {RoomMember, RoomOptions} from './types';
+import { RoomMember, RoomOptions } from './types';
 import { v4 } from 'uuid';
 import Image from '../misc/image/Image';
 import { Game } from '../misc/games';
