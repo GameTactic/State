@@ -1,7 +1,7 @@
 import { HistoryEventModules, HistoryEventHub } from '../../../../history';
 import { SubscriberLevel } from '../../types';
 import HubRoomSocketDoc from '../../HubRoomSocketDoc';
-import { RoomExtended } from '../types';
+import Room from "../../../../room/Room";
 
 export default class HubRoomFetchAllDoc extends HubRoomSocketDoc {
     public constructor() {
@@ -19,5 +19,5 @@ export type HubRoomFetchAllInDocPayload = void
 
 export type HubRoomFetchAllOutDocPayload = {
     bookmark: string | null | undefined;
-    rooms: Array<RoomExtended>;
+    rooms: Array<Room>;
 };

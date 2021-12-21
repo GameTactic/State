@@ -15,11 +15,6 @@ export default class RoomHistoryDisconnect extends History {
      */
     public readonly userId: string
 
-    /**
-     * The ID of the room the user left
-     */
-    public readonly roomId: string
-
     constructor (options: RoomHistoryDisconnectOptions) {
         super({
             ...options,
@@ -29,6 +24,5 @@ export default class RoomHistoryDisconnect extends History {
             })
         });
         this.userId = options.userId;
-        this.roomId = options.roomId;
     }
 }

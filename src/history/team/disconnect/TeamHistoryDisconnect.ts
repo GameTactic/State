@@ -10,15 +10,10 @@ import { HistoryEventTeam } from '../types';
  */
 export default class TeamHistoryDisconnect extends History {
     /**
-     * The ID of the user who left the team
+     * The ID of the user who disconnected from the team
      * @public
      */
     public readonly userId: string
-
-    /**
-     * The ID of the team the user left
-     */
-    public readonly teamId: string
 
     constructor (options: TeamHistoryDisconnectOptions) {
         super({
@@ -29,6 +24,5 @@ export default class TeamHistoryDisconnect extends History {
             })
         });
         this.userId = options.userId;
-        this.teamId = options.teamId;
     }
 }

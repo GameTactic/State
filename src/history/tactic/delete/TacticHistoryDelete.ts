@@ -1,28 +1,28 @@
 /**
- * This class contains data of a tactic disconnect event
+ * This class contains data of an tactic delete event
  * @author Eirik Måseidvåg
  */
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventTactic } from '../types';
-import { TacticHistoryDisconnectOptions } from './types';
+import { TacticHistoryDeleteOptions } from './types';
 
-export default class TacticHistoryDisconnect extends History {
+export default class TacticHistoryDelete extends History {
     /**
-     * The user who disconnected to from tactic
+     * The ID of the tactic to be deleted
      * @public
      */
-    public readonly userId: string
+    public readonly tacticId: string
 
-    constructor (options: TacticHistoryDisconnectOptions) {
+    constructor (options: TacticHistoryDeleteOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.TACTIC,
-                event: HistoryEventTactic.DISCONNECT
+                event: HistoryEventTactic.DELETE
             })
         });
-        this.userId = options.userId;
+        this.tacticId = options.tacticId;
     }
 }

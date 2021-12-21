@@ -10,16 +10,10 @@ import { HistoryEventView } from '../types';
 
 export default class ViewHistoryDisconnect extends History {
     /**
-     * The user who disconnected to the view
+     * The user who disconnected from the view
      * @public
      */
     public readonly userId: string
-
-    /**
-     * The view the user disconnected from
-     * @public
-     */
-    public readonly viewId: string
 
     constructor (options: ViewHistoryDisconnectOptions) {
         super({
@@ -30,6 +24,5 @@ export default class ViewHistoryDisconnect extends History {
             })
         });
         this.userId = options.userId;
-        this.viewId = options.viewId;
     }
 }

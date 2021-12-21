@@ -1,4 +1,4 @@
-import { RoomOptions } from './types';
+import {RoomMember, RoomOptions} from './types';
 import { v4 } from 'uuid';
 import Image from '../misc/image/Image';
 import { Game } from '../misc/games';
@@ -49,6 +49,12 @@ export default class Room {
      */
     public updated: number
 
+    /**
+     * The members of the room
+     * Contains only authenticated users
+     */
+    public members: Array<RoomMember>
+
     public constructor(options: RoomOptions) {
         this.id = options.id || v4();
         this.name = options.name;
@@ -58,5 +64,6 @@ export default class Room {
         this.isPrivate = options.isPrivate || false;
         this.created = options.created || Date.now();
         this.updated = options.updated || Date.now();
+        this.members = options.members;
     }
 }

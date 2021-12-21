@@ -1,5 +1,5 @@
 import { Game } from '../misc/games';
-import Image from '../misc/image/Image';
+import { UserPermission } from "../user";
 
 export interface RoomOptions {
     id?: string;
@@ -10,4 +10,10 @@ export interface RoomOptions {
     cover?: string;
     created?: number;
     updated?: number;
+    members: Array<RoomMember>;
+}
+
+export type RoomMember = {
+    id: string;
+    permissions: UserPermission;
 }
