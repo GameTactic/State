@@ -10,7 +10,6 @@ import { UserPermission } from '../../user';
 
 export interface SocketStateOptions {
     collection: RootCollection;
-    users: Record<string, Pick<User, 'id' | 'permissions'>>;
     tactics: Record<string, TacticData>;
     room: Room;
     chat: Array<Message>;
