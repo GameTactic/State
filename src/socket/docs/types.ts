@@ -1,6 +1,12 @@
 import { HistoryEventEnums, HistoryEventModules } from '../../history';
 import {UserPermission} from "../../user";
 
+export type HubSocketDocOptions = Omit<SocketDocOptions, 'requireAuth'>
+
+export interface HubRoomSocketDocOptions extends HubSocketDocOptions {
+    permissionScope?: UserPermission;
+}
+
 export interface RoomSocketDocOptions extends SocketDocOptions {
     permissionScope?: UserPermission;
 }

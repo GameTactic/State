@@ -4,7 +4,7 @@ import SocketDoc from './SocketDoc';
 
 export default abstract class RoomSocketDoc extends SocketDoc {
     /**
-     * The title of the socket event
+     * The permission required execute the event
      */
     public permissionScope: UserPermission | undefined;
 

@@ -1,56 +1,54 @@
-import { HubHistoryRoomAdditionOptions } from './types';
+import { HubHistoryRoomUpdateOptions } from './types';
 import History from '../../History';
 import HistoryEvent from '../../HistoryEvent';
 import { HistoryEventModules } from '../../types';
 import { HistoryEventHub } from '../types';
-import {Game} from "../../../misc/games";
 
 /**
- * This class contains data of a room creation event
+ * This class contains data of a room update event
  * @author Eirik Måseidvåg
  */
-export default class HubHistoryRoomAddition extends History {
+export default class HubHistoryRoomUpdate extends History {
+    /**
+     * The ID of the room to be updated
+     */
+    public readonly roomId: string
+
     /**
      * The room name
      * @public
      */
-    public readonly name: string
+    public readonly name: string | undefined
 
     /**
      * The room description
      * @public
      */
-    public readonly description: string
-
-    /**
-     * The room game
-     * @public
-     */
-    public readonly game: Game
+    public readonly description: string | undefined
 
     /**
      * The room cover
      * @public
      */
-    public readonly cover: string | null
+    public readonly cover: string | null | undefined
 
     /**
      * Determines weather or not the room is private
      * @public
      */
-    public readonly isPrivate: boolean
+    public readonly isPrivate: boolean | undefined
 
-    constructor (options: HubHistoryRoomAdditionOptions) {
+    constructor (options: HubHistoryRoomUpdateOptions) {
         super({
             ...options,
             event: new HistoryEvent({
                 module: HistoryEventModules.HUB,
-                event: HistoryEventHub.ROOM_ADDITION
+                event: HistoryEventHub.ROOM_UPDATE
             })
         });
+        this.roomId = options.roomId;
         this.name = options.name;
         this.description = options.description;
-        this.game = options.game;
         this.cover = options.cover;
         this.isPrivate = options.isPrivate;
     }

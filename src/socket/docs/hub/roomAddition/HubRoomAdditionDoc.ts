@@ -1,16 +1,16 @@
-import HubSocketDoc from '../../HubSocketDoc';
 import { HistoryEventHub, HistoryEventModules } from '../../../../history';
 import HubHistoryRoomAddition from '../../../../history/hub/roomAddition/HubHistoryRoomAddition';
 import { SubscriberLevel } from '../../types';
-import Room from "../../../../room/Room";
+import HubRoomSocketDoc from "../../HubRoomSocketDoc";
+import { RoomExtended } from "../types";
 
-export default class HubRoomAdditionDoc extends HubSocketDoc {
+export default class HubRoomAdditionDoc extends HubRoomSocketDoc {
     public constructor() {
         super({
-            title: 'Room roomAddition',
+            title: 'Room Addition',
             description: 'Adds a new room',
             module: HistoryEventModules.HUB,
-            event: HistoryEventHub.ADDITION,
+            event: HistoryEventHub.ROOM_ADDITION,
             level: SubscriberLevel.HUB
         });
     }
@@ -21,5 +21,5 @@ export type HubRoomAdditionInDocPayload = {
 }
 
 export type HubRoomAdditionOutDocPayload = {
-    room: Room;
+    room: RoomExtended;
 }

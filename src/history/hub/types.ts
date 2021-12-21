@@ -1,5 +1,7 @@
 export enum HistoryEventHub {
     CONNECT = 'CONNECT',
     DISCONNECT = 'DISCONNECT',
-    ADDITION = 'ADDITION',
+    ROOM_FETCH_ALL = 'ROOM_FETCH_ALL',
+    ROOM_ADDITION = 'ADDITION',
+    ROOM_UPDATE = 'ROOM_UPDATE'
 }

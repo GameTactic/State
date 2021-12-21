@@ -1,5 +1,5 @@
 /**
- * This class contains data of an tactic roomAddition event
+ * This class contains data of an tactic addition event
  * @author Eirik Måseidvåg
  */
 import History from '../../History';

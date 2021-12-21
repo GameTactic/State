@@ -1,7 +1,6 @@
 import HubSocketDoc from '../../HubSocketDoc';
 import { HistoryEventModules, HistoryEventHub } from '../../../../history';
 import { SubscriberLevel } from '../../types';
-import Room from '../../../../room/Room';
 
 export default class HubConnectDoc extends HubSocketDoc {
     public constructor() {
@@ -15,9 +14,4 @@ export default class HubConnectDoc extends HubSocketDoc {
     }
 }
 
-export type HubConnectInDocPayload = void
-
-export type HubConnectOutDocPayload = {
-    bookmark: string | null | undefined;
-    rooms: Array<Room>;
-};
+export type HubConnectDocPayload = void
