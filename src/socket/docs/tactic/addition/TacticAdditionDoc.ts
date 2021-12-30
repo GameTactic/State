@@ -1,8 +1,8 @@
 import RoomSocketDoc from '../../RoomSocketDoc';
 import TacticHistoryAddition from '../../../../history/tactic/addition/TacticHistoryAddition';
-import { CreateTacticData } from '../../../state';
 import { HistoryEventModules, HistoryEventTactic } from '../../../../history';
 import { SubscriberLevel } from '../../types';
+import {CreateTacticData} from "../../../state";
 
 export default class TacticAdditionDoc extends RoomSocketDoc {
     public constructor() {
