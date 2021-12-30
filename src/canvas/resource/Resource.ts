@@ -4,8 +4,7 @@ import { defaultCanvasElementOptions, TransformPermissions } from '../elements/a
 import Image from '../../misc/image/Image';
 
 /**
- * An resource includes data to construct multiple icons
- * The difference between an resource and an resource is that an resource does not include data such as point on canvas, ID etc...
+ * A resource includes data to construct icons or entities
  * @author Eirik Måseidvåg
  */
 export default class Resource {
