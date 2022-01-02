@@ -23,12 +23,7 @@ export default class Icon extends CanvasElement {
      * @protected
      */
     constructor (options: IconOptions) {
-        super({
-            ...options,
-            temporary: options.resource.temporary,
-            permissions: options.resource.permissions,
-            plugins: options.resource.plugins
-        });
+        super(options);
         this.data = options.data;
     }
 }
