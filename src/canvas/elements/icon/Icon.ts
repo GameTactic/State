@@ -8,9 +8,9 @@ import CanvasElement from '../abstract/CanvasElement';
  */
 export default class Icon extends CanvasElement {
     /**
-     * The resource
+     * The resource data
      */
-    public resource: IconResource;
+    public data: IconResource;
     /**
      * Return the name of the canvas element
      * @returns CanvasElementName
@@ -29,6 +29,6 @@ export default class Icon extends CanvasElement {
             permissions: options.resource.permissions,
             plugins: options.resource.plugins
         });
-        this.resource = options.resource;
+        this.data = options.data;
     }
 }
